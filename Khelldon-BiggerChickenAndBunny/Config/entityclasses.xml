@@ -13,12 +13,12 @@
 <!-- Chicken -->
 <append xpath="/entity_classes/entity_class[@name='animalChicken']">
     <!-- 50% bigger -->
-	<property name="SizeScale" value="1.5"/>
+	<property name="SizeScale" value="2.0"/>
 </append>
 <!-- Rabbit -->
 <append xpath="/entity_classes/entity_class[@name='animalRabbit']">
     <!-- 100% bigger -->
-	<property name="SizeScale" value="2.0"/>
+	<property name="SizeScale" value="2.5"/>
 </append>
 	
 
