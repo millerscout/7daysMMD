@@ -1,0 +1,83 @@
+<configs>
+
+<!--Add the new material, weight, and group to the books.-->
+<append xpath="//item[@name='bookFiremansAlmanacHeat']" >
+	<property name="Material" value="MresourceRWPerkPapers" />
+	<property name="Weight" value="2" />
+</append>
+
+<csv xpath="//item[@name='bookFiremansAlmanacHeat']/property[@name='Group']/@value" delim="," op="add">RWPerkBooks</csv>
+<csv xpath="//item[starts-with(@name, book) and ./property[@name='Extends' and @value='bookFiremansAlmanacHeat']]/property[@name='Group']/@value" delim="," op="add">RWPerkBooks</csv>
+
+<!--Add the new material, weight, and group to the magazines.-->
+<append xpath="//item[@name='masterSkillMagazine']" >
+	<property name="Material" value="MresourceRWSkillPapers" />
+	<property name="Weight" value="2" />
+</append>
+
+<csv xpath="//item[@name='masterSkillMagazine']/property[@name='Group']/@value" delim="," op="add" >RWSkillMagazines</csv>
+
+<!--Add the new material, weight, and group to the schematics.-->
+<append xpath="//item[@name='schematicNoQualityMaster']" >
+	<property name="Material" value="MresourceRWBlueprintScraps" />
+	<property name="Weight" value="2" />
+	<property name="Group" value="Books,SchematicsOnly,TCReading,RWSchematics"/>
+</append>
+
+<append xpath="//item[@name='schematicNoQualityRecipeMaster']" >
+	<property name="Material" value="MresourceRWBlueprintScraps" />
+	<property name="Weight" value="2" />
+	<property name="Group" value="Books,SchematicsOnly,TCReading,RWSchematics"/>
+</append>
+
+<!--Add the new scrap items. This will be the item you get back when scrapping-->
+<append xpath="/items">
+
+<item name="resourceRWPerkPapers">
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="CustomIconTint" value="663300"/>
+	<property name="Tags" value="junk"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceRWPerkPapers"/>
+	<property name="Weight" value="1" />
+	<property name="Stacknumber" value="500"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="3.0"/>
+</item>
+
+<item name="resourceRWSkillPapers">
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="CustomIconTint" value="336600"/>
+	<property name="Tags" value="junk"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceRWSkillPapers"/>
+	<property name="Weight" value="1" />
+	<property name="Stacknumber" value="500"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="3.0"/>
+</item>
+
+<item name="resourceRWBlueprintScraps">
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="CustomIconTint" value="003366"/>
+	<property name="Tags" value="junk"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceRWBlueprintScraps"/>
+	<property name="Weight" value="1" />
+	<property name="Stacknumber" value="500"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="3.0"/>
+</item>
+
+</append>
+
+</configs>

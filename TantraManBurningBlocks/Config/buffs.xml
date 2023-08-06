@@ -1,0 +1,60 @@
+<configs>
+	<append xpath="/buffs">
+		
+		<buff name="buffBurningElement" hidden="true">
+			<damage_type value="heat"/>
+			<stack_type value="replace"/><duration value="0"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffBurningElementDuration" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffBurningElement"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningElement">
+					<requirement name="CVarCompare" cvar="$buffBurningElementDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="0"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffIsOnFire"/>
+
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="15"/>
+				<passive_effect name="WaterChangeOT" operation="base_subtract" value="4"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="30"/>
+			</effect_group>
+		</buff>
+		
+		<!--==== Still working this out ====-->
+		
+		<!--<buff name="buffFrozen" name_key="buffDontMove" icon="ui_game_symbol_cold" icon_color="200,200,0" icon_blink="true" remove_on_death="true">
+			<damage_type value="cold"/>
+			<stack_type value="replace"/><duration value="10"/>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffFrozenDuration" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffFrozenDuration" operation="set" value="10"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffFrozenDuration" operation="set" value="10"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffFrozen"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffFrozenDuration" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffFrozen">
+					<requirement name="CVarCompare" cvar="$buffFrozenDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffFrozenDuration" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffElementFreezing"/>
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.1"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.2"/>
+				<passive_effect name="CrouchSpeed" operation="base_set" value="0"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
+			</effect_group>
+		</buff>-->
+		
+	</append>
+</configs>

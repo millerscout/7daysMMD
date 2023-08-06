@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+	<!-- STEEL_SPIKES -->
+	<insertAfter xpath="/blocks/block[@name= 'ironSpikesTrapBloodPOI']">
+	
+		<block name="trapSpikesScrapSteelMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="TrunkTip"/>
+			<property name="Damage" value="66"/> <!-- Damage to player & Zombie -->
+			<property name="Damage_received" value="66"/> <!-- Damage to Player Only -->
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="MtrapSpikesIron"/>
+			<property name="CustomIcon" value="trapSpikesScrapIronMaster"/>
+			<property name="CustomIconTint" value="FF3300"/>
+			<property name="TintColor" value="FF3300"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/traps/ironSpikesTrapPrefab"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="LightOpacity" value="6"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="movement,melee"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="MaxDamage" value="528"/>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="1"/>
+			</property>
+			<property name="UpgradeSound" value="place_block_metal"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,20"/>
+			<drop event="Destroy" name="resourceClayLump" count="5,10"/>
+			<drop event="Fall" count="0"/>
+			<property name="SortOrder1" value="B752"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Building"/>
+			<property name="BlockTag" value="Spike"/>
+			<property name="FilterTags" value="MC_building,SC_traps"/>
+		</block>
+
+		<!-- Player made Stage 3 with blood -->
+		<block name="trapSpikesSteelDmg2">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="Entities/traps/ironSpikesTrap2BloodPrefab"/>
+			<property name="CustomIcon" value="trapSpikesIronDmg1"/>
+			<property name="CustomIconTint" value="FF3300"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+
+		<!-- Player made Stage 2 with blood -->
+		<block name="trapSpikesSteelDmg1">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="Entities/traps/ironSpikesTrap1BloodPrefab"/>
+			<property name="CustomIcon" value="trapSpikesIronDmg2"/>
+			<property name="CustomIconTint" value="FF3300"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg2"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<!-- Player made Stage 1 with no blood -->
+		<block name="trapSpikesSteelDmg0">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CustomIcon" value="trapSpikesScrapIronMaster"/>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg1"/>
+			<property name="SortOrder2" value="0003"/>
+		</block>
+
+		<!-- Decayed POI Spikes Stage 3 -->
+		<block name="SteelSpikesTrap2POI">
+		<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/traps/ironSpikesTrap2Prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="SortOrder2" value="0004"/>
+		</block>
+
+		<!-- Decayed POI Spikes Stage 2 -->
+		<block name="SteelSpikesTrap1POI">
+		<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/traps/ironSpikesTrap1Prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg2"/>
+			<property name="SortOrder2" value="0005"/>
+		</block>
+
+		<!-- Bloody POI Spikes Stage 1 -->
+		<block name="SteelSpikesTrapBloodPOI">
+		<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/traps/ironSpikesTrapBloodPrefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg1"/>
+			<property name="SortOrder2" value="0006"/>
+		</block>
+	</insertAfter>
+	
+</configs>

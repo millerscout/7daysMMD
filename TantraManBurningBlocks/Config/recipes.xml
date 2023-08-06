@@ -1,0 +1,14 @@
+
+<configs>
+	<append xpath="/recipes">
+	
+		<recipe name="burningblockShapes:VariantHelper" count="1" craft_area="workbench" craft_time="120" always_unlocked="true">
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceOil" count="5"/>
+			<ingredient name="ammoGasCan" count="10"/>
+		</recipe>
+
+	</append>
+</configs>

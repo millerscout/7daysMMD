@@ -1,0 +1,2486 @@
+<Config>
+	<append xpath="/item_modifiers">
+		<!-- 
+		DEV NOTES:
+			1) You may notice odd display values like "dDysenteryRisk" and "dCureDysentery"
+			   I use those to hold values, then in ui_display.xml I link them to ussually 
+			   a custom title_key to display text and stat value that I want.
+		-->
+	
+		<!-- ############## -->
+		<!-- Ring :: Scorch -->
+		<item_modifier name="modRingScorchT1" installable_tags="armorHands" modifier_tags="fire" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringScorch"/>
+			<!--<property name="DisplayType" value="ringScorchDT"/>-->
+			<property name="DescriptionKey" value="ringScorchT1BasicDesc"/>
+
+			<effect_group name="apply_scorch" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffScorch">
+					<requirement name="!HasBuff" buff="buffScorch"/>
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="45"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingScorchT2" installable_tags="armorHands" modifier_tags="fire" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringScorch"/>
+			<!--<property name="DisplayType" value="ringScorchDT"/>-->
+			<property name="DescriptionKey" value="ringScorchT2BasicDesc"/>
+
+			<effect_group name="apply_scorch" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffScorch">
+					<requirement name="!HasBuff" buff="buffScorch"/>
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingScorchT3" installable_tags="armorHands" modifier_tags="fire" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringScorch"/>
+			<!--<property name="DisplayType" value="ringScorchDT"/>-->
+			<property name="DescriptionKey" value="ringScorchT3BasicDesc"/>
+
+			<effect_group name="apply_scorch" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffScorch">
+					<requirement name="!HasBuff" buff="buffScorch"/>
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="75"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- ############## -->
+		<!-- Ring :: Stride -->
+		<item_modifier name="modRingStrideT1" installable_tags="armorHands" modifier_tags="ringStride" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStride"/>
+			<property name="DisplayType" value="modRingStrideDT"/>
+			<property name="DescriptionKey" value="ringStrideBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".15"/>
+				<display_value name="dRunSpeed" value=".15"/>
+				<display_value name="dWalkSpeed" value=".15"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStrideT2" installable_tags="armorHands" modifier_tags="ringStride" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStride"/>
+			<property name="DisplayType" value="modRingStrideDT"/>
+			<property name="DescriptionKey" value="ringStrideBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="RunSpeed" operation="perc_add" value=".17"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".17"/>
+				<display_value name="dRunSpeed" value=".17"/>
+				<display_value name="dWalkSpeed" value=".17"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStrideT3" installable_tags="armorHands" modifier_tags="ringStride" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStride"/>
+			<property name="DisplayType" value="modRingStrideDT"/>
+			<property name="DescriptionKey" value="ringStrideBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="RunSpeed" operation="perc_add" value=".19"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".19"/>
+				<display_value name="dRunSpeed" value=".19"/>
+				<display_value name="dWalkSpeed" value=".19"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStrideT4" installable_tags="armorHands" modifier_tags="ringStride" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStride"/>
+			<property name="DisplayType" value="modRingStrideDT"/>
+			<property name="DescriptionKey" value="ringStrideBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="RunSpeed" operation="perc_add" value=".21"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".21"/>
+				<display_value name="dRunSpeed" value=".21"/>
+				<display_value name="dWalkSpeed" value=".21"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStrideT5" installable_tags="armorHands" modifier_tags="ringStride" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStride"/>
+			<property name="DisplayType" value="modRingStrideDT"/>
+			<property name="DescriptionKey" value="ringStrideBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="RunSpeed" operation="perc_add" value=".23"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".23"/>
+				<display_value name="dRunSpeed" value=".23"/>
+				<display_value name="dWalkSpeed" value=".23"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStrideT6" installable_tags="armorHands" modifier_tags="ringStride" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStride"/>
+			<property name="DisplayType" value="modRingStrideDT"/>
+			<property name="DescriptionKey" value="ringStrideBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="RunSpeed" operation="perc_add" value=".25"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".25"/>
+				<display_value name="dRunSpeed" value=".25"/>
+				<display_value name="dWalkSpeed" value=".25"/>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- ############# -->
+		<!-- Ring :: Greed -->
+		<item_modifier name="modRingGreedT1" installable_tags="armorHands" modifier_tags="ringGreed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGreed"/>
+			<property name="DisplayType" value="modRingGreedDT"/>
+			<property name="DescriptionKey" value="ringGreedBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Barter -->
+				<passive_effect name="BarteringBuying" operation="base_add" value=".05"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".05"/>
+				<display_value name="dBarteringSellBuy" value=".05"/>
+				
+				<!-- Loot Quant: Dukes -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".05" tags="dukes"/>
+				<display_value name="dDysenteryRisk" value=".05"/>
+				
+				<!-- Additional Quest Reward -->
+				<passive_effect name="QuestRewardChoiceCount" operation="base_add" value="1"/>
+				<display_value name="dCureDysentery" value="1"/>
+				
+				<!-- Lockpick Speed -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffGreedT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffGreedT1"/>
+				<display_value name="dStopsConcussion" value=".2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGreedT2" installable_tags="armorHands" modifier_tags="ringGreed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGreed"/>
+			<property name="DisplayType" value="modRingGreedDT"/>
+			<property name="DescriptionKey" value="ringGreedBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Baster -->
+				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+				<display_value name="dBarteringSellBuy" value=".1"/>
+				
+				<!-- Loot Quant: Dukes -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".1" tags="dukes"/>
+				<display_value name="dDysenteryRisk" value=".1"/>
+				
+				<!-- Additional Quest Reward -->
+				<passive_effect name="QuestRewardChoiceCount" operation="base_add" value="1"/>
+				<display_value name="dCureDysentery" value="1"/>
+				
+				<!-- Lockpick Speed -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffGreedT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffGreedT2"/>
+				<display_value name="dStopsConcussion" value=".25"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGreedT3" installable_tags="armorHands" modifier_tags="ringGreed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGreed"/>
+			<property name="DisplayType" value="modRingGreedDT"/>
+			<property name="DescriptionKey" value="ringGreedBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Baster -->
+				<passive_effect name="BarteringBuying" operation="base_add" value=".15"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".15"/>
+				<display_value name="dBarteringSellBuy" value=".15"/>
+				
+				<!-- Loot Quant: Dukes -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".15" tags="dukes"/>
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- Additional Quest Reward -->
+				<passive_effect name="QuestRewardChoiceCount" operation="base_add" value="1"/>
+				<display_value name="dCureDysentery" value="1"/>
+				
+				<!-- Lockpick Speed -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffGreedT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffGreedT3"/>
+				<display_value name="dStopsConcussion" value=".3"/>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- ############## -->
+		<!-- Ring :: Seeker -->
+		<item_modifier name="modRingSeekerT1" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="LootStage" operation="base_add" value="5,10.2"/>
+				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-1"/>
+				<display_value name="dTreasureBlocksPerReduction" value="-1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingSeekerT2" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="LootStage" operation="base_add" value="5,10.2"/>
+				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-2"/>
+				<display_value name="dTreasureBlocksPerReduction" value="-2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingSeekerT3" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="LootStage" operation="base_add" value="5,10.2"/>
+				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-3"/>
+				<display_value name="dTreasureBlocksPerReduction" value="-3"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modRingSeekerT4" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT_Dukes"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDescLooting"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Display Value -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+				
+				<!-- Effect :: Loot Quantity :: Dukes -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".25" tags="dukes"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modRingSeekerT5" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT_Food"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDescLooting"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Display Value -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+				
+				<!-- Effect :: Loot Quantity :: Food -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".25" tags="food"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modRingSeekerT6" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT_Ammo"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDescLooting"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Display Value -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+				
+				<!-- Effect :: Loot Quantity :: Ammo -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".25" tags="ammo"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modRingSeekerT7" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT_Medical"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDescLooting"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Display Value -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+				
+				<!-- Effect :: Loot Quantity :: Medical -->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".25" tags="medical"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modRingSeekerT8" installable_tags="armorHands" modifier_tags="ringSeeker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSeeker"/>
+			<property name="DisplayType" value="modRingSeekerDT_LootSpeed"/>
+			<property name="DescriptionKey" value="ringSeekerBasicDescLootSpeed"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Display Value -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+				
+				<!-- Effect :: Loot Speed -->
+				<passive_effect name="ScavengingTime" operation="perc_subtract" value=".25"/>
+			</effect_group>
+		</item_modifier>
+	
+		<!-- ################### -->
+		<!-- Ring :: Twin Terror -->
+		<item_modifier name="modRingTwinTerrorT1" installable_tags="armorHands" modifier_tags="ringTwinTerror" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringTwinTerror"/>
+			<property name="DisplayType" value="modRingTwinTerrorDT"/>
+			<property name="DescriptionKey" value="ringTwinTerrorBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- +1 Projectile -->
+				<display_value name="dDysenteryRisk" value="1"/>
+				
+				<!-- Damage -->
+				<display_value name="dEntityDamage" value="-0.25"/>
+				
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffTwinTerrorT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffTwinTerrorT1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingTwinTerrorT2" installable_tags="armorHands" modifier_tags="ringTwinTerror" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringTwinTerror"/>
+			<property name="DisplayType" value="modRingTwinTerrorDT"/>
+			<property name="DescriptionKey" value="ringTwinTerrorBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- +1 Projectile -->
+				<display_value name="dDysenteryRisk" value="1"/>
+				
+				<!-- Damage -->
+				<display_value name="dEntityDamage" value="-0.2"/>
+				
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffTwinTerrorT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffTwinTerrorT2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingTwinTerrorT3" installable_tags="armorHands" modifier_tags="ringTwinTerror" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringTwinTerror"/>
+			<property name="DisplayType" value="modRingTwinTerrorDT"/>
+			<property name="DescriptionKey" value="ringTwinTerrorBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- +1 Projectile -->
+				<display_value name="dDysenteryRisk" value="1"/>
+				
+				<!-- Damage -->
+				<display_value name="dEntityDamage" value="-0.15"/>
+				
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffTwinTerrorT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffTwinTerrorT3"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################# -->
+		<!-- Ring :: Vampirica -->
+		<item_modifier name="modRingVampiricaT1" installable_tags="armorHands" modifier_tags="ringVampirica" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringVampirica"/>
+			<property name="DisplayType" value="modRingVampiricaDT"/>
+			<property name="DescriptionKey" value="ringVampiricaBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".3"/>
+				
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+					<!-- If Life Steal procs, then play Sound and Heal 1 -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
+					<!-- Chance to heal an additional point -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="35"/>
+					</triggered_effect>
+					<!-- Chance to heal an additional point -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+					</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingVampiricaT2" installable_tags="armorHands" modifier_tags="ringVampirica" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringVampirica"/>
+			<property name="DisplayType" value="modRingVampiricaDT"/>
+			<property name="DescriptionKey" value="ringVampiricaBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".35"/>
+				
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="35"/>
+					<!-- If Life Steal procs, then play Sound and Heal 1 -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
+					<!-- Chance to heal an additional point -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="35"/>
+					</triggered_effect>
+					<!-- Chance to heal an additional point -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+					</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingVampiricaT3" installable_tags="armorHands" modifier_tags="ringVampirica" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringVampirica"/>
+			<property name="DisplayType" value="modRingVampiricaDT"/>
+			<property name="DescriptionKey" value="ringVampiricaBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".4"/>
+				
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+					<!-- If Life Steal procs, then play Sound and Heal 1 -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
+					<!-- Chance to heal an additional point -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="35"/>
+					</triggered_effect>
+					<!-- Chance to heal an additional point -->
+					<triggered_effect trigger="onSelfDamagedOther" action="ModifyStats" target="self" stat="Health" operation="add" value="1">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+					</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################# -->
+		<!-- Ring :: Laborlove -->
+			<!-- Additional Crop Harvest -->
+		<item_modifier name="modRingLaborloveT1" installable_tags="armorHands" modifier_tags="ringLaborlove" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLaborlove"/>
+			<property name="DisplayType" value="modRingLaborloveDTcrop"/>
+			<property name="DescriptionKey" value="ringLaborloveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLaborloveT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaborloveT1"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Harvest Quantity -->
+		<item_modifier name="modRingLaborloveT2" installable_tags="armorHands" modifier_tags="ringLaborlove" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLaborlove"/>
+			<property name="DisplayType" value="modRingLaborloveDTquant"/>
+			<property name="DescriptionKey" value="ringLaborloveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".2"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLaborloveT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaborloveT2"/>
+			</effect_group>
+		</item_modifier>
+			<!-- One-shot ORE -->
+		<item_modifier name="modRingLaborloveT3" installable_tags="armorHands" modifier_tags="ringLaborlove" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLaborlove"/>
+			<property name="DisplayType" value="modRingLaborloveDTore"/>
+			<property name="DescriptionKey" value="ringLaborloveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLaborloveT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaborloveT3"/>
+			</effect_group>
+		</item_modifier>
+			<!-- One-shot TREE -->
+		<item_modifier name="modRingLaborloveT4" installable_tags="armorHands" modifier_tags="ringLaborlove" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLaborlove"/>
+			<property name="DisplayType" value="modRingLaborloveDTtree"/>
+			<property name="DescriptionKey" value="ringLaborloveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".15"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLaborloveT4"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaborloveT4"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Additional Quest Reward -->
+		<item_modifier name="modRingLaborloveT5" installable_tags="armorHands" modifier_tags="ringLaborlove" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLaborlove"/>
+			<property name="DisplayType" value="modRingLaborloveDTquest"/>
+			<property name="DescriptionKey" value="ringLaborloveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLaborloveT5"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaborloveT5"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Crafting Speed -->
+		<item_modifier name="modRingLaborloveT6" installable_tags="armorHands" modifier_tags="ringLaborlove" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLaborlove"/>
+			<property name="DisplayType" value="modRingLaborloveDTcraftspeed"/>
+			<property name="DescriptionKey" value="ringLaborloveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dCraftingTime" value="-.25"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffLaborloveT6"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaborloveT6"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################## -->
+		<!-- Ring :: Brilliance -->
+		<item_modifier name="modRingBrillianceT1" installable_tags="armorHands" modifier_tags="ringBrilliance" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringBrilliance"/>
+			<property name="DisplayType" value="modRingBrillianceDT"/>
+			<property name="DescriptionKey" value="ringBrillianceBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".05"/>
+				<display_value name="dPlayerExpGain" value=".05"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingBrillianceT2" installable_tags="armorHands" modifier_tags="ringBrilliance" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringBrilliance"/>
+			<property name="DisplayType" value="modRingBrillianceDT"/>
+			<property name="DescriptionKey" value="ringBrillianceBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".07"/>
+				<display_value name="dPlayerExpGain" value=".07"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingBrillianceT3" installable_tags="armorHands" modifier_tags="ringBrilliance" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringBrilliance"/>
+			<property name="DisplayType" value="modRingBrillianceDT"/>
+			<property name="DescriptionKey" value="ringBrillianceBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".09"/>
+				<display_value name="dPlayerExpGain" value=".09"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingBrillianceT4" installable_tags="armorHands" modifier_tags="ringBrilliance" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringBrilliance"/>
+			<property name="DisplayType" value="modRingBrillianceDT"/>
+			<property name="DescriptionKey" value="ringBrillianceBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".12"/>
+				<display_value name="dPlayerExpGain" value=".12"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingBrillianceT5" installable_tags="armorHands" modifier_tags="ringBrilliance" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringBrilliance"/>
+			<property name="DisplayType" value="modRingBrillianceDT"/>
+			<property name="DescriptionKey" value="ringBrillianceBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".15"/>
+				<display_value name="dPlayerExpGain" value=".15"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Inspiration -->
+		<item_modifier name="modRingInspirationT1" installable_tags="armorHands" modifier_tags="ringInspiration" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringInspiration"/>
+			<property name="DisplayType" value="modRingInspirationDT"/>
+			<property name="DescriptionKey" value="ringInspirationBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthAmount" value="10"/>
+				<display_value name="dEntityDamage" value=".05"/>
+				<display_value name="dDysenteryRisk" value=".05"/>
+				
+				<!-- <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffInspiredT1" target="selfAOE" target_tags="ally,party" range="15"/> -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffInspiredT1" target="selfOtherPlayers" target_tags="ally,party"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffInspiredT1" target="selfOtherPlayers" target_tags="ally,party"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingInspirationT2" installable_tags="armorHands" modifier_tags="ringInspiration" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringInspiration"/>
+			<property name="DisplayType" value="modRingInspirationDT"/>
+			<property name="DescriptionKey" value="ringInspirationBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthAmount" value="15"/>
+				<display_value name="dEntityDamage" value=".1"/>
+				<display_value name="dDysenteryRisk" value=".1"/>
+				
+				<!-- <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffInspiredT2" target="selfAOE" target_tags="ally,party" range="15"/> -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffInspiredT2" target="selfOtherPlayers" target_tags="ally,party"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffInspiredT2" target="selfOtherPlayers" target_tags="ally,party"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingInspirationT3" installable_tags="armorHands" modifier_tags="ringInspiration" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringInspiration"/>
+			<property name="DisplayType" value="modRingInspirationDT"/>
+			<property name="DescriptionKey" value="ringInspirationBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthAmount" value="20"/>
+				<display_value name="dEntityDamage" value=".15"/>
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffInspiredT3" target="selfAOE" target_tags="ally,party" range="15"/> -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffInspiredT3" target="selfOtherPlayers" target_tags="ally,party"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffInspiredT3" target="selfOtherPlayers" target_tags="ally,party"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############# -->
+		<!-- Ring :: Agony -->
+		<item_modifier name="modRingAgonyT1" installable_tags="armorHands" modifier_tags="ringAgony" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAgony"/>
+			<property name="DisplayType" value="modRingAgonyDT"/>
+			<property name="DescriptionKey" value="ringAgonyBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAgonyT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAgonyT1"/>
+				
+				<display_value name="dHealthAmount" value="-15"/>
+				<display_value name="dEntityDamage" value=".25"/>
+				<display_value name="dDysenteryRisk" value=".05"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingAgonyT2" installable_tags="armorHands" modifier_tags="ringAgony" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAgony"/>
+			<property name="DisplayType" value="modRingAgonyDT"/>
+			<property name="DescriptionKey" value="ringAgonyBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAgonyT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAgonyT2"/>
+				
+				<display_value name="dHealthAmount" value="-25"/>
+				<display_value name="dEntityDamage" value=".30"/>
+				<display_value name="dDysenteryRisk" value=".1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingAgonyT3" installable_tags="armorHands" modifier_tags="ringAgony" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAgony"/>
+			<property name="DisplayType" value="modRingAgonyDT"/>
+			<property name="DescriptionKey" value="ringAgonyBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAgonyT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAgonyT3"/>
+				
+				<display_value name="dHealthAmount" value="-35"/>
+				<display_value name="dEntityDamage" value=".35"/>
+				<display_value name="dDysenteryRisk" value=".15"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################## -->
+		<!-- Ring :: HeadHunter -->
+		<item_modifier name="modRingHeadHunterT1" installable_tags="armorHands" modifier_tags="ringHeadHunter" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringHeadHunter"/>
+			<property name="DisplayType" value="modRingHeadHunterDT"/>
+			<property name="DescriptionKey" value="ringHeadHunterBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeadHunterItemExists"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeadHunterItemExists"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################ -->
+		<!-- Ring :: Guardius -->
+		<item_modifier name="modRingGuardiusT1" installable_tags="armorHands" modifier_tags="ringGuardius" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGuardius"/>
+			<property name="DisplayType" value="modRingGuardiusDT"/>
+			<property name="DescriptionKey" value="ringGuardiusBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthLoss" value=".05"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".05"/>
+				
+				<!-- Ring Proc Effect -->
+				<display_value name="dDuration" value="6"/>
+				<requirement name="!HasBuff" buff="buffFortify"/>
+				<requirement name="!HasBuff" buff="buffFortifyCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortify"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortifyCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGuardiusT2" installable_tags="armorHands" modifier_tags="ringGuardius" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGuardius"/>
+			<property name="DisplayType" value="modRingGuardiusDT"/>
+			<property name="DescriptionKey" value="ringGuardiusBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthLoss" value=".06"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".06"/>
+				
+				<!-- Ring Proc Effect -->
+				<display_value name="dDuration" value="6"/>
+				<requirement name="!HasBuff" buff="buffFortify"/>
+				<requirement name="!HasBuff" buff="buffFortifyCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortify"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortifyCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGuardiusT3" installable_tags="armorHands" modifier_tags="ringGuardius" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGuardius"/>
+			<property name="DisplayType" value="modRingGuardiusDT"/>
+			<property name="DescriptionKey" value="ringGuardiusBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthLoss" value=".07"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".07"/>
+				
+				<!-- Ring Proc Effect -->
+				<display_value name="dDuration" value="6"/>
+				<requirement name="!HasBuff" buff="buffFortify"/>
+				<requirement name="!HasBuff" buff="buffFortifyCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortify"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortifyCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGuardiusT4" installable_tags="armorHands" modifier_tags="ringGuardius" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGuardius"/>
+			<property name="DisplayType" value="modRingGuardiusDT"/>
+			<property name="DescriptionKey" value="ringGuardiusBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthLoss" value=".08"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".08"/>
+				
+				<!-- Ring Proc Effect -->
+				<display_value name="dDuration" value="6"/>
+				<requirement name="!HasBuff" buff="buffFortify"/>
+				<requirement name="!HasBuff" buff="buffFortifyCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortify"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortifyCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGuardiusT5" installable_tags="armorHands" modifier_tags="ringGuardius" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGuardius"/>
+			<property name="DisplayType" value="modRingGuardiusDT"/>
+			<property name="DescriptionKey" value="ringGuardiusBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthLoss" value=".09"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".09"/>
+				
+				<!-- Ring Proc Effect -->
+				<display_value name="dDuration" value="6"/>
+				<requirement name="!HasBuff" buff="buffFortify"/>
+				<requirement name="!HasBuff" buff="buffFortifyCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortify"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortifyCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingGuardiusT6" installable_tags="armorHands" modifier_tags="ringGuardius" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringGuardius"/>
+			<property name="DisplayType" value="modRingGuardiusDT"/>
+			<property name="DescriptionKey" value="ringGuardiusBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthLoss" value=".1"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".1"/>
+				
+				<!-- Ring Proc Effect -->
+				<display_value name="dDuration" value="6"/>
+				<requirement name="!HasBuff" buff="buffFortify"/>
+				<requirement name="!HasBuff" buff="buffFortifyCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortify"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffFortifyCD"/>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- #################### -->
+		<!-- Ring :: Life Essence -->
+		<item_modifier name="modRingLifeEssT1" installable_tags="armorHands" modifier_tags="ringLifeEss" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLifeEssence"/>
+			<property name="DisplayType" value="modRingLifeEssDT"/>
+			<property name="DescriptionKey" value="ringLifeEssT1BasicDesc"/>
+			
+			<effect_group name="Ring_stats">
+				<!-- Ring's Stats -->
+				<passive_effect name="HealthMax" operation="base_add" value="20"/>
+				<display_value name="dHealthAmount" value="20"/>
+				<display_value name="dDysenteryRisk" value="5"/>
+				
+				<!-- Ring Proc Effect -->
+				<requirement name="!HasBuff" buff="buffLifeEssenceRecover"/>
+				<requirement name="!HasBuff" buff="buffLifeEssenceRecoverCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffLifeEssenceRecover"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffLifeEssenceRecoverCD"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingLifeEssenceT1Equipped"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingLifeEssenceT1Equipped"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingLifeEssT2" installable_tags="armorHands" modifier_tags="ringLifeEss" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLifeEssence"/>
+			<property name="DisplayType" value="modRingLifeEssDT"/>
+			<property name="DescriptionKey" value="ringLifeEssT2BasicDesc"/>
+			
+			<effect_group name="Ring_stats">
+				<!-- Ring's Stats -->
+				<passive_effect name="HealthMax" operation="base_add" value="25"/>
+				<display_value name="dHealthAmount" value="25"/>
+				<display_value name="dDysenteryRisk" value="7"/>
+				
+				<!-- Ring Proc Effect -->
+				<requirement name="!HasBuff" buff="buffLifeEssenceRecover"/>
+				<requirement name="!HasBuff" buff="buffLifeEssenceRecoverCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffLifeEssenceRecover"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffLifeEssenceRecoverCD"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingLifeEssenceT2Equipped"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingLifeEssenceT2Equipped"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingLifeEssT3" installable_tags="armorHands" modifier_tags="ringLifeEss" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringLifeEssence"/>
+			<property name="DisplayType" value="modRingLifeEssDT"/>
+			<property name="DescriptionKey" value="ringLifeEssT3BasicDesc"/>
+			
+			<effect_group name="Ring_stats">
+				<!-- Ring's Stats -->
+				<passive_effect name="HealthMax" operation="base_add" value="30"/>
+				<display_value name="dHealthAmount" value="30"/>
+				<display_value name="dDysenteryRisk" value="10"/>
+				
+				<!-- Ring Proc Effect -->
+				<requirement name="!HasBuff" buff="buffLifeEssenceRecover"/>
+				<requirement name="!HasBuff" buff="buffLifeEssenceRecoverCD"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffLifeEssenceRecover"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffLifeEssenceRecoverCD"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingLifeEssenceT3Equipped"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingLifeEssenceT3Equipped"/>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- ############### -->
+		<!-- Ring :: Stealth -->
+		<item_modifier name="modRingStealthT1" installable_tags="armorHands" modifier_tags="ringStealth" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStealth"/>
+			<property name="DisplayType" value="modRingStealthDT"/>
+			<property name="DescriptionKey" value="ringStealthT1BasicDesc"/>
+			
+			<effect_group name="Ring_stats">
+				<!-- Ring's Stats -->
+				<display_value name="dDysenteryRisk" value="8"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="buffStealthDurationDE" operation="set" value="8"/>
+				
+				<!-- Prevent Equip-dequip abuse -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingStealthCD"/>
+				
+				<!-- Ring Proc Effect -->
+				<requirement name="!HasBuff" buff="buffRingStealth"/>
+				<requirement name="!HasBuff" buff="buffRingStealthCD"/>
+					<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffRingStealth"/>
+					<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffRingStealthCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStealthT2" installable_tags="armorHands" modifier_tags="ringStealth" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStealth"/>
+			<property name="DisplayType" value="modRingStealthDT"/>
+			<property name="DescriptionKey" value="ringStealthT1BasicDesc"/>
+			
+			<effect_group name="Ring_stats">
+				<!-- Ring's Stats -->
+				<display_value name="dDysenteryRisk" value="10"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="buffStealthDurationDE" operation="set" value="10"/>
+				
+				<!-- Prevent Equip-dequip abuse -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingStealthCD"/>
+				
+				<!-- Ring Proc Effect -->
+				<requirement name="!HasBuff" buff="buffRingStealth"/>
+				<requirement name="!HasBuff" buff="buffRingStealthCD"/>
+					<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffRingStealth"/>
+					<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffRingStealthCD"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStealthT3" installable_tags="armorHands" modifier_tags="ringStealth" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStealth"/>
+			<property name="DisplayType" value="modRingStealthDT"/>
+			<property name="DescriptionKey" value="ringStealthT1BasicDesc"/>
+			
+			<effect_group name="Ring_stats">
+				<!-- Ring's Stats -->
+				<display_value name="dDysenteryRisk" value="12"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="buffStealthDurationDE" operation="set" value="12"/>
+				
+				<!-- Prevent Equip-dequip abuse -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingStealthCD"/>
+				
+				<!-- Ring Proc Effect -->
+				<requirement name="!HasBuff" buff="buffRingStealth"/>
+				<requirement name="!HasBuff" buff="buffRingStealthCD"/>
+					<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffRingStealth"/>
+					<triggered_effect trigger="onSelfCrouch" action="AddBuff" target="self" buff="buffRingStealthCD"/>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- ################# -->
+		<!-- Ring :: Mechanism -->
+			<!-- Robotic Summon Limit -->
+		<item_modifier name="modRingMechanismT1" installable_tags="armorHands" modifier_tags="ringMechanism" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringMechanism"/>
+			<property name="DisplayType" value="modRingMechanismDT_limit"/>
+			<property name="DescriptionKey" value="ringMechanismT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Summon Limit Increase -->
+				<display_value name="dDysenteryRisk" value="1"/>
+				<!-- Activation Range -->
+				<display_value name="dCureDysentery" value="10"/>
+				
+				<!-- Application for Ring's Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMechanismT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMechanismT1"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Robotic General Boost -->
+		<item_modifier name="modRingMechanismT2" installable_tags="armorHands" modifier_tags="ringMechanism" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringMechanism"/>
+			<property name="DisplayType" value="modRingMechanismDT_boost"/>
+			<property name="DescriptionKey" value="ringMechanismT2BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Entity Damage -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+				<!-- Attack Speed -->
+				<display_value name="dCureDysentery" value=".15"/>
+				
+				<!-- Application for Ring's Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMechanismT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMechanismT2"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Robotic Hit Slow but Hard -->
+		<item_modifier name="modRingMechanismT3" installable_tags="armorHands" modifier_tags="ringMechanism" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringMechanism"/>
+			<property name="DisplayType" value="modRingMechanismDT_slowhard"/>
+			<property name="DescriptionKey" value="ringMechanismT3BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Entity Damage -->
+				<display_value name="dDysenteryRisk" value="1"/>
+				
+				<!-- Reduced Attack Speed-->
+				<display_value name="dCureDysentery" value="-.3"/>
+				
+				<!-- Application for Ring's Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMechanismT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMechanismT3"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Robotic Haste -->
+		<item_modifier name="modRingMechanismT4" installable_tags="armorHands" modifier_tags="ringMechanism" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringMechanism"/>
+			<property name="DisplayType" value="modRingMechanismDT_haste"/>
+			<property name="DescriptionKey" value="ringMechanismT4BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Reduced Entity Damage-->
+				<display_value name="dDysenteryRisk" value="-.25"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dCureDysentery" value=".35"/>
+				
+				<!-- Magazine Capacity Increase-->
+				<display_value name="dStopsConcussion" value="50"/>
+				
+				<!-- Application for Ring's Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMechanismT4"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMechanismT4"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Robotic Melee -->
+		<item_modifier name="modRingMechanismT5" installable_tags="armorHands" modifier_tags="ringMechanism" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringMechanism"/>
+			<property name="DisplayType" value="modRingMechanismDT_melee"/>
+			<property name="DescriptionKey" value="ringMechanismT5BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Entity Damage -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dCureDysentery" value=".1"/>
+				
+				<!-- DOESNT WORK Max Strike Range -->
+				<!-- <display_value name="dStopsConcussion" value="4"/> -->
+				
+				<!-- Damage while holding -->
+				<display_value name="dStopsConcussion" value=".5"/>
+				
+				<!-- Application for Ring's Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMechanismT5"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMechanismT5"/>
+			</effect_group>
+		</item_modifier>
+		
+	
+		<!-- ##################### -->
+		<!-- Ring :: Thunderstruck -->
+		<item_modifier name="modRingThunderstruckT1" installable_tags="armorHands" modifier_tags="ringThunderstruck" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringThunderstruck"/>
+			<property name="DisplayType" value="modRingThunderstruckDT"/>
+			<property name="DescriptionKey" value="ringThunderstruckT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/>
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffThunderstruckProcChance"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffThunderstruckProcChance"/>
+			</effect_group>
+		</item_modifier>
+	
+	
+		<!-- ################ -->
+		<!-- Ring :: Predator -->
+		<item_modifier name="modRingPredatorT1" installable_tags="armorHands" modifier_tags="ringPredator" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringPredator"/>
+			<property name="DisplayType" value="modRingPredatorDT"/>
+			<property name="DescriptionKey" value="ringPredatorT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffPredatorT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffPredatorT1"/>
+			
+				<!-- Entity Damage -->
+				<display_value name="dEntityDamage" value=".05"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".05"/>
+				
+				<!-- Movement Speed-->
+				<display_value name="dRunSpeed" value=".05"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingPredatorT2" installable_tags="armorHands" modifier_tags="ringPredator" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringPredator"/>
+			<property name="DisplayType" value="modRingPredatorDT"/>
+			<property name="DescriptionKey" value="ringPredatorT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffPredatorT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffPredatorT2"/>
+				
+				<!-- Entity Damage -->
+				<display_value name="dEntityDamage" value=".07"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".07"/>
+				
+				<!-- Movement Speed-->
+				<display_value name="dRunSpeed" value=".07"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingPredatorT3" installable_tags="armorHands" modifier_tags="ringPredator" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringPredator"/>
+			<property name="DisplayType" value="modRingPredatorDT"/>
+			<property name="DescriptionKey" value="ringPredatorT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffPredatorT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffPredatorT3"/>
+				
+				<!-- Entity Damage -->
+				<display_value name="dEntityDamage" value=".1"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".1"/>
+				
+				<!-- Movement Speed-->
+				<display_value name="dRunSpeed" value=".1"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################ -->
+		<!-- Ring :: Assassin -->
+		<item_modifier name="modRingAssassinT1" installable_tags="armorHands" modifier_tags="ringAssassin" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAssassin"/>
+			<property name="DisplayType" value="modRingAssassinDT"/>
+			<property name="DescriptionKey" value="ringAssassinT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAssassinT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAssassinT1"/>
+				
+				<!-- referencing Parkour perk: 1m Jump = .39 in perc_add value -->
+				<!-- Jump Strength -->
+				<display_value name="dDysenteryRisk" value="1"/> 
+				
+				<display_value name="dLightMultiplier" value="-.2"/>
+				<display_value name="dNoiseMultiplier" value="-.2"/>
+				
+				<!-- Crouch Speed -->
+				<display_value name="dCureDysentery" value=".3"/>
+				
+				<!-- Sneak Damage -->
+				<display_value name="dEntityDamage" value=".5"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingAssassinT2" installable_tags="armorHands" modifier_tags="ringAssassin" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAssassin"/>
+			<property name="DisplayType" value="modRingAssassinDT"/>
+			<property name="DescriptionKey" value="ringAssassinT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAssassinT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAssassinT2"/>
+				
+				<!-- referencing Parkour perk: 1m Jump = .39 in perc_add value -->
+				<!-- Jump Strength -->
+				<display_value name="dDysenteryRisk" value="1"/> 
+				
+				<display_value name="dLightMultiplier" value="-.25"/>
+				<display_value name="dNoiseMultiplier" value="-.25"/>
+				
+				<!-- Crouch Speed -->
+				<display_value name="dCureDysentery" value=".4"/>
+				
+				<!-- Sneak Damage -->
+				<display_value name="dEntityDamage" value=".6"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingAssassinT3" installable_tags="armorHands" modifier_tags="ringAssassin" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAssassin"/>
+			<property name="DisplayType" value="modRingAssassinDT"/>
+			<property name="DescriptionKey" value="ringAssassinT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffAssassinT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffAssassinT3"/>
+			
+				<!-- referencing Parkour perk: 1m Jump = .39 in perc_add value -->
+				<!-- Jump Strength -->
+				<display_value name="dDysenteryRisk" value="1"/> 
+				
+				<display_value name="dLightMultiplier" value="-.3"/>
+				<display_value name="dNoiseMultiplier" value="-.3"/>
+				
+				<!-- Crouch Speed -->
+				<display_value name="dCureDysentery" value=".5"/>
+				
+				<!-- Sneak Damage -->
+				<display_value name="dEntityDamage" value=".7"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############### -->
+		<!-- Ring :: Mending -->
+		<item_modifier name="modRingMendingT1" installable_tags="armorHands" modifier_tags="ringMending" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringMending"/>
+			<property name="DisplayType" value="modRingMendingDT"/>
+			<property name="DescriptionKey" value="ringMendingT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/> 
+			</effect_group>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffMending"/>
+				<requirement name="!HasBuff" buff="buffMendingCD"/>
+				<requirement name="!HasBuff" buff="buffMendingItemExists"/>
+					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMending"/>
+					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMendingItemExists"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMending">
+					<requirement name="HasBuff" buff="buffMending"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMendingItemExists">
+					<requirement name="HasBuff" buff="buffMendingItemExists"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############### -->
+		<!-- Ring :: Stamina -->
+		<item_modifier name="modRingStaminaT1" installable_tags="armorHands" modifier_tags="ringStamina" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStamina"/>
+			<property name="DisplayType" value="modRingStaminaDT"/>
+			<property name="DescriptionKey" value="ringStaminaT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".15"/>
+				<display_value name="dStaminaRegen" value=".15"/>
+
+				<passive_effect name="StaminaMax" operation="base_add" value="15"/>
+				<display_value name="dDysenteryRisk" value="15"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStaminaT2" installable_tags="armorHands" modifier_tags="ringStamina" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStamina"/>
+			<property name="DisplayType" value="modRingStaminaDT"/>
+			<property name="DescriptionKey" value="ringStaminaT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".2"/>
+				<display_value name="dStaminaRegen" value=".2"/>
+
+				<passive_effect name="StaminaMax" operation="base_add" value="20"/>
+				<display_value name="dDysenteryRisk" value="20"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStaminaT3" installable_tags="armorHands" modifier_tags="ringStamina" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStamina"/>
+			<property name="DisplayType" value="modRingStaminaDT"/>
+			<property name="DescriptionKey" value="ringStaminaT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".25"/>
+				<display_value name="dStaminaRegen" value=".25"/>
+
+				<passive_effect name="StaminaMax" operation="base_add" value="25"/>
+				<display_value name="dDysenteryRisk" value="25"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStaminaT4" installable_tags="armorHands" modifier_tags="ringStamina" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStamina"/>
+			<property name="DisplayType" value="modRingStaminaDT"/>
+			<property name="DescriptionKey" value="ringStaminaT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".3"/>
+				<display_value name="dStaminaRegen" value=".3"/>
+
+				<passive_effect name="StaminaMax" operation="base_add" value="30"/>
+				<display_value name="dDysenteryRisk" value="30"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- #################### -->
+		<!-- Ring :: Face Breaker -->
+			<!-- Power Attack -->
+		<item_modifier name="modRingFaceBreakerT1" installable_tags="armorHands" modifier_tags="ringFaceBreaker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringFaceBreaker"/>
+			<property name="DisplayType" value="modRingFaceBreakerT1DT"/>
+			<property name="DescriptionKey" value="ringFaceBreakerT1BasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFaceBreakerT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFaceBreakerT1"/>
+			
+				<display_value name="dEntityDamage" value=".25"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- Power Attack Damage -->
+				<display_value name="dCureDysentery" value="1"/>
+				
+				<!-- Power Attack Damage -->
+				<display_value name="dStopsConcussion" value="1.5"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Damage % Chance -->
+		<item_modifier name="modRingFaceBreakerT2" installable_tags="armorHands" modifier_tags="ringFaceBreaker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringFaceBreaker"/>
+			<property name="DisplayType" value="modRingFaceBreakerT2DT"/>
+			<property name="DescriptionKey" value="ringFaceBreakerT1BasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFaceBreakerT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFaceBreakerT2"/>
+			
+				<display_value name="dEntityDamage" value=".25"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- X% Chance for +75% Damage -->
+				<display_value name="dCureDysentery" value=".25"/>
+				
+				<!-- X% Chance for +50% Damage -->
+				<display_value name="dStopsConcussion" value=".5"/>
+				
+				<!-- X% Chance for +25% Damage -->
+				<display_value name="dEfficientDigestion" value=".75"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Force -->
+		<item_modifier name="modRingFaceBreakerT3" installable_tags="armorHands" modifier_tags="ringFaceBreaker" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringFaceBreaker"/>
+			<property name="DisplayType" value="modRingFaceBreakerT3DT"/>
+			<property name="DescriptionKey" value="ringFaceBreakerT1BasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffFaceBreakerT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFaceBreakerT3"/>
+			
+				<display_value name="dEntityDamage" value=".25"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- Force -->
+				<display_value name="dCureDysentery" value="100"/>
+				
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Dragon Claw -->
+		<item_modifier name="modRingDragonClaw" installable_tags="armorHands" modifier_tags="ringDragon" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringDragonClaw"/>
+			<property name="DisplayType" value="modRingDragonClawDT"/>
+			<property name="DescriptionKey" value="ringDragonClawBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffEquippedDragonClaw"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffEquippedDragonClaw"/>
+				
+				<!-- Grant Skill -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<!-- #################### -->
+		<!-- Ring :: Dragon Flame -->
+		<item_modifier name="modRingDragonFlame" installable_tags="armorHands" modifier_tags="ringDragon" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringDragonFlame"/>
+			<property name="DisplayType" value="modRingDragonFlameDT"/>
+			<property name="DescriptionKey" value="ringDragonFlameBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffEquippedDragonFlame"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffEquippedDragonFlame"/>
+				
+				<!-- Grant Skill -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<!-- ################### -->
+		<!-- Ring :: Dragon Roar -->
+		<item_modifier name="modRingDragonRoar" installable_tags="armorHands" modifier_tags="ringDragon" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringDragonRoar"/>
+			<property name="DisplayType" value="modRingDragonRoarDT"/>
+			<property name="DescriptionKey" value="ringDragonRoarBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffEquippedDragonRoar"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffEquippedDragonRoar"/>
+				
+				<!-- Grant Skill -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############# -->
+		<!-- Ring :: Force -->
+		<item_modifier name="modRingForceT1" installable_tags="armorHands" modifier_tags="ringForce" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringForce"/>
+			<property name="DisplayType" value="modRingForceDT"/>
+			<property name="DescriptionKey" value="ringForceBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffForceT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffForceT1"/>
+			
+				<display_value name="dEntityDamage" value=".1"/>
+				
+				<!-- Force -->
+				<display_value name="dCureDysentery" value="100"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingForceT2" installable_tags="armorHands" modifier_tags="ringForce" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringForce"/>
+			<property name="DisplayType" value="modRingForceDT"/>
+			<property name="DescriptionKey" value="ringForceBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffForceT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffForceT2"/>
+			
+				<display_value name="dEntityDamage" value=".1"/>
+				
+				<!-- Force -->
+				<display_value name="dCureDysentery" value="125"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingForceT3" installable_tags="armorHands" modifier_tags="ringForce" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringForce"/>
+			<property name="DisplayType" value="modRingForceDT"/>
+			<property name="DescriptionKey" value="ringForceBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffForceT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffForceT3"/>
+			
+				<display_value name="dEntityDamage" value=".1"/>
+				
+				<!-- Force -->
+				<display_value name="dCureDysentery" value="150"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- ############ -->
+		<!-- Ring :: Wish -->
+		<item_modifier name="modRingWishART" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishARTDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishART"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishART"/>
+			
+				<!-- Active Robot Limit -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishMovement" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishMovementDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishMovement"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishMovement"/>
+			
+				<!-- Movement Speed -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishDamageMit" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishDamageMitDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishDamageMitigation"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishDamageMitigation"/>
+			
+				<!-- Damage Mitigation -->
+				<display_value name="dHealthLoss" value=".05"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishHealthMax" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishHealthMaxDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishMaxHealth"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishMaxHealth"/>
+			
+				<!-- Max Health -->
+				<display_value name="dHealthAmount" value="25"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishStaminaMax" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishStaminaMaxDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishMaxStamina"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishMaxStamina"/>
+			
+				<!-- Max Stamina -->
+				<display_value name="dDysenteryRisk" value="25"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAddProj" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAddProjDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishAddProj"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishAddProj"/>
+			
+				<!-- +1 Projectile -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishJump" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishJumpDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishJump"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishJump"/>
+			
+				<!-- Jump Strength -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishEXP" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishEXPDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishEXP"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishEXP"/>
+			
+				<!-- EXP -->
+				<display_value name="dPlayerExpGain" value=".1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAttSTR" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAttSTRDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">		
+				<!-- Attribute Level -->
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attStrength"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAttPER" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAttPERDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">		
+				<!-- Attribute Level -->
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attPerception"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAttAGI" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAttAGIDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">		
+				<!-- Attribute Level -->
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attAgility"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAttFORT" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAttFORTDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">		
+				<!-- Attribute Level -->
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attFortitude"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAttINT" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAttINTDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">		
+				<!-- Attribute Level -->
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAtkSpd" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAtkSpdDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishAtkSpd"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishAtkSpd"/>
+			
+				<!-- Attack Speed -->
+				<display_value name="dDysenteryRisk" value=".1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishEntityDamage" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishEntityDamageDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishEntityDamage"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishEntityDamage"/>
+			
+				<!-- Entity Damage -->
+				<display_value name="dEntityDamage" value=".2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishDigRadius" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishDigRadiusDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishDigRadius"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishDigRadius"/>
+			
+				<!-- Dig Radius -->
+				<display_value name="dTreasureBlocksPerReduction" value="-2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishHarvest" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishHarvestDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishHarvest"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishHarvest"/>
+			
+				<!-- Harvest Quantity -->
+				<display_value name="dDysenteryRisk" value=".2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishOreOS" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishOreOSDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishOreOS"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishOreOS"/>
+			
+				<!-- Oneshot Chance -->
+				<display_value name="dDysenteryRisk" value=".1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishTreeOS" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishTreeOSDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishTreeOS"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishTreeOS"/>
+			
+				<!-- Oneshot Chance -->
+				<display_value name="dDysenteryRisk" value=".15"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishLockpick" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishLockpickDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishLockpickTime"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishLockpickTime"/>
+			
+				<!-- Lockpick Speed -->
+				<display_value name="dLockpickSuccess" value=".25"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAddQuest" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAddQuestDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishAddQuestReward"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishAddQuestReward"/>
+			
+				<!-- Additional Quest Reward -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishDukeQuant" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishDukeQuantDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishDukeQuant"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishDukeQuant"/>
+			
+				<!-- Duke Quantity -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishLootStage" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishLootStageDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="LootStage" operation="base_add" value="10,15.2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishAmplify" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishAmplifyDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".2"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingWishAmplifyEquipped">
+					<requirement name="!HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				</triggered_effect>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingWishAmplifyEquipped">
+					<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingWishLootSpeed" installable_tags="armorHands" modifier_tags="ringWish" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringWish"/>
+			<property name="DisplayType" value="modRingWishLootSpeedDT"/>
+			<property name="DescriptionKey" value="ringWishBasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Display Value -->
+				<display_value name="dDysenteryRisk" value=".25"/>
+				
+				<!-- Effect :: Loot Speed -->
+				<passive_effect name="ScavengingTime" operation="perc_subtract" value=".25"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############# -->
+		<!-- Ring :: Venom -->
+		<item_modifier name="modRingVenomT1" installable_tags="armorHands" modifier_tags="ringVenom" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringVenom"/>
+			<property name="DisplayType" value="modRingVenomDT"/>
+			<property name="DescriptionKey" value="ringVenomT1BasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group>
+				<!-- Number of Poisons -->
+				<display_value name="dDysenteryRisk" value="2"/>
+			</effect_group>
+			<effect_group name="Ring_stats">
+				<requirement name="HoldingItemHasTags" tags="tool, melee, perkArchery"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffPoisonDurationROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffPoisonEffectROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" target_tags="zombie,animal" cvar="varPoisonStackROV" operation="add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingVenomT2" installable_tags="armorHands" modifier_tags="ringVenom" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringVenom"/>
+			<property name="DisplayType" value="modRingVenomDT"/>
+			<property name="DescriptionKey" value="ringVenomT2BasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group>
+				<!-- Number of Poisons -->
+				<display_value name="dDysenteryRisk" value="3"/>
+			</effect_group>
+			<effect_group name="Ring_stats">
+				<requirement name="HoldingItemHasTags" tags="tool, melee, perkArchery"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffPoisonDurationROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffPoisonEffectROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" target_tags="zombie,animal" cvar="varPoisonStackROV" operation="add" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingVenomT3" installable_tags="armorHands" modifier_tags="ringVenom" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringVenom"/>
+			<property name="DisplayType" value="modRingVenomDT"/>
+			<property name="DescriptionKey" value="ringVenomT3BasicDesc"/>
+
+			<!-- Ring's Stats -->
+			<effect_group>
+				<!-- Number of Poisons -->
+				<display_value name="dDysenteryRisk" value="4"/>
+			</effect_group>
+			<effect_group name="Ring_stats">
+				<requirement name="HoldingItemHasTags" tags="tool, melee, perkArchery"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffPoisonDurationROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffPoisonEffectROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" target_tags="zombie,animal" cvar="varPoisonStackROV" operation="add" value="4"/>
+				
+					<!-- Test if poison works (testing by also applying poison to self) -->
+					<!--
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffPoisonDurationROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffPoisonEffectROV"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="varPoisonStackROV" operation="add" value="1"/>
+					-->
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################## -->
+		<!-- Ring :: Demolition -->
+			<!-- Brawler Block Damage -->
+		<item_modifier name="modRingDemolitionT1" installable_tags="armorHands" modifier_tags="ringDemolition" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringDemolition"/>
+			<property name="DisplayType" value="modRingDemolitionT1DT"/>
+			<property name="DescriptionKey" value="ringDemolitionBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDemolitionT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDemolitionT1"/>
+				
+				<!-- Brawler Block Damage -->
+				<display_value name="dDysenteryRisk" value="5"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Robotic Sledge Block Damage -->
+		<item_modifier name="modRingDemolitionT2" installable_tags="armorHands" modifier_tags="ringDemolition" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringDemolition"/>
+			<property name="DisplayType" value="modRingDemolitionT2DT"/>
+			<property name="DescriptionKey" value="ringDemolitionBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDemolitionT2"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDemolitionT2"/>
+				
+				<!-- Brawler Block Damage -->
+				<display_value name="dDysenteryRisk" value="5"/>
+			</effect_group>
+		</item_modifier>
+			<!-- Generic Block Damage -->
+		<item_modifier name="modRingDemolitionT3" installable_tags="armorHands" modifier_tags="ringDemolition" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringDemolition"/>
+			<property name="DisplayType" value="modRingDemolitionT3DT"/>
+			<property name="DescriptionKey" value="ringDemolitionBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDemolitionT3"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDemolitionT3"/>
+				
+				<!-- Brawler Block Damage -->
+				<display_value name="dDysenteryRisk" value=".5"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############## -->
+		<!-- Ring :: Reborn -->
+			<!-- TIER 1 -->
+		<item_modifier name="modRingRebornT1" installable_tags="armorHands" modifier_tags="ringReborn" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringReborn"/>
+			<property name="DisplayType" value="modRingRebornDT"/>
+			<property name="DescriptionKey" value="ringRebornT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfRebornT1Equipped"/>
+				<requirement name="!HasBuff" buff="buffRingOfRebornT1Charged"/>
+				<requirement name="!HasBuff" buff="buffRingOfRebornCooldown"/>
+					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfRebornT1Charged"/>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfRebornT1Charged">
+					<requirement name="HasBuff" buff="buffRingOfRebornT1Charged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfRebornT1Equipped">
+					<requirement name="HasBuff" buff="buffRingOfRebornT1Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+			<!-- TIER 2 -->
+		<item_modifier name="modRingRebornT2" installable_tags="armorHands" modifier_tags="ringReborn" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringReborn"/>
+			<property name="DisplayType" value="modRingRebornDT"/>
+			<property name="DescriptionKey" value="ringRebornT2BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfRebornT2Equipped"/>
+				<requirement name="!HasBuff" buff="buffRingOfRebornT2Charged"/>
+				<requirement name="!HasBuff" buff="buffRingOfRebornCooldown"/>
+					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfRebornT2Charged"/>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfRebornT2Charged">
+					<requirement name="HasBuff" buff="buffRingOfRebornT2Charged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfRebornT2Equipped">
+					<requirement name="HasBuff" buff="buffRingOfRebornT2Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+			<!-- TIER 3 -->
+		<item_modifier name="modRingRebornT3" installable_tags="armorHands" modifier_tags="ringReborn" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringReborn"/>
+			<property name="DisplayType" value="modRingRebornDT"/>
+			<property name="DescriptionKey" value="ringRebornT3BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value="1"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfRebornT3Equipped"/>
+				<requirement name="!HasBuff" buff="buffRingOfRebornT3Charged"/>
+				<requirement name="!HasBuff" buff="buffRingOfRebornCooldown"/>
+					<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfRebornT3Charged"/>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfRebornT3Charged">
+					<requirement name="HasBuff" buff="buffRingOfRebornT3Charged"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfRebornT3Equipped">
+					<requirement name="HasBuff" buff="buffRingOfRebornT3Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Amplify -->
+			<!-- TIER 1 -->
+		<item_modifier name="modRingAmplifyT1" installable_tags="armorHands" modifier_tags="ringAmplify" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAmplify"/>
+			<property name="DisplayType" value="modRingAmplifyDT"/>
+			<property name="DescriptionKey" value="ringAmplifyBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".2"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfAmplifyT1Equipped">
+					<requirement name="!HasBuff" buff="buffRingOfAmplifyT1Equipped"/>
+				</triggered_effect>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfAmplifyT1Equipped">
+					<requirement name="HasBuff" buff="buffRingOfAmplifyT1Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+			<!-- TIER 2 -->
+		<item_modifier name="modRingAmplifyT2" installable_tags="armorHands" modifier_tags="ringAmplify" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAmplify"/>
+			<property name="DisplayType" value="modRingAmplifyDT"/>
+			<property name="DescriptionKey" value="ringAmplifyBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".3"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfAmplifyT2Equipped">
+					<requirement name="!HasBuff" buff="buffRingOfAmplifyT2Equipped"/>
+				</triggered_effect>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfAmplifyT2Equipped">
+					<requirement name="HasBuff" buff="buffRingOfAmplifyT2Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+			<!-- TIER 3 -->
+		<item_modifier name="modRingAmplifyT3" installable_tags="armorHands" modifier_tags="ringAmplify" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringAmplify"/>
+			<property name="DisplayType" value="modRingAmplifyDT"/>
+			<property name="DescriptionKey" value="ringAmplifyBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".4"/> 
+			</effect_group>
+			
+			<!-- Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingOfAmplifyT3Equipped">
+					<requirement name="!HasBuff" buff="buffRingOfAmplifyT3Equipped"/>
+				</triggered_effect>
+			</effect_group>
+			
+			<!-- De-Equip -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingOfAmplifyT3Equipped">
+					<requirement name="HasBuff" buff="buffRingOfAmplifyT3Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ################################# -->
+		<!-- Ring :: Splinter Rain :: Wrathful -->
+		<item_modifier name="modRingSplinterRainWrathful" installable_tags="armorHands" modifier_tags="ringSplinterRain" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSplinterRainWrathful"/>
+			<property name="DisplayType" value="modRingSplinterRainWrathDT"/>
+			<property name="DescriptionKey" value="ringSplinterRainWrathBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- +2 Projectile -->
+				<display_value name="dDysenteryRisk" value="2"/>
+				
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingSplinterRainWrathEquipped"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingSplinterRainWrathEquipped"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- ################################ -->
+		<!-- Ring :: Splinter Rain :: Furious -->
+		<item_modifier name="modRingSplinterRainFurious" installable_tags="armorHands" modifier_tags="ringSplinterRain" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSplinterRainFurious"/>
+			<property name="DisplayType" value="modRingSplinterRainFuriousDT"/>
+			<property name="DescriptionKey" value="ringSplinterRainFuriousBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- Attack Speed -->
+				<display_value name="dCureDysentery" value="1.5"/>
+				
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingSplinterRainFuriousEquipped"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingSplinterRainFuriousEquipped"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- #################################### -->
+		<!-- Ring :: Splinter Rain :: Destructive -->
+		<item_modifier name="modRingSplinterRainDestructive" installable_tags="armorHands" modifier_tags="ringSplinterRain" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringSplinterRainDestructive"/>
+			<property name="DisplayType" value="modRingSplinterRainDestructiveDT"/>
+			<property name="DescriptionKey" value="ringSplinterRainDestructiveBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<!-- +4 Projectile -->
+				<display_value name="dDysenteryRisk" value="4"/>
+				
+				<!-- Attack Speed -->
+				<display_value name="dCureDysentery" value="-.5"/>
+				
+				<!-- Damage -->
+				<display_value name="dEntityDamage" value="-.5"/>
+				
+				<!-- Application of Stats -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingSplinterRainDestructiveEquipped"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingSplinterRainDestructiveEquipped"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<!-- ############### -->
+		<!-- Ring :: Storage -->
+		<item_modifier name="modRingStorageT1" installable_tags="armorHands" modifier_tags="ringStorage" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStorage"/>
+			<property name="DisplayType" value="modRingStorageDT"/>
+			<property name="DescriptionKey" value="ringStorageBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="CarryCapacity" operation="base_add" value="1"/>
+				<display_value name="dCarryCapacity" value="1"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStorageT2" installable_tags="armorHands" modifier_tags="ringStorage" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStorage"/>
+			<property name="DisplayType" value="modRingStorageDT"/>
+			<property name="DescriptionKey" value="ringStorageBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="CarryCapacity" operation="base_add" value="2"/>
+				<display_value name="dCarryCapacity" value="2"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStorageT3" installable_tags="armorHands" modifier_tags="ringStorage" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStorage"/>
+			<property name="DisplayType" value="modRingStorageDT"/>
+			<property name="DescriptionKey" value="ringStorageBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="CarryCapacity" operation="base_add" value="3"/>
+				<display_value name="dCarryCapacity" value="3"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStorageT4" installable_tags="armorHands" modifier_tags="ringStorage" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStorage"/>
+			<property name="DisplayType" value="modRingStorageDT"/>
+			<property name="DescriptionKey" value="ringStorageBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="CarryCapacity" operation="base_add" value="4"/>
+				<display_value name="dCarryCapacity" value="4"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStorageT5" installable_tags="armorHands" modifier_tags="ringStorage" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStorage"/>
+			<property name="DisplayType" value="modRingStorageDT"/>
+			<property name="DescriptionKey" value="ringStorageBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="CarryCapacity" operation="base_add" value="5"/>
+				<display_value name="dCarryCapacity" value="5"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="modRingStorageT6" installable_tags="armorHands" modifier_tags="ringStorage" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringStorage"/>
+			<property name="DisplayType" value="modRingStorageDT"/>
+			<property name="DescriptionKey" value="ringStorageBasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<passive_effect name="CarryCapacity" operation="base_add" value="6"/>
+				<display_value name="dCarryCapacity" value="6"/>
+			</effect_group>
+		</item_modifier>
+		
+		
+		<item_modifier name="modRingFishingT1" installable_tags="armorHands" modifier_tags="ringFishing" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringFishing"/>
+			<property name="DisplayType" value="modRingFishingDT"/>
+			<property name="DescriptionKey" value="ringFishingT1BasicDesc"/>
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingGrantFishing"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingGrantFishing"/>
+				
+				<!-- Grant Fishing -->
+				<display_value name="dDysenteryRisk" value="1"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- ################ -->
+		<!-- CRAFTED    RINGS -->
+		<!-- ################ -->
+		
+		<!-- ################## -->
+		<!-- Ring :: Beginnings -->
+		<item_modifier name="modRingBeginningsT1" installable_tags="armorHands" modifier_tags="ringBeginnings" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringBeginnings"/>
+			<property name="DisplayType" value="modRingBeginningsDT"/>
+			<property name="DescriptionKey" value="ringBeginningsT1BasicDesc"/>
+			<property name="EconomicValue" value="750"/> <!-- This ring is Sellable if player wants a method to make dukes by selling rings -->
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffBeginningsT1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffBeginningsT1"/>
+			
+				<display_value name="dEntityDamage" value=".1"/>
+
+				<display_value name="dHealthAmount" value="10"/>
+				
+				<!-- Max Stamina -->
+				<display_value name="dDysenteryRisk" value="10"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- ############## -->
+		<!-- Ring :: Silver -->
+		<item_modifier name="modRingCraftedSilver" installable_tags="armorHands" modifier_tags="ringCraftedSilver" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringCraftedSilver"/>
+			<property name="DisplayType" value="modRingCraftedSilverDT"/>
+			<property name="DescriptionKey" value="ringCraftedSilverBasicDesc"/>
+			<property name="EconomicValue" value="2950"/> <!-- This ring is Sellable if player wants a method to make dukes by selling rings -->
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dHealthAmount" value="5"/>
+				
+				<!-- Passive Effect-->
+				<passive_effect name="HealthMax" operation="base_add" value="5"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="1"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- ############ -->
+		<!-- Ring :: Gold -->
+		<item_modifier name="modRingCraftedGold" installable_tags="armorHands" modifier_tags="ringCraftedGold" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringCraftedGold"/>
+			<property name="DisplayType" value="modRingCraftedGoldDT"/>
+			<property name="DescriptionKey" value="ringCraftedGoldBasicDesc"/>
+			<property name="EconomicValue" value="8500"/> <!-- This ring is Sellable if player wants a method to make dukes by selling rings -->
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".15"/>
+				
+				<!-- Passive Effect-->
+				<passive_effect name="LootQuantity" operation="perc_add" value=".15" tags="dukes"/>
+				
+				<!-- Apply Effect -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingCraftedGold"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingCraftedGold"/>
+			</effect_group>
+		</item_modifier>
+		
+		<!-- ############### -->
+		<!-- Ring :: Diamond -->
+		<item_modifier name="modRingCraftedDiamond" installable_tags="armorHands" modifier_tags="ringCraftedDiamond" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="CustomIcon" value="ringCraftedDiamond"/>
+			<property name="DisplayType" value="modRingCraftedDiamondDT"/>
+			<property name="DescriptionKey" value="ringCraftedDiamondBasicDesc"/>
+			<property name="EconomicValue" value="17500"/> <!-- This ring is Sellable if player wants a method to make dukes by selling rings -->
+			
+			<!-- Ring's Stats -->
+			<effect_group name="Ring_stats">
+				<display_value name="dDysenteryRisk" value=".05"/>
+				<display_value name="dBarteringSellBuy" value=".05"/>
+				
+				<!-- Passive Effect-->
+				<passive_effect name="BarteringBuying" operation="base_add" value=".05"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".05"/>
+				
+				<!-- One Shot Effect -->
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffRingCraftedDiamond"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffRingCraftedDiamond"/>
+			</effect_group>
+		</item_modifier>
+	</append>
+</Config>

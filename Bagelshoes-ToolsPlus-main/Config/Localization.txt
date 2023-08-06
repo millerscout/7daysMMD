@@ -1,0 +1,64 @@
+Key,Source,Context,English
+
+toolCookingPotDouble,items,Item,Sauce Pot
+toolCookingPotDoubleDesc,items,Item,"2nd cooking pot to double productivity."
+
+toolCookingPotTriple,items,Item,Skillet
+toolCookingPotTripleDesc,items,Item,"3rd cooking pot to triple productivity."
+
+toolCookingGrillDouble,items,Item,Medium Grill
+toolCookingGrillDoubleDesc,items,Item,"2nd cooking grill to double productivity."
+
+toolCookingGrillTriple,items,Item,Large Grill
+toolCookingGrillTripleDesc,items,Item,"3rd cooking grill to triple productivity."
+
+toolCookingHotSauce,items,Item,Hot Sauce
+toolCookingHotSauceDesc,items,Item,"A bottle of hot sauce for cooking. Reduces meat required in recipes by 1."
+
+toolBellowsDouble,items,Item,2nd Bellows
+toolBellowsDoubleDesc,items,Item,"2nd bellows to increase smelting speeds."
+
+toolBellowsTriple,items,Item,3rd Bellows
+toolBellowsTripleDesc,items,Item,"3rd bellows to increase smelting speeds."
+
+toolAnvilDouble,items,Item,2nd Anvil
+toolAnvilDoubleDesc,items,Item,"2nd anvil increases forge production speed."
+
+toolAnvilTriple,items,Item,3rd Anvil
+toolAnvilTripleDesc,items,Item,"3rd anvil increases forge production speed."
+
+toolForgeHighCarbonTooling,items,Item,High Carbon Tooling
+toolForgeHighCarbonToolingDesc,items,Item,"Tools for the forge made from high carbon steel. Reduces forge crafting time by 2.5%"
+
+toolBunsenBurner,items,Item,Bunsen Burner
+toolBunsenBurnerDesc,items,Item,"A small table top torch. Speeds up chemistry station production speeds."
+
+resourceSulfur,items,Item,Jar of Sulfur
+resourceSulfurDesc,items,Item,"A resource commonly used in chemical formulas. Speeds up chemistry station production speeds."
+
+toolLimestone,items,Item,Limestone
+toolLimestoneDesc,items,Item,"A common ingredient in cement. Can be placed in a cement mixer to reduce crafting times."
+
+toolPlasticizer,items,Item,Plasticizer
+toolPlasticizerDesc,items,Item,"A compound used to make cement more malleable. Can be placed in a cement mixer to reduce crafting times."
+
+toolAccelerator,items,Item,Accelerator
+toolAcceleratorDesc,items,Item,"A compound used to make cement dry faster. Can be placed in a cement mixer to reduce crafting times."
+
+meleeToolRepairT1ClawHammerDesc,items,Tool,"The claw hammer is great for repairing and upgrading base walls and not bad as a weapon. Reduces workbench crafting time."
+meleeToolSalvageT1WrenchDesc,items,Tool,"Great for disassembling mechanical devices like cars, air conditioners and more. Reduces workbench crafting time."
+meleeToolSalvageT2RatchetDesc,items,Tool,"Great for disassembling mechanical devices like cars, air conditioners and more. Reduces workbench crafting time."
+meleeWpnBladeT1HuntingKnifeDesc,items,Melee,"Great for slashing zombies and gutting animals for meat.\nRegular attacks cause 1 Bleeding Wound and power attacks at least 2. Reduces campfire crafting time."
+meleeWpnSledgeT1IronSledgehammerDesc,items,Melee,"The sledgehammer is one of the best weapons for cracking skulls. Reduces forge crafting time."
+toolBeakerDesc,items,Item,"A precision measurement beaker used in the campfire to unlock recipes. Reduces chemistry station crafting time."
+
+perkAdvancedEngineeringDesc,progression,perk Int,"Engineer advanced items with reduced costs at workstations."
+perkAdvancedEngineeringRank1LongDesc,progression,perk Int,"You are now out of the stone age and an apprentice Engineer!\nGain 15% XP from electrical trap kills.\nCraft glue cheaper."
+perkAdvancedEngineeringRank2LongDesc,progression,perk Int,"The long hours tinkering on projects is starting to pay dividends!\nGain 30% XP from electrical trap kills."
+
+perkMasterChefDesc,progression,perk Str,"Learn how to become a Master Chef! Decrease ingredients needed for your favorite recipes."
+perkMasterChefRank1LongDesc,progression,perk Str,"Cooking is not your thing, but you know some basics.\nUse 20% less of a recipe's main ingredients.\nFind more cooking magazines in loot."
+perkMasterChefRank2LongDesc,progression,perk Str,"Don’t let good food go to waste!\nAdds a chance to find salvageable food in dumpsters."
+perkMasterChefRank3LongDesc,progression,perk Str,"Cooking for an Army?\nUse 40% less of a recipe's main ingredients."
+
+

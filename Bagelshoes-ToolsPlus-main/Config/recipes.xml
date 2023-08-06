@@ -1,0 +1,43 @@
+<config>
+	<append xpath="/recipes/recipe[@craft_tool='toolCookingPot' and @craft_area='campfire']/@tags">,CP,CF</append>
+	<append xpath="/recipes/recipe[@craft_tool='toolCookingGrill' and @craft_area='campfire']/@tags">,GR,CF</append>
+	<append xpath="/recipes/recipe[@craft_tool='toolBeaker' and @craft_area='campfire']/@tags">,BR,CF</append>
+	<append xpath="/recipes/recipe[@craft_tool='toolForgeCrucible']/@tags">,CR</append>
+	<append xpath="/recipes/recipe[@craft_area='workbench']/@tags">,WB</append>
+	<append xpath="/recipes/recipe[@craft_area='chemistryStation']/@tags">,CS</append>
+	<append xpath="/recipes/recipe[@craft_area='cementMixer']/@tags">,CM</append>
+	
+	<setattribute xpath="recipes/recipe[contains(@name,'Shapes')]" name="tags">WB</setattribute>
+	
+	<append xpath="/recipes">
+		<recipe name="toolCookingPot" count="1" craft_time="1">
+			<ingredient name="toolCookingPotDouble" count="1"/>
+		</recipe>
+		<recipe name="toolCookingPot" count="1" craft_time="1">
+			<ingredient name="toolCookingPotTriple" count="1"/>
+		</recipe>
+		
+		<recipe name="toolCookingGrill" count="1" craft_time="1">
+			<ingredient name="toolCookingGrillDouble" count="1"/>
+		</recipe>
+		<recipe name="toolCookingGrill" count="1" craft_time="1">
+			<ingredient name="toolCookingGrillTriple" count="1"/>
+		</recipe>
+	
+		<recipe name="toolBellows" count="1" craft_time="1">
+			<ingredient name="toolBellowsDouble" count="1"/>
+		</recipe>
+		<recipe name="toolBellows" count="1" craft_time="1">
+			<ingredient name="toolBellowsTriple" count="1"/>
+		</recipe>
+		
+		<recipe name="toolAnvil" count="1" craft_time="1">
+			<ingredient name="toolAnvilDouble" count="1"/>
+		</recipe>
+		<recipe name="toolAnvil" count="1" craft_time="1">
+			<ingredient name="toolAnvilTriple" count="1"/>
+		</recipe>
+		
+	</append>
+</config>
+	

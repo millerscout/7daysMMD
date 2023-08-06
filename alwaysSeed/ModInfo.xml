@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="Always_Seed" />
+	<DisplayName value="Harvested plants always drop seed." />
+	<Description value="Harvested plants always drop seed." />
+	<Author value="Pahbi" />
+	<Version value="1.0" />
+	<Website value="" />
+</xml>

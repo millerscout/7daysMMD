@@ -1,0 +1,390 @@
+<configs>
+
+
+<append xpath="/recipes">
+
+<!-- Sizes 1x, 10x, 50x, 250x -->
+	<!-- Types ARROWS, BOLTS, BULLETS, SHELLS/SLUGS, ROCKETS -->
+
+<!-- ******************************************************** 1x ******************************************************** -->
+
+	<!-- ARROWS -->
+	<recipe name="1x Stone Arrow Parts" count="1">
+		<ingredient name="ammoArrowStone" count="1"/>
+	</recipe>
+	<recipe name="1x Iron Arrow Parts" count="1">
+		<ingredient name="ammoArrowIron" count="1"/>
+	</recipe>
+	<recipe name="1x Steel Arrow Parts" count="1">
+		<ingredient name="ammoArrowSteelAP" count="1"/>
+	</recipe>
+	<recipe name="1x Flaming Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowFlaming" count="1"/>
+	</recipe>
+	<recipe name="1x Exploding Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowExploding" count="1"/>
+	</recipe>
+
+	<!-- BOLTS -->
+	<recipe name="1x Stone Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltStone" count="1"/>
+	</recipe>
+	<recipe name="1x Iron Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltIron" count="1"/>
+	</recipe>
+	<recipe name="1x Steel Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
+	</recipe>
+	<recipe name="1x Flaming Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltFlaming" count="1"/>
+	</recipe>
+	<recipe name="1x Exploding Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltExploding" count="1"/>
+	</recipe>
+	
+	<!-- BULLETS -->
+	<recipe name="1x .44 Magnum Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletBall" count="1"/>
+	</recipe>
+
+	<recipe name="1x .44 Magnum AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletAP" count="1"/>
+	</recipe>
+
+	<recipe name="1x .44 Magnum HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletHP" count="1"/>
+	</recipe>
+
+	<recipe name="1x 7.62mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletBall" count="1"/>
+	</recipe>
+
+	<recipe name="1x 7.62mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletAP" count="1"/>
+	</recipe>
+
+	<recipe name="1x 7.62mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletHP" count="1"/>
+	</recipe>
+
+	<recipe name="1x 9mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletBall" count="1"/>
+	</recipe>
+
+	<recipe name="1x 9mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletAP" count="1"/>
+	</recipe>
+
+	<recipe name="1x 9mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletHP" count="1"/>
+	</recipe>
+
+	<!-- SHELLS/SLUGS -->
+	<recipe name="1x Shotgun Shell Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunShell" count="1"/>
+	</recipe>
+
+	<recipe name="1x Shotgun AP Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunSlug" count="1"/>
+	</recipe>
+
+	<recipe name="1x Shotgun Breaching Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunBreachingSlug" count="1"/>
+	</recipe>
+
+	<!-- ROCKETS -->
+	<recipe name="1x Rocket Frag Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketFrag" count="1"/>
+	</recipe>
+
+	<recipe name="1x Rocket HE Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketHE" count="1"/>
+	</recipe>
+
+<!-- ******************************************************** 10x ******************************************************** -->
+
+	<!-- ARROWS -->
+	<recipe name="10x Stone Arrow Parts" count="1">
+		<ingredient name="ammoArrowStone" count="10"/>
+	</recipe>
+	<recipe name="10x Iron Arrow Parts" count="1">
+		<ingredient name="ammoArrowIron" count="10"/>
+	</recipe>
+	<recipe name="10x Steel Arrow Parts" count="1">
+		<ingredient name="ammoArrowSteelAP" count="10"/>
+	</recipe>
+	<recipe name="10x Flaming Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowFlaming" count="10"/>
+	</recipe>
+	<recipe name="10x Exploding Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowExploding" count="10"/>
+	</recipe>
+
+	<!-- BOLTS -->
+	<recipe name="10x Stone Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltStone" count="10"/>
+	</recipe>
+	<recipe name="10x Iron Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltIron" count="10"/>
+	</recipe>
+	<recipe name="10x Steel Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltSteelAP" count="10"/>
+	</recipe>
+	<recipe name="10x Flaming Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltFlaming" count="10"/>
+	</recipe>
+	<recipe name="10x Exploding Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltExploding" count="10"/>
+	</recipe>
+	
+	<!-- BULLETS -->
+	<recipe name="10x .44 Magnum Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletBall" count="10"/>
+	</recipe>
+
+	<recipe name="10x .44 Magnum AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletAP" count="10"/>
+	</recipe>
+
+	<recipe name="10x .44 Magnum HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletHP" count="10"/>
+	</recipe>
+
+	<recipe name="10x 7.62mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletBall" count="10"/>
+	</recipe>
+
+	<recipe name="10x 7.62mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletAP" count="10"/>
+	</recipe>
+
+	<recipe name="10x 7.62mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletHP" count="10"/>
+	</recipe>
+
+	<recipe name="10x 9mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletBall" count="10"/>
+	</recipe>
+
+	<recipe name="10x 9mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletAP" count="10"/>
+	</recipe>
+
+	<recipe name="10x 9mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletHP" count="10"/>
+	</recipe>
+
+	<!-- SHELLS/SLUGS -->
+	<recipe name="10x Shotgun Shell Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunShell" count="10"/>
+	</recipe>
+
+	<recipe name="10x Shotgun AP Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunSlug" count="10"/>
+	</recipe>
+
+	<recipe name="10x Shotgun Breaching Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunBreachingSlug" count="10"/>
+	</recipe>
+
+	<!-- ROCKETS -->
+	<recipe name="10x Rocket Frag Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketFrag" count="10"/>
+	</recipe>
+
+	<recipe name="10x Rocket HE Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketHE" count="10"/>
+	</recipe>
+	
+<!-- ******************************************************** 50x ******************************************************** -->
+
+	<!-- ARROWS -->
+	<recipe name="50x Stone Arrow Parts" count="1">
+		<ingredient name="ammoArrowStone" count="50"/>
+	</recipe>
+	<recipe name="50x Iron Arrow Parts" count="1">
+		<ingredient name="ammoArrowIron" count="50"/>
+	</recipe>
+	<recipe name="50x Steel Arrow Parts" count="1">
+		<ingredient name="ammoArrowSteelAP" count="50"/>
+	</recipe>
+	<recipe name="50x Flaming Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowFlaming" count="50"/>
+	</recipe>
+	<recipe name="50x Exploding Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowExploding" count="50"/>
+	</recipe>
+
+	<!-- BOLTS -->
+	<recipe name="50x Stone Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltStone" count="50"/>
+	</recipe>
+	<recipe name="50x Iron Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltIron" count="50"/>
+	</recipe>
+	<recipe name="50x Steel Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltSteelAP" count="50"/>
+	</recipe>
+	<recipe name="50x Flaming Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltFlaming" count="50"/>
+	</recipe>
+	<recipe name="50x Exploding Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltExploding" count="50"/>
+	</recipe>
+	
+	<!-- BULLETS -->
+	<recipe name="50x .44 Magnum Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletBall" count="50"/>
+	</recipe>
+
+	<recipe name="50x .44 Magnum AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletAP" count="50"/>
+	</recipe>
+
+	<recipe name="50x .44 Magnum HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletHP" count="50"/>
+	</recipe>
+
+	<recipe name="50x 7.62mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletBall" count="50"/>
+	</recipe>
+
+	<recipe name="50x 7.62mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletAP" count="50"/>
+	</recipe>
+
+	<recipe name="50x 7.62mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletHP" count="50"/>
+	</recipe>
+
+	<recipe name="50x 9mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletBall" count="50"/>
+	</recipe>
+
+	<recipe name="50x 9mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletAP" count="50"/>
+	</recipe>
+
+	<recipe name="50x 9mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletHP" count="50"/>
+	</recipe>
+
+	<!-- SHELLS/SLUGS -->
+	<recipe name="50x Shotgun Shell Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunShell" count="50"/>
+	</recipe>
+
+	<recipe name="50x Shotgun AP Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunSlug" count="50"/>
+	</recipe>
+
+	<recipe name="50x Shotgun Breaching Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunBreachingSlug" count="50"/>
+	</recipe>
+
+	<!-- ROCKETS -->
+	<recipe name="50x Rocket Frag Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketFrag" count="50"/>
+	</recipe>
+
+	<recipe name="50x Rocket HE Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketHE" count="50"/>
+	</recipe>
+	
+<!-- ******************************************************** 250x ******************************************************** -->
+
+	<!-- ARROWS -->
+	<recipe name="250x Stone Arrow Parts" count="1">
+		<ingredient name="ammoArrowStone" count="250"/>
+	</recipe>
+	<recipe name="250x Iron Arrow Parts" count="1">
+		<ingredient name="ammoArrowIron" count="250"/>
+	</recipe>
+	<recipe name="250x Steel Arrow Parts" count="1">
+		<ingredient name="ammoArrowSteelAP" count="250"/>
+	</recipe>
+	<recipe name="250x Flaming Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowFlaming" count="250"/>
+	</recipe>
+	<recipe name="250x Exploding Arrow Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoArrowExploding" count="250"/>
+	</recipe>
+
+	<!-- BOLTS -->
+	<recipe name="250x Stone Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltStone" count="250"/>
+	</recipe>
+	<recipe name="250x Iron Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltIron" count="250"/>
+	</recipe>
+	<recipe name="250x Steel Crossbow Bolt Parts" count="1">
+		<ingredient name="ammoCrossbowBoltSteelAP" count="250"/>
+	</recipe>
+	<recipe name="250x Flaming Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltFlaming" count="250"/>
+	</recipe>
+	<recipe name="250x Exploding Crossbow Bolt Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoCrossbowBoltExploding" count="250"/>
+	</recipe>
+	
+	<!-- BULLETS -->
+	<recipe name="250x .44 Magnum Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletBall" count="250"/>
+	</recipe>
+
+	<recipe name="250x .44 Magnum AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletAP" count="250"/>
+	</recipe>
+
+	<recipe name="250x .44 Magnum HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo44MagnumBulletHP" count="250"/>
+	</recipe>
+
+	<recipe name="250x 7.62mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletBall" count="250"/>
+	</recipe>
+
+	<recipe name="250x 7.62mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletAP" count="250"/>
+	</recipe>
+
+	<recipe name="250x 7.62mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo762mmBulletHP" count="250"/>
+	</recipe>
+
+	<recipe name="250x 9mm Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletBall" count="250"/>
+	</recipe>
+
+	<recipe name="250x 9mm AP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletAP" count="250"/>
+	</recipe>
+
+	<recipe name="250x 9mm HP Ammo Parts" count="1" craft_area="workbench">
+		<ingredient name="ammo9mmBulletHP" count="250"/>
+	</recipe>
+
+	<!-- SHELLS/SLUGS -->
+	<recipe name="250x Shotgun Shell Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunShell" count="250"/>
+	</recipe>
+
+	<recipe name="250x Shotgun AP Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunSlug" count="250"/>
+	</recipe>
+
+	<recipe name="250x Shotgun Breaching Slug Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoShotgunBreachingSlug" count="250"/>
+	</recipe>
+
+	<!-- ROCKETS -->
+	<recipe name="250x Rocket Frag Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketFrag" count="250"/>
+	</recipe>
+
+	<recipe name="250x Rocket HE Parts" count="1" craft_area="workbench">
+		<ingredient name="ammoRocketHE" count="250"/>
+	</recipe>
+	
+</append>
+</configs>

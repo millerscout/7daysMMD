@@ -1,0 +1,5 @@
+<configs>
+	<!-- Default Living off The Land perk values are 1,1,2 -->
+	<!-- Set new values to increase harvest yields -->
+	<set xpath =	"/progression/perks/perk[@name='perkLivingOffTheLand']/effect_group/passive_effect[@name='HarvestCount']/@value">2,3,4</set>
+</configs>

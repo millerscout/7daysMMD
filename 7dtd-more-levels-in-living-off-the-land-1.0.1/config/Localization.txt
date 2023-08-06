@@ -1,0 +1,7 @@
+Key,Source,Context,Changes,English,French
+
+perkLivingOffTheLandRank4Desc,progression,perk For,,Farmer,Fermier
+perkLivingOffTheLandRank4LongDesc,progression,perk For,,Further Increase the harvest of wild or planted crops by 2 for a total increase of 6. Also increase the amount of seeds randomly harvested by 1.,,Augmente la récolte des éléments dans la nature ou dans les cultures de 2 pour une augmentation totale de 6. Augmente également la quantité de graines récoltées aléatoirement de 1.
+
+perkLivingOffTheLandRank5Desc,progression,perk For,,Farmer,Fermier
+perkLivingOffTheLandRank5LongDesc,progression,perk For,,Further Increase the harvest of wild or planted crops by 3 for a total increase of 9. Also increase the amount of seeds randomly harvested by 2.,,Augmente la récolte des éléments dans la nature ou dans les cultures de 3 pour une augmentation totale de 9. Augmente également la quantité de graines récoltées aléatoirement de 2.

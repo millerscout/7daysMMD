@@ -1,0 +1,1598 @@
+<Config>
+	<!-- Add custom Vars -->
+	<append xpath="/buffs/buff[@name='buffPerkAbilityUpdate']">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffHeadHunterDuration" operation="set" value="15"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffHeadHunterStackEffect" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffHeadHunterStackDisplay" operation="set" value="0"/>
+			
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffFortifyDuration" operation="set" value="6"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffFortifyCD" operation="set" value="30"/>
+			
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffLifeEssenceRecover" operation="set" value="5"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffLifeEssenceRecoverCD" operation="set" value="15"/>
+			
+			<!-- <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="buffStealthDurationDE" operation="set" value="8"/> -->
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="buffStealthCDDurationDE" operation="set" value="20"/>
+			
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffThunderstruckDuration" operation="set" value="0"/>
+			
+			
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="buffMendingDurationDE" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffMendingCooldownDE" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffMendingCooldown" operation="set" value="0"/>
+		</effect_group>
+	</append>
+	
+	
+	<append xpath="/buffs">
+		<!-- ############## -->
+		<!-- Ring :: Scorch -->
+		<buff name="buffScorch" name_key="buffScorchName" description_key="buffScorchDesc" showonhud="true" icon="ui_game_symbol_near_death_trauma" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="varScorchDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varScorchDuration" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varScorchDuration" operation="add" value="-1"/>
+				
+				<!-- Particle & FX -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="5"/>
+				
+				<!-- Effect of being Scorched -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="-10"/>
+				
+				<!-- Cleanup Handling :: Scorch -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffScorch">
+					<requirement name="CVarCompare" cvar="varScorchDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varScorchDuration" operation="set" value="0"/>
+				
+				<!-- Cleanup Handling :: buffBurningElement & Visual Effect -->
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+
+
+		<!-- ############# -->
+		<!-- Ring :: Greed -->
+		<buff name="buffGreedT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Effect -->
+				<passive_effect name="LockPickTime" operation="perc_add" value="-.2"/>
+			</effect_group>
+		</buff>
+		<buff name="buffGreedT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Effect -->
+				<passive_effect name="LockPickTime" operation="perc_add" value="-.25"/>
+			</effect_group>
+		</buff>
+		<buff name="buffGreedT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Effect -->
+				<passive_effect name="LockPickTime" operation="perc_add" value="-.3"/>
+			</effect_group>
+		</buff>
+
+		
+		<!-- ############# -->
+		<!-- Ring :: Agony -->
+		<buff name="buffAgonyT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Effect -->
+				<passive_effect name="HealthMax" operation="base_add" value="-15"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05"/>
+			</effect_group>
+		</buff>
+		<buff name="buffAgonyT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Effect -->
+				<passive_effect name="HealthMax" operation="base_add" value="-25"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".3"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".1"/>
+			</effect_group>
+		</buff>
+		<buff name="buffAgonyT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Effect -->
+				<passive_effect name="HealthMax" operation="base_add" value="-35"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".35"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".15"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".15"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Inspiration -->
+		<buff name="buffInspiredT1" name_key="buffInspiredName" description_key="buffInspiredDesc" icon="ui_game_symbol_talk" icon_color="0,255,0" icon_blink="false" hidden="false">
+			<stack_type value="replace"/>
+			<duration value="120"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" value="10"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05"/>
+			</effect_group>
+		</buff>
+		<buff name="buffInspiredT2" name_key="buffInspiredName" description_key="buffInspiredDesc" icon="ui_game_symbol_talk" icon_color="0,255,0" icon_blink="false" hidden="false">
+			<stack_type value="replace"/>
+			<duration value="120"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" value="15"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".1"/>
+			</effect_group>
+		</buff>
+		<buff name="buffInspiredT3" name_key="buffInspiredName" description_key="buffInspiredDesc" icon="ui_game_symbol_talk" icon_color="0,255,0" icon_blink="false" hidden="false">
+			<stack_type value="replace"/>
+			<duration value="120"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" value="20"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".15"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".15"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".15"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################# -->
+		<!-- Ring :: Laborlove -->
+			<!-- Additional Crop Harvest -->
+		<buff name="buffLaborloveT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" value="1" tags="cropHarvest,wildCropsHarvest"/>
+			</effect_group>
+		</buff>
+			<!-- Harvest Quantity -->
+		<buff name="buffLaborloveT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="butcherHarvest"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="oreWoodHarvest"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="salvageHarvest"/>
+			</effect_group>
+		</buff>
+			<!-- One-shot ORE -->
+		<buff name="buffLaborloveT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+					<passive_effect name="BlockDamage" operation="base_add" value="2500" tags="ore"/>
+			</effect_group>
+		</buff>
+			<!-- One-shot TREE -->
+		<buff name="buffLaborloveT4" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+					<!-- <passive_effect name="BlockDamage" operation="base_add" value="2500" tags="tree"/> -->
+					<passive_effect name="DamageModifier" operation="base_add" value="2500" tags="wood"/>
+			</effect_group>
+		</buff>
+			<!-- Additional Quest Reward -->
+		<buff name="buffLaborloveT5" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="QuestRewardChoiceCount" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+			<!-- Craft Speed -->
+		<buff name="buffLaborloveT6" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.25"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Twin Terror -->
+		<buff name="buffTwinTerrorT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="MagazineSize" operation="base_add" value="1" tags="perkArchery"/>
+				<passive_effect name="BurstRoundCount" operation="base_add" value="1" tags="perkArchery"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.25" tags="perkArchery"/>
+			</effect_group>
+		</buff>
+		<buff name="buffTwinTerrorT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="MagazineSize" operation="base_add" value="1" tags="perkArchery"/>
+				<passive_effect name="BurstRoundCount" operation="base_add" value="1" tags="perkArchery"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.2" tags="perkArchery"/>
+			</effect_group>
+		</buff>
+		<buff name="buffTwinTerrorT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="MagazineSize" operation="base_add" value="1" tags="perkArchery"/>
+				<passive_effect name="BurstRoundCount" operation="base_add" value="1" tags="perkArchery"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15" tags="perkArchery"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Head Hunter -->
+		<buff name="buffHeadHunterItemExists" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group name="Ring_stats">
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="self" buff="buffHeadHunterDuration"/>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="self" buff="buffHeadHunterEffect"/>
+			</effect_group>
+		</buff>
+		<buff name="buffHeadHunterDuration" name_key="buffHeadHunterName" description_key="buffHeadHunterDesc" showonhud="true" icon="ui_game_symbol_near_death_trauma" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="15"/>
+			<display_value value=".buffHeadHunterDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffHeadHunterDuration" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffHeadHunterDuration" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffHeadHunterDuration" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHeadHunterDuration">
+					<requirement name="CVarCompare" cvar=".buffHeadHunterDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffHeadHunterDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffHeadHunterEffect"/>
+			</effect_group>
+		</buff>
+		<buff name="buffHeadHunterEffect" name_key="buffHeadHunterName" description_key="buffHeadHunterDesc" icon="ui_game_symbol_near_death_trauma" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="25"/>
+			<display_value value=".buffHeadHunterStackDisplay"/>
+			<display_value_key value="{0}"/>
+
+			<effect_group>
+				<!-- Stack -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffHeadHunterStackEffect" operation="set" value=".05"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffHeadHunterStackEffect" operation="add" value=".05"/>
+
+				<!-- Display -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffHeadHunterStackDisplay" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffHeadHunterStackDisplay" operation="add" value="1"/>
+
+				<!-- Effect -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="@.buffHeadHunterStackEffect"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="@.buffHeadHunterStackEffect"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="@.buffHeadHunterStackEffect"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="@.buffHeadHunterStackEffect"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="@.buffHeadHunterStackEffect"/>
+				
+				<!-- Cleanup -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffHeadHunterStackEffect" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffHeadHunterStackDisplay" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+	
+	
+		<!-- ################ -->
+		<!-- Ring :: Guardius -->
+		<buff name="buffFortify" name_key="buffFortifyName" description_key="buffFortifyDesc" showonhud="true" icon="ui_game_symbol_armor_iron" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="6"/>
+			<display_value value=".buffFortifyDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffFortifyDuration" operation="set" value="6"/>
+					<!-- <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffFortifyDuration" operation="set" value="6"/> -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffFortifyDuration" operation="add" value="-1"/>
+				
+				<!-- Effect -->
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".5"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffFortify">
+					<requirement name="CVarCompare" cvar=".buffFortifyDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffFortifyDuration" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		<buff name="buffFortifyCD" name_key="buffFortifyNameCD" description_key="buffFortifyDescCD" showonhud="true" icon="ui_game_symbol_armor_iron" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="30"/>
+			<display_value value=".buffFortifyCD"/>
+			<display_value_format value="time"/>
+
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffFortifyCD" operation="set" value="30"/>
+					<!-- <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffFortifyCD" operation="set" value="30"/> -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffFortifyCD" operation="add" value="-1"/>
+
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffFortifyCD" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+	
+	
+		<!-- #################### -->
+		<!-- Ring :: Life Essence -->
+		<buff name="buffRingLifeEssenceT1Equipped" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<!-- Exists to determin what healing should be applied in buffLifeEssenceRecover -->
+		</buff>
+		<buff name="buffRingLifeEssenceT2Equipped" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<!-- Exists to determin what healing should be applied in buffLifeEssenceRecover -->
+		</buff>
+		<buff name="buffRingLifeEssenceT3Equipped" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<!-- Exists to determin what healing should be applied in buffLifeEssenceRecover -->
+		</buff>
+		
+		<buff name="buffLifeEssenceRecover" name_key="buffLifeEssenceRecoverName" description_key="buffLifeEssenceRecoverDesc" showonhud="true" icon="ui_game_symbol_healing_factor" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="5"/>
+			<display_value value=".buffLifeEssenceRecover"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffLifeEssenceRecover" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffLifeEssenceRecover" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffLifeEssenceRecover" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="t1_healing">
+				<requirement name="HasBuff" buff="buffRingLifeEssenceT1Equipped"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5"/>
+			</effect_group>
+			<effect_group name="t2_healing">
+				<requirement name="HasBuff" buff="buffRingLifeEssenceT2Equipped"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="7"/>
+			</effect_group>
+			<effect_group name="t3_healing">
+				<requirement name="HasBuff" buff="buffRingLifeEssenceT3Equipped"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="10"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffLifeEssenceRecoverCD" name_key="buffLifeEssenceRecoverName" description_key="buffLifeEssenceRecoverDesc" showonhud="true" icon="ui_game_symbol_healing_factor" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="15"/>
+			<display_value value=".buffLifeEssenceRecoverCD"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffLifeEssenceRecoverCD" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffLifeEssenceRecoverCD" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffLifeEssenceRecoverCD" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		
+		
+		<!-- ############### -->
+		<!-- Ring :: Stealth -->
+		<buff name="buffRingStealth" name_key="buffRingStealthName" description_key="buffRingStealthDesc" showonhud="true" icon="uiStealth" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffStealthDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- NOTE: Some things are repeated here, just incase -->
+				
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffStealthDuration" operation="set" value="@buffStealthDurationDE"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffStealthDuration" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRingStealth">
+					<requirement name="CVarCompare" cvar=".buffStealthDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffStealthDuration" operation="set" value="0"/>
+				
+				<!-- Buff's Effect -->
+				<passive_effect name="LightMultiplier" operation="perc_add" value="-6.5"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-6.5"/>
+				<passive_effect name="EnemySearchDuration" operation="perc_add" value="-5.5"/>
+				
+				<!-- Break Cloak of Shadows upon attacking an enemy -->
+				<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" buff="buffStealth"/>
+				<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="buffStealth"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffStealthDuration" operation="set" value="0"/>
+				
+				<!-- Apply Cooldown -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingStealthCD"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingStealthCD" name_key="buffRingStealthCDName" description_key="buffRingStealthCDDesc" showonhud="true" icon="uiStealth" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="30"/>
+			<display_value value=".buffStealthCDDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffStealthCDDuration" operation="set" value="@buffStealthCDDurationDE"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffStealthCDDuration" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRingStealthCD">
+					<requirement name="CVarCompare" cvar=".buffStealthCDDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffStealthCDDuration" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################ -->
+		<!-- Ring :: Assassin -->
+		<buff name="buffAssassinT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- referencing Parkour perk: 1m Jump = .39 in perc_add value -->
+				<passive_effect name="JumpStrength" operation="perc_add" value=".39"/>
+				
+				<passive_effect name="LightMultiplier" operation="perc_add" value="-.2"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.2"/>
+				
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".3"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5">
+					<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				</passive_effect>
+				<passive_effect name="DamageBonus" operation="base_add" value=".5">
+					<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+		<buff name="buffAssassinT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- referencing Parkour perk: 1m Jump = .39 in perc_add value -->
+				<passive_effect name="JumpStrength" operation="perc_add" value=".39"/>
+				
+				<passive_effect name="LightMultiplier" operation="perc_add" value="-.25"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.25"/>
+				
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".4"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value=".6">
+					<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				</passive_effect>
+				<passive_effect name="DamageBonus" operation="base_add" value=".6">
+					<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+		<buff name="buffAssassinT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- referencing Parkour perk: 1m Jump = .39 in perc_add value -->
+				<passive_effect name="JumpStrength" operation="perc_add" value=".39"/>
+				
+				<passive_effect name="LightMultiplier" operation="perc_add" value="-.3"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.3"/>
+				
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".5"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value=".7">
+					<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				</passive_effect>
+				<passive_effect name="DamageBonus" operation="base_add" value=".7">
+					<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################ -->
+		<!-- Ring :: Predator -->
+		<buff name="buffPredatorT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>
+			
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".05"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05"/>
+			
+				<passive_effect name="RunSpeed" operation="perc_add" value=".05"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".05"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".05"/>
+			</effect_group>
+		</buff>
+		<buff name="buffPredatorT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".07"/>
+			
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".07"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".07"/>
+			
+				<passive_effect name="RunSpeed" operation="perc_add" value=".07"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".07"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".07"/>
+			</effect_group>
+		</buff>
+		<buff name="buffPredatorT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+			
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".1"/>
+			
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".1"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".1"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ##################### -->
+		<!-- Ring :: Thunderstruck -->
+			<!-- Proc Chance -->
+		<buff name="buffThunderstruckProcChance" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="otherAOE" range="3" target_tags="zombie,animal" buff="buffShockThunderstruck">
+					<requirement name="!HasBuff" buff="buffThunderstruckCD"/>
+					<!-- For some reason Spear Impact will not work with code below, while archery still works -->
+					<!-- <requirement name="ItemHasTags" tags="perkArchery,perkJavelinMaster,thrownWeapon"/> -->
+				</triggered_effect>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="buffThunderstruckCD">
+					<requirement name="!HasBuff" buff="buffThunderstruckCD"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+			<!-- Shock & Damage Effect -->
+		<buff name="buffShockThunderstruck" name_key="buffShockThunderstruckName" description_key="buffShockThunderstruckDesc" showonhud="true" icon="ui_game_symbol_electric_power" icon_color="255,0,0">
+			<damage_type value="electrical"/>
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<update_rate value="1"/>
+			<display_value value=".buffThunderstruckDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Buff Handling-->
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffShocked"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffThunderstruckDuration" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffThunderstruckDuration" operation="set" value="2"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffThunderstruckDuration" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffShockThunderstruck">
+					<requirement name="CVarCompare" cvar="$buffThunderstruckDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffThunderstruckDuration" operation="set" value="0"/>
+				
+				<!-- Shock's Effect -->
+				<passive_effect name="HealthChangeOT" operation="base_add" value="-10"/>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,0" duration="0,3"/>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,0" duration="0,3"/>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,0" duration="0,3"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,0" duration="0,3"/>
+
+				<!-- Visual FX -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact"/>
+			</effect_group>
+		</buff>
+			<!-- Cooldown -->
+		<buff name="buffThunderstruckCD" name_key="buffThunderstruckCDName" description_key="buffThunderstruckCDDesc" showonhud="true" icon="ui_game_symbol_electric_power" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="5"/>
+			<display_value value=".varThunderstruckCooldown"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".varThunderstruckCooldown" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varThunderstruckCooldown" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffThunderstruckCD">
+					<requirement name="CVarCompare" cvar=".varThunderstruckCooldown" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".varThunderstruckCooldown" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ################# -->
+		<!-- Ring :: Mechanism -->
+		<buff name="buffMechanismT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="JunkTurretActiveCount" operation="base_add" value="1"/>
+				<passive_effect name="JunkTurretActiveRange" operation="base_add" value="10"/>
+			</effect_group>
+		</buff>
+		<buff name="buffMechanismT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".15" tags="perkTurrets"/>
+				
+				<!-- +15% for BOTH (note how Sledge is .05 for ~15%, reference: "perkTechJunkie7Hydraulics")-->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".05" tags="turretMelee,deployed"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".15" tags="turretRanged,deployed"/>
+			</effect_group>
+		</buff>
+		<buff name="buffMechanismT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="perkTurrets"/>
+				
+				<!-- -30% for BOTH (note how Sledge is .1 for ~30%, reference: "perkTechJunkie7Hydraulics")-->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.1" tags="turretMelee,deployed"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.3" tags="turretRanged,deployed"/>
+			</effect_group>
+		</buff>
+		<buff name="buffMechanismT4" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.25" tags="perkTurrets"/>
+				
+				<!-- +35% for BOTH (note how Sledge is .12 for ~35%, reference: "perkTechJunkie7Hydraulics")-->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".12" tags="turretMelee,deployed"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".35" tags="turretRanged,deployed"/>
+				
+				<passive_effect name="MagazineSize" operation="base_add" value="50" tags="perkTurrets">
+					<requirement name="ItemHasTags" tags="turretRanged"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+		<buff name="buffMechanismT5" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".15" tags="perkTurrets"/>
+				
+				<!-- +10% (reference: "perkTechJunkie7Hydraulics")-->
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".033" tags="turretMelee,deployed"/>
+				
+				<!-- DOESNT WORK
+				<passive_effect name="MaxRange" operation="base_add" value="4" tags="turretMelee,deployed">
+					<requirement name="ItemHasTags" tags="turretMelee"/>
+				</passive_effect>
+				-->
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5">
+					<requirement name="HoldingItemHasTags" tags="turretMelee"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+	
+		<!-- ############### -->
+		<!-- Ring :: Mending -->
+		<buff name="buffMendingItemExists" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Angelic Aura is equipped. -->
+			</effect_group>
+		</buff>
+		<buff name="buffMending" name_key="buffMendingName" description_key="buffMendingDesc" showonhud="true" icon="ui_game_symbol_healing_factor" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="30"/>
+			<display_value value=".buffMendingDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffMendingDuration" operation="set" value="@buffMendingDurationDE"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffMendingDuration" operation="add" value="-1"/>
+				
+				<!-- Effect -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="2"/>
+				
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$armHurtCounter" operation="multiply" value=".1">
+					<requirement name="CVarCompare" cvar="$armHurtCounter" operation="GTE" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$legHurtCounter" operation="multiply" value=".1">
+					<requirement name="CVarCompare" cvar="$legHurtCounter" operation="GTE" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$abrasionCounter" operation="multiply" value=".1">
+					<requirement name="CVarCompare" cvar="$abrasionCounter" operation="GTE" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$fatiguedCounter" operation="multiply" value=".1">
+					<requirement name="CVarCompare" cvar="$fatiguedCounter" operation="GTE" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$lacerationCounter" operation="multiply" value=".1">
+					<requirement name="CVarCompare" cvar="$lacerationCounter" operation="GTE" value="2"/>
+				</triggered_effect>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffMendingDuration" operation="set" value="0"/>
+				
+				<!-- Apply Cooldown -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffMendingCD"/>
+			</effect_group>
+		</buff>
+		<!-- <buff name="buffMendingCD" name_key="buffMendingName" description_key="buffMendingDesc" showonhud="true" icon="ui_game_symbol_healing_factor" icon_color="255,0,0"> -->
+		<buff name="buffMendingCD" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<display_value value=".buffMendingCooldown"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffMendingCooldown" operation="set" value="@.buffMendingCooldownDE"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffMendingCooldown" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffMendingCooldown" operation="set" value="0"/>
+				
+				<!-- Recycle Buff -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffMending">
+					<requirement name="HasBuff" buff="buffMendingItemExists"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################## -->
+		<!-- Ring :: Beginnings -->
+		<buff name="buffBeginningsT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+
+				<passive_effect name="HealthMax" operation="base_add" value="10"/>
+				
+				<passive_effect name="StaminaMax" operation="base_add" value="10"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- #################### -->
+		<!-- Ring :: Face Breaker -->
+			<!-- Power Attack -->
+		<buff name="buffFaceBreakerT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".15"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="1.5" tags="secondary"/>
+			</effect_group>
+		</buff>
+			<!-- Damage % Chance -->
+		<buff name="buffFaceBreakerT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".15"/>
+				
+				<!-- 25% Chance for +75% Damage -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="buffFaceBreaker75DamageProc">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" target="self" buff="buffFaceBreaker75DamageProc">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				</triggered_effect>
+				<!-- 50% Chance for +50% Damage -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="buffFaceBreaker50DamageProc">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" target="self" buff="buffFaceBreaker50DamageProc">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+				<!-- 75% Chance for +25% Damage -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="buffFaceBreaker25DamageProc">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" target="self" buff="buffFaceBreaker25DamageProc">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+				</triggered_effect>
+				
+				<!-- DOESNT WORK -->
+				<!--
+				<passive_effect name="EntityDamage" operation="perc_add" value="3" tags="perkBrawler">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="100"/>
+				</passive_effect>
+				-->
+			</effect_group>
+		</buff>
+		<buff name="buffFaceBreaker75DamageProc" hidden="true"> <!--showonhud="true" icon="ui_game_symbol_boxer" icon_color="150,100,60">-->
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".75">
+					<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffFaceBreaker75DamageProc"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="self" buff="buffFaceBreaker75DamageProc"/>
+			</effect_group>
+		</buff>
+		<buff name="buffFaceBreaker50DamageProc" hidden="true"> <!--showonhud="true" icon="ui_game_symbol_boxer" icon_color="150,100,60">-->
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5">
+					<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffFaceBreaker50DamageProc"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="self" buff="buffFaceBreaker50DamageProc"/>
+			</effect_group>
+		</buff>
+		<buff name="buffFaceBreaker25DamageProc" hidden="true"> <!--showonhud="true" icon="ui_game_symbol_boxer" icon_color="150,100,60">-->
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25">
+					<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffFaceBreaker25DamageProc"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="self" buff="buffFaceBreaker25DamageProc"/>
+			</effect_group>
+		</buff>
+			<!-- Force -->
+		<buff name="buffFaceBreakerT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".15"/>
+				
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="100"/><!-- just knockback -->
+			</effect_group>
+		</buff>
+	
+	
+		<!-- ################### -->
+		<!-- Ring :: Dragon Claw -->
+		<buff name="buffEquippedDragonClaw" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffDragonClawCooldown"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="3" target_tags="zombie,animal" buff="debuffDragonClawBleed"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="self" buff="buffDragonClawCooldown"/>
+			</effect_group>
+		</buff>
+		<buff name="buffDragonClawCooldown" name_key="buffDragonClawCooldownName" description_key="buffDragonClawCooldownDesc" icon="ui_dragon_claw" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="12"/>
+			<display_value value=".varDragonClawCooldown"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".varDragonClawCooldown" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varDragonClawCooldown" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".varDragonClawCooldown" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		<buff name="debuffDragonClawBleed" name_key="buffDragonClawBleedName" icon="ui_dragon_claw" icon_color="255,0,0">
+			<damage_type value="bloodloss"/>
+			<damage_source value="Internal"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="varDragonClawBleedDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Bleed Duration -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varDragonClawBleedDuration" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="varDragonClawBleedDuration" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varDragonClawBleedDuration" operation="add" value="-1"/>
+				
+				<!-- Effect of Buff -->
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="8"/>
+				
+				<!-- Cleanup -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDragonClawBleed">
+					<requirement name="CVarCompare" cvar="varDragonClawBleedDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varDragonClawBleedDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffDragonClawBleed"/>
+				
+				<!-- Visual -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_impact_metal_on_organic" local_offset="0,.25,0" parent_transform="Hips"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_impact_metal_on_organic"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_impact_metal_on_organic"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- #################### -->
+		<!-- Ring :: Dragon Flame -->
+		<buff name="buffEquippedDragonFlame" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffDragonFlameCooldown"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="3" target_tags="zombie,animal" buff="debuffDragonFlameBurn"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="self" buff="buffDragonFlameCooldown"/>
+			</effect_group>
+		</buff>
+		<buff name="buffDragonFlameCooldown" name_key="buffDragonFlameCooldownName" description_key="buffDragonFlameCooldownDesc" icon="ui_dragon_flame" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="12"/>
+			<display_value value=".varDragonFlameCooldown"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".varDragonFlameCooldown" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varDragonFlameCooldown" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".varDragonFlameCooldown" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		<buff name="debuffDragonFlameBurn" name_key="buffDragonFlameBurnName" icon="ui_dragon_flame" icon_color="255,0,0">
+			<damage_type value="heat"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="varDragonFlameBurnDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Bleed Duration -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varDragonFlameBurnDuration" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="varDragonFlameBurnDuration" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varDragonFlameBurnDuration" operation="add" value="-1"/>
+				
+				<!-- Effect of Buff -->
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="16"/>
+				
+				<!-- Cleanup -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="debuffDragonFlameBurn">
+					<requirement name="CVarCompare" cvar="varDragonFlameBurnDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varDragonFlameBurnDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="debuffDragonFlameBurn"/>
+				
+				<!-- Particle & FX -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="4"/>
+				
+				<!-- Cleanup Handling :: Particle & FX -->
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################### -->
+		<!-- Ring :: Dragon Roar -->
+		<buff name="buffEquippedDragonRoar" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffDragonRoarCooldown"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="3" target_tags="zombie,animal" buff="buffInjuryKnockdown01"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="self" buff="buffDragonRoarCooldown"/>
+				
+				<!-- SFX -->
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="stonedestroy3"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="PlaySound" sound="explosion2"/>
+			</effect_group>
+		</buff>
+		<buff name="buffDragonRoarCooldown" name_key="buffDragonRoarCooldownName" description_key="buffDragonRoarCooldownDesc" icon="ui_dragon_roar" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="12"/>
+			<display_value value=".varDragonRoarCooldown"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".varDragonRoarCooldown" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varDragonRoarCooldown" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".varDragonRoarCooldown" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ############# -->
+		<!-- Ring :: Force -->
+		<buff name="buffForceT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				
+				<!-- <requirement name="HoldingItemHasTags" tags="melee, archery, thrownWeapon, perkArchery, perkJavelinMaster"/> -->
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="100"/> <!-- just knockback -->
+			</effect_group>
+		</buff>
+		<buff name="buffForceT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				
+				<!-- <requirement name="HoldingItemHasTags" tags="melee, archery, thrownWeapon, perkArchery, perkJavelinMaster"/> -->
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="125"/> <!-- just knockback -->
+			</effect_group>
+		</buff>
+		<buff name="buffForceT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
+				
+				<!-- <requirement name="HoldingItemHasTags" tags="melee, archery, thrownWeapon, perkArchery, perkJavelinMaster"/> -->
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="150"/> <!-- just knockback -->
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ############ -->
+		<!-- Ring :: Wish -->
+		<buff name="buffRingWishART" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="JunkTurretActiveCount" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishMovement" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".15"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".15"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishDamageMitigation" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value=".05"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishMaxHealth" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" value="25"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishMaxStamina" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="StaminaMax" operation="base_add" value="25"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishAddProj" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="MagazineSize" operation="base_add" value="1" tags="perkArchery"/>
+				<passive_effect name="BurstRoundCount" operation="base_add" value="1" tags="perkArchery"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishJump" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="JumpStrength" operation="perc_add" value=".25"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishEXP" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishAtkSpd" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".1"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishEntityDamage" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".2"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishDigRadius" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-2"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishHarvest" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".2" tags="oreWoodHarvest,butcherHarvest,salvageHarvest"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishOreOS" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+					<passive_effect name="BlockDamage" operation="base_add" value="2500" tags="ore"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishTreeOS" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+					<!-- <passive_effect name="BlockDamage" operation="base_add" value="2500" tags="tree"/> -->
+					<passive_effect name="DamageModifier" operation="base_add" value="2500" tags="wood"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishLockpickTime" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="LockPickTime" operation="perc_subtract" value=".25"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishAddQuestReward" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="QuestRewardChoiceCount" operation="base_add" value="1"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishDukeQuant" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="LootQuantity" operation="perc_add" value=".25" tags="dukes"/>
+			</effect_group>
+		</buff>
+		<buff name="buffRingWishAmplifyEquipped" name_key="buffAmplifyName" description_key="buffAmplifyDesc" showonhud="true" icon="ui_buff_amplify" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Amplify is equipped. -->
+				<!-- Actual Effect access's "buffPerkAbilityUpdate" and modifies "$MetabolismDuration". -->
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ############# -->
+		<!-- Ring :: Venom -->
+		<buff name="buffPoisonDurationROV" name_key="buffPoisonDurationROVName" description_key="buffPoisonDurationROVDesc" showonhud="true" icon="ui_buff_poison" icon_color="200,115,244">
+			<damage_type value="bloodloss"/>
+			<damage_source value="Internal"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="varPoisonDurationROV"/>
+			<display_value_format value="time"/>
+
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varPoisonDurationROV" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="varPoisonDurationROV" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varPoisonDurationROV" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPoisonDurationROV">
+					<requirement name="CVarCompare" cvar="varPoisonDurationROV" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffPoisonDurationROV"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varPoisonDurationROV" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffPoisonEffectROV"/>
+			</effect_group>
+		</buff>
+		<buff name="buffPoisonEffectROV" name_key="buffPoisonEffectROVName" description_key="buffPoisonEffectROVDesc" showonhud="true" icon="ui_buff_poison" icon_color="200,115,244">
+			<stack_type value="replace"/>
+			<duration value="15"/>
+			<display_value value="varPoisonStackROV"/>
+			<display_value_key value="{0}"/>
+
+			<effect_group>
+				<!-- Stack -->
+				<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varPoisonStackROV" operation="set" value="1"/> -->
+				<!-- <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="varPoisonStackROV" operation="add" value="1"/> -->
+
+				<!-- Effect -->
+				<!-- Deal Damage (HealthChangeOT: Alter hit points by Value every 1 second) -->
+				<!-- <passive_effect name="HealthChangeOT" operation="base_subtract" value="@varPoisonStackROV"/> -->
+				
+					<!--DISABLED "HealthChanceOT" as it seems to NOT give player the EXP when zombie dies -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="@varPoisonStackROV"/>
+				
+				<!-- Buff Handling stuff -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+				
+				<!-- Cleanup -->
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffPoisonEffectROV"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varPoisonStackROV" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ################## -->
+		<!-- Ring :: Demolition -->
+			<!-- Power Attack -->
+		<buff name="buffDemolitionT1" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="5" tags="perkBrawler"/> <!-- +500% Block Damage = 35 to 107 (Base ~5 to 17) -->
+					<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth,metal,stone,wood"/>
+			</effect_group>
+		</buff>
+		<buff name="buffDemolitionT2" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="turretMelee"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="5" tags="turretMelee"/>  <!-- +500% Block Damage = 102 to 246 (Base = ~17 to 41) -->
+					<passive_effect name="DamageModifier" operation="perc_add" value=".5" tags="earth,metal,stone,wood"/>
+					
+					<!-- Sledge by default gets a -75% Harvest Penelty, so might as well add the following -->
+					<passive_effect name="HarvestCount" operation="base_add" value=".75" tags="allHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value=".75" tags="allToolsHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value=".75" tags="oreWoodHarvest"/>
+			</effect_group>
+		</buff>
+		<buff name="buffDemolitionT3" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".5" tags="melee,tool"/> 
+			</effect_group>
+		</buff>
+		
+		
+		<!-- ############## -->
+		<!-- Ring :: Reborn -->
+			<!-- TIER 1 -->
+		<buff name="buffRingOfRebornT1Equipped" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Reborn is equipped. -->
+			</effect_group>
+		</buff>
+		<buff name="buffRingOfRebornT1Charged" name_key="buffRingOfRebornChargedName" description_key="buffRingOfRebornT1ChargedDesc" showonhud="true" icon="ui_buff_reborn" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+				<!-- Effect Procced -->
+				<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="15"/>
+					<!-- Health Recovery -->
+					<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="@HealthMax"/> -->
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="1000"/>
+					
+					<!-- Apply Cooldown -->
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingOfRebornCooldown"/>
+					
+					<!-- Remove Reborn Charged -->
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRingOfRebornT1Charged"/>
+			</effect_group>
+		</buff>
+			<!-- TIER 2 -->
+		<buff name="buffRingOfRebornT2Equipped" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Reborn is equipped. -->
+			</effect_group>
+		</buff>
+		<buff name="buffRingOfRebornT2Charged" name_key="buffRingOfRebornChargedName" description_key="buffRingOfRebornT2ChargedDesc" showonhud="true" icon="ui_buff_reborn" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+				<!-- Effect Procced -->
+				<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="20"/>
+					<!-- Health Recovery -->
+					<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="@HealthMax"/> -->
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="1000"/>
+					
+					<!-- Apply Cooldown -->
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingOfRebornCooldown"/>
+					
+					<!-- Remove Reborn Charged -->
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRingOfRebornT2Charged"/>
+			</effect_group>
+		</buff>
+			<!-- TIER 3 -->
+		<buff name="buffRingOfRebornT3Equipped" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Reborn is equipped. -->
+			</effect_group>
+		</buff>
+		<buff name="buffRingOfRebornT3Charged" name_key="buffRingOfRebornChargedName" description_key="buffRingOfRebornT3ChargedDesc" showonhud="true" icon="ui_buff_reborn" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+				<!-- Effect Procced -->
+				<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="25"/>
+					<!-- Health Recovery -->
+					<!-- <triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="@HealthMax"/> -->
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="1000"/>
+					
+					<!-- Apply Cooldown -->
+					<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingOfRebornCooldown"/>
+					
+					<!-- Remove Reborn Charged -->
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRingOfRebornT3Charged"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffRingOfRebornCooldown" name_key="buffRingOfRebornCooldownName" description_key="buffRingOfRebornCooldownDesc" showonhud="true" icon="ui_buff_reborn" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="600"/>
+			<display_value value="varBuffRingOfRebornCD"/>
+			<display_value_format value="time"/>
+			
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varBuffRingOfRebornCD" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varBuffRingOfRebornCD" operation="add" value="-1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varBuffRingOfRebornCD" operation="set" value="0"/>
+				
+				<!-- Recycle Buff -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingOfRebornT1Charged">
+					<requirement name="HasBuff" buff="buffRingOfRebornT1Equipped"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingOfRebornT2Charged">
+					<requirement name="HasBuff" buff="buffRingOfRebornT2Equipped"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffRingOfRebornT3Charged">
+					<requirement name="HasBuff" buff="buffRingOfRebornT3Equipped"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+		
+		<!-- ############### -->
+		<!-- Ring :: Amplify -->
+			<!-- TIER 1 -->
+		<buff name="buffRingOfAmplifyT1Equipped" name_key="buffAmplifyName" description_key="buffAmplifyDesc" showonhud="true" icon="ui_buff_amplify" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Amplify is equipped. -->
+				<!-- Actual Effect access's "buffPerkAbilityUpdate" and modifies "$MetabolismDuration". -->
+				<!-- Look to end of document for the appending for buffPerkAbilityUpdate -->
+			</effect_group>
+		</buff>
+			<!-- TIER 2 -->
+		<buff name="buffRingOfAmplifyT2Equipped" name_key="buffAmplifyName" description_key="buffAmplifyDesc" showonhud="true" icon="ui_buff_amplify" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Amplify is equipped. -->
+				<!-- Actual Effect access's "buffPerkAbilityUpdate" and modifies "$MetabolismDuration". -->
+				<!-- Look to end of document for the appending for buffPerkAbilityUpdate -->
+			</effect_group>
+		</buff>
+			<!-- TIER 3 -->
+		<buff name="buffRingOfAmplifyT3Equipped" name_key="buffAmplifyName" description_key="buffAmplifyDesc" showonhud="true" icon="ui_buff_amplify" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- This buff exists as a check to see if an item that grants Amplify is equipped. -->
+				<!-- Actual Effect access's "buffPerkAbilityUpdate" and modifies "$MetabolismDuration". -->
+				<!-- Look to end of document for the appending for buffPerkAbilityUpdate -->
+			</effect_group>
+		</buff>
+		
+		<buff name="buffRingGrantFishing" name_key="buffRingGrantFishingName" description_key="buffRingGrantFishingDesc" showonhud="true" icon="ui_buff_fishing" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Something seems fishy here... -->
+			</effect_group>
+		</buff>
+		
+		<!-- ################################# -->
+		<!-- Ring :: Splinter Rain :: Wrathful -->
+		<buff name="buffRingSplinterRainWrathEquipped" name_key="buffRingSplinterRainWrathName" description_key="buffRingSplinterRainWrathDesc" icon="ui_buff_splinterrain_wrathful" icon_color="0,255,0" icon_blink="false" hidden="false">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Additional Projectiles -->
+				<passive_effect name="MagazineSize" operation="base_add" value="2" tags="perkArchery"/>
+				<passive_effect name="BurstRoundCount" operation="base_add" value="2" tags="perkArchery"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ################################ -->
+		<!-- Ring :: Splinter Rain :: Furious -->
+		<buff name="buffRingSplinterRainFuriousEquipped" name_key="buffRingSplinterRainFuriousName" description_key="buffRingSplinterRainFuriousDesc" icon="ui_buff_splinterrain_furious" icon_color="0,255,0" icon_blink="false" hidden="false">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Increased Attack Speed -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".75" tags="perkArchery"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".75" tags="bowDrawPenalty"/>
+			</effect_group>
+		</buff>
+		
+		<!-- #################################### -->
+		<!-- Ring :: Splinter Rain :: Destructive -->
+		<buff name="buffRingSplinterRainDestructiveEquipped" name_key="buffRingSplinterRainDestructiveName" description_key="buffRingSplinterRainDestructiveDesc" icon="ui_buff_splinterrain_destructive" icon_color="0,255,0" icon_blink="false" hidden="false">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<!-- Additional Projectiles -->
+				<passive_effect name="MagazineSize" operation="base_add" value="4" tags="perkArchery"/>
+				<passive_effect name="BurstRoundCount" operation="base_add" value="4" tags="perkArchery"/>
+			
+				<!-- Increased Attack Speed -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-.5" tags="perkArchery"/>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.5" tags="bowDrawPenalty"/>
+				
+				<!-- Reduced Damage -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-0.50" tags="perkArchery"/>
+			</effect_group>
+		</buff>
+		
+		<!-- ############### -->
+		<!-- Ring :: Gold -->
+		<buff name="buffRingCraftedGold" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".15" tags="oreWoodHarvest"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".15" tags="salvageHarvest"/>
+			</effect_group>
+		</buff>
+	
+		<!-- ############### -->
+		<!-- Ring :: Diamond -->
+		<buff name="buffRingCraftedDiamond" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+				<requirement name="HoldingItemHasTags" tags="tool"/>
+					<passive_effect name="BlockDamage" operation="base_add" value="2500" tags="ore"/>
+			</effect_group>
+		</buff>
+	</append>
+	
+	
+	<!-- ################### -->
+	<!-- Ring :: Amplify -->
+	<!-- NOTE: Honestly the game's duration handling for consumables is a bit wack to me -->
+	<!--       so hopefully these values actually increase consumable buff duration by X% -->
+	<!--       where X is dependant on what ring is equipped -->
+	<append xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group">
+		<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="subtract" value=".05">
+			<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="subtract" value=".05">
+			<requirement name="HasBuff" buff="buffRingOfAmplifyT1Equipped"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="subtract" value=".08">
+			<requirement name="HasBuff" buff="buffRingOfAmplifyT2Equipped"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="subtract" value=".11">
+			<requirement name="HasBuff" buff="buffRingOfAmplifyT3Equipped"/>
+		</triggered_effect>
+	</append>
+	
+	<!-- Prevent Ring of Amplification from harmful effects -->
+	<append xpath="/buffs/buff[@name='buffDrugPainkillers']">
+		<effect_group>
+			<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				<passive_effect name="WaterChangeOT" operation="base_add" value="0.218"/>
+		</effect_group>
+	</append>
+	<append xpath="/buffs/buff[@name='buffDrugRecog']">
+		<effect_group>
+			<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				<passive_effect name="WaterChangeOT" operation="base_add" value=".1"/>
+		</effect_group>
+	</append>
+	<append xpath="/buffs/buff[@name='buffDrugFortBites']">
+		<effect_group>
+			<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				<passive_effect name="WaterChangeOT" operation="base_add" value=".1"/>
+		</effect_group>
+	</append>
+	<append xpath="/buffs/buff[@name='buffDrugDiazepam']">
+		<effect_group>
+			<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				<passive_effect name="WaterChangeOT" operation="base_add" value=".1"/>
+		</effect_group>
+	</append>
+	<append xpath="/buffs/buff[@name='buffDrugSteroids']">
+		<effect_group>
+			<requirement name="HasBuff" buff="buffRingWishAmplifyEquipped"/>
+				<passive_effect name="WaterChangeOT" operation="base_add" value=".05"/>
+		</effect_group>
+	</append>
+</Config>

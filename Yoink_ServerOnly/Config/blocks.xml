@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+	<!-- TakeDelay (block pickup timer) -->
+	<set xpath="//property[@name= 'TakeDelay' and @value>0]/@value">1</set>
+	
+</configs>

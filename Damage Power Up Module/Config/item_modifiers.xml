@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+<append xpath="/item_modifiers">
+
+<item_modifier name="PowerUPModDMG1" installable_tags="tool,weapon" blocked_tags="noMods" type="attachment" modifier_tags="dmg">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="powerdmgmod"/>
+		<property name="CustomIconTint" value="255,155,0"/> 
+
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value=".2"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".2"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".2"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+		</effect_group>
+</item_modifier>
+
+<item_modifier name="PowerUPModDMG2" installable_tags="tool,weapon" blocked_tags="noMods" type="attachment" modifier_tags="dmg">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="powerdmgmod"/>
+		<property name="CustomIconTint" value="255,255,0"/> 
+
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value=".4"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".4"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".4"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+		</effect_group>
+</item_modifier>
+
+<item_modifier name="PowerUPModDMG3" installable_tags="tool,weapon" blocked_tags="noMods" type="attachment" modifier_tags="dmg">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="powerdmgmod"/>
+		<property name="CustomIconTint" value="0,255,0"/> 
+
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".6"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+		</effect_group>
+</item_modifier>
+
+<item_modifier name="PowerUPModDMG4" installable_tags="tool,weapon" blocked_tags="noMods" type="attachment" modifier_tags="dmg">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="powerdmgmod"/>
+		<property name="CustomIconTint" value="0,0,255"/> 
+
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value=".8"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value=".8"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".8"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+		</effect_group>
+</item_modifier>
+
+<item_modifier name="PowerUPModDMG5" installable_tags="tool,weapon" blocked_tags="noMods" type="attachment" modifier_tags="dmg">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="powerdmgmod"/>
+		<property name="CustomIconTint" value="255,0,255"/> 
+
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.0"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="2.0"/>
+			<passive_effect name="MaxRange" operation="perc_add" value="2.0"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+		</effect_group>
+</item_modifier>
+
+</append>
+
+</configs>

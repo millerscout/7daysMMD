@@ -1,0 +1,96 @@
+<configs>
+
+	<append xpath="//lootgroup[@name='twitch_perkBooks']">	
+		<item name="bookHammerTimeV1"/>
+		<item name="bookHammerTimeV2"/>
+		<item name="bookHammerTimeV3"/>
+		<item name="bookHammerTimeV4"/>
+		<item name="bookHammerTimeV5"/>
+		<item name="bookHammerTimeV6"/>
+		<item name="bookHammerTimeV7"/>
+		<item name="bookItsElectrifyingV1"/>
+		<item name="bookItsElectrifyingV2"/>
+		<item name="bookItsElectrifyingV3"/>
+		<item name="bookItsElectrifyingV4"/>
+		<item name="bookItsElectrifyingV5"/>
+		<item name="bookItsElectrifyingV6"/>
+		<item name="bookItsElectrifyingV7"/>
+		<item name="bookKnifeGuyV1"/>
+		<item name="bookKnifeGuyV2"/>
+		<item name="bookKnifeGuyV3"/>
+		<item name="bookKnifeGuyV4"/>
+		<item name="bookKnifeGuyV5"/>
+		<item name="bookKnifeGuyV6"/>
+		<item name="bookKnifeGuyV7"/>
+		<item name="bookMassacreManiacV1"/>
+		<item name="bookMassacreManiacV2"/>
+		<item name="bookMassacreManiacV3"/>
+		<item name="bookMassacreManiacV4"/>
+		<item name="bookMassacreManiacV5"/>
+		<item name="bookMassacreManiacV6"/>
+		<item name="bookMassacreManiacV7"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='perkBooks']">	
+		<item name="bookHammerTimeV1"/>
+		<item name="bookHammerTimeV2"/>
+		<item name="bookHammerTimeV3"/>
+		<item name="bookHammerTimeV4"/>
+		<item name="bookHammerTimeV5"/>
+		<item name="bookHammerTimeV6"/>
+		<item name="bookHammerTimeV7"/>
+		<item name="bookItsElectrifyingV1"/>
+		<item name="bookItsElectrifyingV2"/>
+		<item name="bookItsElectrifyingV3"/>
+		<item name="bookItsElectrifyingV4"/>
+		<item name="bookItsElectrifyingV5"/>
+		<item name="bookItsElectrifyingV6"/>
+		<item name="bookItsElectrifyingV7"/>
+		<item name="bookKnifeGuyV1"/>
+		<item name="bookKnifeGuyV2"/>
+		<item name="bookKnifeGuyV3"/>
+		<item name="bookKnifeGuyV4"/>
+		<item name="bookKnifeGuyV5"/>
+		<item name="bookKnifeGuyV6"/>
+		<item name="bookKnifeGuyV7"/>
+		<item name="bookMassacreManiacV1"/>
+		<item name="bookMassacreManiacV2"/>
+		<item name="bookMassacreManiacV3"/>
+		<item name="bookMassacreManiacV4"/>
+		<item name="bookMassacreManiacV5"/>
+		<item name="bookMassacreManiacV6"/>
+		<item name="bookMassacreManiacV7"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupSavageCountryBooks']">	
+		<item name="bookHammerTimeV1"/>
+		<item name="bookHammerTimeV2"/>
+		<item name="bookHammerTimeV3"/>
+		<item name="bookHammerTimeV4"/>
+		<item name="bookHammerTimeV5"/>
+		<item name="bookHammerTimeV6"/>
+		<item name="bookHammerTimeV7"/>
+		<item name="bookItsElectrifyingV1"/>
+		<item name="bookItsElectrifyingV2"/>
+		<item name="bookItsElectrifyingV3"/>
+		<item name="bookItsElectrifyingV4"/>
+		<item name="bookItsElectrifyingV5"/>
+		<item name="bookItsElectrifyingV6"/>
+		<item name="bookItsElectrifyingV7"/>
+		<item name="bookKnifeGuyV1"/>
+		<item name="bookKnifeGuyV2"/>
+		<item name="bookKnifeGuyV3"/>
+		<item name="bookKnifeGuyV4"/>
+		<item name="bookKnifeGuyV5"/>
+		<item name="bookKnifeGuyV6"/>
+		<item name="bookKnifeGuyV7"/>
+		<item name="bookMassacreManiacV1"/>
+		<item name="bookMassacreManiacV2"/>
+		<item name="bookMassacreManiacV3"/>
+		<item name="bookMassacreManiacV4"/>
+		<item name="bookMassacreManiacV5"/>
+		<item name="bookMassacreManiacV6"/>
+		<item name="bookMassacreManiacV7"/>
+	</append>
+	
+</configs>

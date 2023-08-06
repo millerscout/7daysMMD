@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_SkillPapers"/>
+	<DisplayName value="Skill Papers"/>
+	<Version value="2.0.0"/>
+	<Description value="Scrap books, magazines, and schematics into their own scrap item which can be used at a new workstation to craft a book, magazine, or schematic of your choosing."/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32952-revs-simple-mods"/>
+</xml>

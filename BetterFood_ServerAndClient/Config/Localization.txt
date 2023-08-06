@@ -1,0 +1,13 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+foodCanBacon,items,Item,,,"Can of Bacon"
+foodCanBaconDesc,item,Items,,,"Several pigs died for this."
+foodTacVegStew,items,Item,,,"Tactical Soup"
+foodTacVegStewDesc,item,Item,,,"Just like mom used to make, before dad left"
+foodTacCrackerReg,items,Item,,,"Tactical Crackers"
+foodTacCrackerRegDesc,items,Item,,,"They won't see you eating them, because they're tactical"
+foodTacCrackerVeg,items,Item,,,"Tactical Vegetable Crackers"
+foodTacCrackerVegDesc,items,Item,,,"Contains 0% vegetables"
+foodTacLemPoppyPoundCake,items,Item,,,"Tactical Poppiseed Poundcake"
+foodTacLemPoppyPoundCakeDesc,items,Item,,,"It's always a good day when you find one of these"
+foodTacDriedFruit,items,Item,,,"Dried Fruit"
+foodTacDriedFruitDesc,items,Item,,,"Dried Fruit may cause Lung Cancer, Heart Disease, Emphysema, And May Complicate Pregnancy"

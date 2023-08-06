@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="PickupTurrets"/>
+	<DisplayName value="Pickup Turrets" />
+	<Version value="1.0.0.1" />
+	<Description value="Pick up turrets by holding E key.  Note turrets must be in landclaim range."/>
+	<Author value="TheDigitalApe"/>
+	<Website value=""/>
+</xml>

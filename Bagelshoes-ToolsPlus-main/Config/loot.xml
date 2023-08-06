@@ -1,0 +1,43 @@
+<config>
+	<append xpath="/lootcontainers/lootgroup[@name='groupCookingTools']">
+		<item name="toolCookingPotDouble" count="1"/>
+		<item name="toolCookingPotTriple" count="1"/>
+		<item name="toolCookingGrillDouble" count="1"/>
+		<item name="toolCookingGrillTriple" count="1"/>
+		<item name="toolCookingHotSauce" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
+		<item name="toolCookingHotSauce" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='workstationToolsScaled']">
+		<item name="toolAnvilDouble" count="1"/>
+		<item name="toolAnvilTriple" count="1"/>
+		<item name="toolBellowsDouble" count="1"/>
+		<item name="toolBellowsTriple" count="1"/>
+		<item name="toolForgeHighCarbonTooling" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupToolsT3']">
+		<item name="toolForgeHighCarbonTooling" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupChem01']">
+		<item name="toolBunsenBurner" loot_prob_template="veryLow" count="1"/>
+		<item name="resourceSulfur" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupCementMixerLoot01']">
+		<item name="toolPlasticizer" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupCementMixerLoot01']">
+		<item name="toolAccelerator" loot_prob_template="Low" count="1"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuildingRare']">
+		<item name="toolLimestone" count="1"/>
+	</append>	
+</config>
+	

@@ -1,0 +1,1051 @@
+<configs>
+	
+	<append xpath="/items">
+	<!-- Custom Class -->
+		<item name="dismantleBundleMaster">
+    		<property name="Extends" value="questRewardBundleMaster" />
+    		<property name="CustomIconTint" value="FFFFFF" />
+			<property name="ItemTypeIcon" value="bundle"/>
+    		<property name="Stacknumber" value="150" /><!-- This will be changed by Elucidus' stack mods or any similar that alter "Stacknumber" and load after this mod, rather than the "questRewardBundleMaster" itself -->
+    	</item>
+
+<!-- Sizes 1x, 10x, 50x, 250x -->
+	<!-- Types ARROWS, BOLTS, BULLETS, SHELLS/SLUGS, ROCKETS -->
+	
+<!-- ******************************************************** 1x ******************************************************** -->
+
+	<!-- ARROWS -->
+
+		<item name="1x Stone Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x Iron Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x Steel Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="1,2"/>
+			</property>
+		</item>
+
+		<item name="1x Flaming Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="1,2,2,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x Exploding Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="1,2,6,1"/>
+			</property>
+		</item>
+	
+
+	<!-- BOLTS -->
+
+		<item name="1x Stone Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x Iron Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x Steel Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="1,2"/>
+			</property>
+		</item>
+
+		<item name="1x Flaming Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="1,2,2,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x Exploding Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="1,2,8,1"/>
+			</property>
+		</item>
+
+	<!-- BULLETS -->
+
+		<!-- MAGNUM AMMO -->
+
+		<item name="1x .44 Magnum Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1,2,1"/>
+			</property>
+		</item>
+
+		<item name="1x .44 Magnum AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,3,1"/>
+			</property>
+		</item>
+
+		<item name="1x .44 Magnum HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,2,1"/>
+			</property>
+		</item>
+
+		<!-- 7.62MM AMMO -->
+
+		<item name="1x 7.62mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1,3,1"/>
+			</property>
+		</item>
+
+		<item name="1x 7.62mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,5,1"/>
+			</property>
+		</item>
+
+		<item name="1x 7.62mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,3,1"/>
+			</property>
+		</item>
+
+		<!-- 9MM AMMO -->
+
+		<item name="1x 9mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+
+		<item name="1x 9mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,2,1"/>
+			</property>
+		</item>
+
+		<item name="1x 9mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,1,1"/>
+			</property>
+		</item>
+
+	<!-- SHELLS/SLUGS -->
+
+		<item name="1x Shotgun Shell Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunShellAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunShellDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="1,4,1"/>
+			</property>
+		</item>
+
+		<item name="1x Shotgun AP Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="2,5,1"/>
+			</property>
+		</item>
+
+		<item name="1x Shotgun Breaching Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunBreachingSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunBreachingSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="3,2,4,1"/>
+			</property>
+		</item>
+
+	<!-- ROCKETS -->
+
+		<item name="1x Rocket Frag Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketFragAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketFragDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="25,15,2,500,1"/>
+			</property>
+		</item>
+
+		<item name="1x Rocket HE Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketHEAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketHEDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="1,15,2,500,1"/>
+			</property>
+		</item>
+	
+<!-- ******************************************************** 10x ******************************************************** -->
+
+	<!-- ARROWS -->
+
+		<item name="10x Stone Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="10,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x Iron Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="10,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x Steel Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="10,20"/>
+			</property>
+		</item>
+
+		<item name="10x Flaming Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="10,20,20,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x Exploding Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="10,20,60,10"/>
+			</property>
+		</item>
+	
+
+	<!-- BOLTS -->
+
+		<item name="10x Stone Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="10,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x Iron Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="10,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x Steel Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="10,20"/>
+			</property>
+		</item>
+
+		<item name="10x Flaming Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="10,20,20,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x Exploding Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="10,20,80,10"/>
+			</property>
+		</item>
+
+	<!-- BULLETS -->
+
+		<!-- MAGNUM AMMO -->
+
+		<item name="10x .44 Magnum Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="10,20,10"/>
+			</property>
+		</item>
+
+		<item name="10x .44 Magnum AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="20,30,10"/>
+			</property>
+		</item>
+
+		<item name="10x .44 Magnum HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="20,20,10"/>
+			</property>
+		</item>
+
+		<!-- 7.62MM AMMO -->
+
+		<item name="10x 7.62mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="10,30,10"/>
+			</property>
+		</item>
+
+		<item name="10x 7.62mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="20,50,10"/>
+			</property>
+		</item>
+
+		<item name="10x 7.62mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="20,30,10"/>
+			</property>
+		</item>
+
+		<!-- 9MM AMMO -->
+
+		<item name="10x 9mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="10,10,10"/>
+			</property>
+		</item>
+
+		<item name="10x 9mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="20,20,10"/>
+			</property>
+		</item>
+
+		<item name="10x 9mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="20,10,10"/>
+			</property>
+		</item>
+
+	<!-- SHELLS/SLUGS -->
+
+		<item name="10x Shotgun Shell Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunShellAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunShellDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="10,40,10"/>
+			</property>
+		</item>
+
+		<item name="10x Shotgun AP Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="20,50,10"/>
+			</property>
+		</item>
+
+		<item name="10x Shotgun Breaching Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunBreachingSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunBreachingSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="30,20,40,10"/>
+			</property>
+		</item>
+
+	<!-- ROCKETS -->
+
+		<item name="10x Rocket Frag Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketFragAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketFragDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="250,150,20,5000,10"/>
+			</property>
+		</item>
+
+		<item name="10x Rocket HE Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketHEAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketHEDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="10,150,20,5000,10"/>
+			</property>
+		</item>
+	
+<!-- ******************************************************** 50x ******************************************************** -->
+
+	<!-- ARROWS -->
+
+		<item name="50x Stone Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="50,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x Iron Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="50,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x Steel Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="50,100"/>
+			</property>
+		</item>
+
+		<item name="50x Flaming Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="50,100,100,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x Exploding Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="50,100,300,50"/>
+			</property>
+		</item>
+
+	<!-- BOLTS -->
+
+		<item name="50x Stone Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="50,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x Iron Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="50,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x Steel Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="50,100"/>
+			</property>
+		</item>
+
+		<item name="50x Flaming Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="50,100,100,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x Exploding Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="50,100,400,50"/>
+			</property>
+		</item>
+		
+	<!-- BULLETS -->
+
+		<!-- MAGNUM AMMO -->
+
+		<item name="50x .44 Magnum Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="50,100,50"/>
+			</property>
+		</item>
+
+		<item name="50x .44 Magnum AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,150,50"/>
+			</property>
+		</item>
+
+		<item name="50x .44 Magnum HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,100,50"/>
+			</property>
+		</item>
+
+		<!-- 7.62MM AMMO -->
+
+		<item name="50x 7.62mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="50,150,50"/>
+			</property>
+		</item>
+
+		<item name="50x 7.62mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,250,50"/>
+			</property>
+		</item>
+
+		<item name="50x 7.62mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,150,50"/>
+			</property>
+		</item>
+
+		<!-- 9MM AMMO -->
+
+		<item name="50x 9mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="50,50,50"/>
+			</property>
+		</item>
+
+		<item name="50x 9mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,100,50"/>
+			</property>
+		</item>
+
+		<item name="50x 9mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,50,50"/>
+			</property>
+		</item>
+
+	<!-- SHELLS/SLUGS -->
+
+		<item name="50x Shotgun Shell Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunShellAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunShellDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="50,200,50"/>
+			</property>
+		</item>
+
+		<item name="50x Shotgun AP Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="100,250,50"/>
+			</property>
+		</item>
+
+		<item name="50x Shotgun Breaching Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunBreachingSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunBreachingSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="150,100,200,50"/>
+			</property>
+		</item>
+
+	<!-- ROCKETS -->
+
+		<item name="50x Rocket Frag Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketFragAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketFragDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="1250,750,100,25000,50"/>
+			</property>
+		</item>
+
+		<item name="50x Rocket HE Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketHEAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketHEDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="50,750,100,25000,50"/>
+			</property>
+		</item>
+	
+<!-- ******************************************************** 250x ******************************************************** -->
+
+	<!-- ARROWS -->
+
+		<item name="250x Stone Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="250,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Iron Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="250,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Steel Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="250,500"/>
+			</property>
+		</item>
+
+		<item name="250x Flaming Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="250,500,500,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Exploding Arrow Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingArrowDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="250,500,1500,250"/>
+			</property>
+		</item>
+	
+	<!-- BOLTS -->
+
+		<item name="250x Stone Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="stoneAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleStoneBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRockSmall,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="250,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Iron Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="ironAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleIronBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadIron,resourceWood,resourceFeather"/>
+				<property name="Create_item_count" value="250,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Steel Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="steelAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleSteelBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="250,500"/>
+			</property>
+		</item>
+
+		<item name="250x Flaming Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="flamingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleFlamingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth,resourceAnimalFat"/>
+				<property name="Create_item_count" value="250,500,500,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Exploding Crossbow Bolt Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="explodingAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleExplodingBoltDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceDuctTape"/>
+				<property name="Create_item_count" value="250,500,2000,250"/>
+			</property>
+		</item>
+
+	<!-- BULLETS -->
+
+		<!-- MAGNUM AMMO -->
+
+		<item name="250x .44 Magnum Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="250,500,250"/>
+			</property>
+		</item>
+
+		<item name="250x .44 Magnum AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="500,750,250"/>
+			</property>
+		</item>
+
+		<item name="250x .44 Magnum HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="44MagnumHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle44MagnumHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="500,500,250"/>
+			</property>
+		</item>
+
+		<!-- 7.62MM AMMO -->
+
+		<item name="250x 7.62mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="250,750,250"/>
+			</property>
+		</item>
+
+		<item name="250x 7.62mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="500,1250,250"/>
+			</property>
+		</item>
+
+		<item name="250x 7.62mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="762mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle762mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="500,750,250"/>
+			</property>
+		</item>
+
+		<!-- 9MM AMMO -->
+
+		<item name="250x 9mm Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="250,250,250"/>
+			</property>
+		</item>
+
+		<item name="250x 9mm AP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmAPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmAPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="500,500,250"/>
+			</property>
+		</item>
+
+		<item name="250x 9mm HP Ammo Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="9mmHPAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantle9mmHPDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="500,250,250"/>
+			</property>
+		</item>
+
+	<!-- SHELLS/SLUGS -->
+
+		<item name="250x Shotgun Shell Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunShellAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunShellDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="250,1000,250"/>
+			</property>
+		</item>
+
+		<item name="250x Shotgun AP Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="500,1250,250"/>
+			</property>
+		</item>
+
+		<item name="250x Shotgun Breaching Slug Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="shotgunBreachingSlugAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleShotgunBreachingSlugDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="750,500,1000,250"/>
+			</property>
+		</item>
+
+	<!-- ROCKETS -->
+
+		<item name="250x Rocket Frag Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketFragAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketFragDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="6250,3750,500,125000,250"/>
+			</property>
+		</item>
+
+		<item name="250x Rocket HE Parts">
+			<property name="Extends" value="dismantleBundleMaster"/>
+			<property name="CustomIcon" value="rocketHEAmmoBundle"/>
+			<property name="DescriptionKey" value="dismantleRocketHEDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,resourceDuctTape,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="250,3750,500,125000,250"/>
+			</property>
+		</item>
+	
+	</append>
+
+</configs>

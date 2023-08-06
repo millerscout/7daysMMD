@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Reduce Heatmap" />
+        <Description value="This mod reduces all heatmapstrength values to 10% of thier original values, so that fewer scout zombies spawn near your base" />
+        <Author value="The Freehold" />
+        <Version value="1.0." />
+    </ModInfo>
+</xml>

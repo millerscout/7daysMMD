@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+	<insertBefore xpath="/recipes/recipe[@name= 'trapSpikesIronDmg0']">
+		<recipe name="trapSpikesSteelDmg0" count="1">
+			<ingredient name="resourceForgedSteel" count="4"/>
+		</recipe>
+	</insertBefore>
+
+
+</configs>

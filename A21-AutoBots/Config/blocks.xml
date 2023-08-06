@@ -1,0 +1,117 @@
+<configs>
+	<append xpath="/blocks">
+		<block name="AutomatedMining">
+			<property name="CustomIcon" value="controlPanelBase01"/>
+			<property name="CustomIconTint" value="31452B"/>
+			<property name="TintColor" value="31452B"/>
+			<property name="DescriptionKey" value="AutomatedMiningDesc"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="ParticleName" value="chemistryStation"/>
+			<property name="ParticleOffset" value="0.5,0.5,0.5"/>
+			<property name="MaxDamage" value="1200"/>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="293"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Entities/Industrial/controlPanelBase_01Prefab"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="6"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>		
+				<property name="CraftingAreaRecipes" value="AutomatedMining"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_mining" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceMechanicalParts" value="5"/>
+				<property name="resourceForgedSteel" value="5"/>
+				<property name="resourceSpring" value="5"/>
+			</property>
+			<drop event="Harvest" name="resourceForgedSteel" count="5" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="50" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="20" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceForgedSteel" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="5" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="10"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Building,Science,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="SellableToTrader" value="false"/>	
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+		<block name="AutomatedAmmunition">
+			<property name="CustomIcon" value="controlPanelBase02"/>
+			<property name="CustomIconTint" value="4B2825"/>
+			<property name="TintColor" value="4B2825"/>
+			<property name="DescriptionKey" value="AutomatedAmmunitionDesc"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="ParticleName" value="chemistryStation"/>
+			<property name="ParticleOffset" value="0.5,0.5,0.5"/>
+			<property name="MaxDamage" value="1200"/>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="293"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Entities/Industrial/controlPanelBase_02Prefab"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="6"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>		
+				<property name="CraftingAreaRecipes" value="AutomatedAmmunition"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceMechanicalParts" value="5"/>
+				<property name="resourceForgedSteel" value="5"/>
+				<property name="resourceSpring" value="5"/>
+			</property>
+			<drop event="Harvest" name="resourceForgedSteel" count="5" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="50" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="20" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceForgedSteel" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="5" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="10"/>
+			<property name="EconomicValue" value="776"/>
+			<property name="Group" value="Building,Science,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="SellableToTrader" value="false"/>	
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>		
+	</append>
+</configs>
+

@@ -1,0 +1,51 @@
+<!-- "Living off the land" perk tweaks to seeds -->
+<config>
+	<setattribute xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">cropSeedHarvest</setattribute>
+
+<!-- Ready to harvest crops -->	
+<!--
+plantedPotato3HarvestPlayer
+plantedCoffee3HarvestPlayer
+plantedCorn3HarvestPlayer
+plantedBlueberry3HarvestPlayer
+plantedCotton3HarvestPlayer
+plantedGoldenrod3HarvestPlayer
+plantedAloe3HarvestPlayer
+plantedMushroom3HarvestPlayer
+plantedYucca3HarvestPlayer
+plantedHop3HarvestPlayer
+plantedChrysanthemum3HarvestPlayer
+plantedPumpkin3HarvestPlayer
+plantedGraceCorn3HarvestPlayer
+-->
+
+<!-- Seeds, i.e. blocks (blocks are also items) -->
+<!--
+plantedPotato1
+plantedCoffee1
+plantedCorn1
+plantedBlueberry1
+plantedCotton1
+plantedGoldenrod1
+plantedAloe1
+plantedMushroom1
+plantedYucca1
+plantedHop1
+plantedChrysanthemum1
+plantedPumpkin1
+plantedGraceCorn1
+-->
+
+</config>

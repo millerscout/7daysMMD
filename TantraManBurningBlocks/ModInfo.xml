@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+		<Name value="TantraManBurningBlocks"/>
+		<DisplayName value="TantraMan Burning Blocks" />
+		<Description value="Burning Blocks of variable shapes that hurt ANYTHING that walks on them"/>
+		<Version value="1.0"/>
+		<Author value="TantraMan"/>
+		<Website value=""/>
+</xml>

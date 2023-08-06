@@ -1,0 +1,6 @@
+<config>
+	<remove xpath="/entity_classes/entity_class[contains(@name,'zombie') and not(contains(@name,'animal')) and not(@name='zombieTemplateMale')]/property[contains(@name,'MoveSpeed')]"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MoveSpeedAggro']/@value">0.5,0.5</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MoveSpeedRand']/@value">-0.1,0.05</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MoveSpeedPanic']/@value">0.5</set>
+</config>	

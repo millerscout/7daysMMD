@@ -1,0 +1,382 @@
+<Config>
+	<!-- 
+	DEV NOTES:
+		1) I use "dDysenteryRisk" and "dCureDysentery" for a way to display my own custom stat's values. 
+		   If seeing "dCureDysentery" or "dDysenteryRisk" it is just used to hold a value, doesnt actually effect "Dysentery".
+	-->
+	
+	<!-- ######## -->
+	<!-- Tooltips -->
+	<append xpath="ui_display_info/item_display">
+		<item_display_info display_type="modRingStrideDT" display_group="modAttire">
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dWalkSpeed" title_key="statWalkSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="modRingGreedDT" display_group="modAttire">
+			<display_entry name="dBarteringSellBuy" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityDukes" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCureDysentery" title_key="statAdditionalQuestReward" display_leading_plus="true"/>
+			<display_entry name="dStopsConcussion" title_key="statLockpickTime" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingSeekerDT" display_group="modAttire">
+			<display_entry name="LootStage" title_key="statLootStage" display_leading_plus="true"/>
+			<display_entry name="dTreasureBlocksPerReduction" title_key="statTreasureRadius" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingSeekerDT_Dukes" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityDukes" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingSeekerDT_Food" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityFood" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingSeekerDT_Ammo" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityAmmo" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingSeekerDT_Medical" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityMedical" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="modRingSeekerDT_LootSpeed" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingTwinTerrorDT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalProjectilesArchery" display_leading_plus="true"/>
+		</item_display_info>
+	
+	
+		<item_display_info display_type="modRingVampiricaDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statVampiricProcChance" display_type="Percent"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingLaborloveDTcrop" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalCropHarvest" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingLaborloveDTquant" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityOre" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityWood" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantitySalvage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityMeat" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingLaborloveDTore" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statOneShotOre" display_type="Percent"/>
+		</item_display_info>
+		<item_display_info display_type="modRingLaborloveDTtree" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statOneShotTree" display_type="Percent"/>
+		</item_display_info>
+		<item_display_info display_type="modRingLaborloveDTquest" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalQuestReward" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingLaborloveDTcraftspeed" display_group="modAttire">
+			<display_entry name="dCraftingTime" title_key="statCraftingTime" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingBrillianceDT" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingInspirationDT" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statInspirationMaxHealth" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statInspirationDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statInspirationAtkSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingAgonyDT" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statHealthMax" negative_preferred="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statAtkSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="modRingHeadHunterDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statHeadHunter" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingGuardiusDT" display_group="modAttire">
+			<display_entry name="dHealthLoss" title_key="statHealthLoss" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDuration" title_key="statFortify" display_type="Time"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingLifeEssDT" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statHealthMax" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHealthRecovery" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingStealthDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantStealth" display_type="Time"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingMechanismDT_limit" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statRobotSummonLimit" display_leading_plus="true"/>
+			<display_entry name="dCureDysentery" title_key="statRobotActiveRange" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingMechanismDT_boost" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statRobotDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCureDysentery" title_key="statRobotAtkSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingMechanismDT_slowhard" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statRobotDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCureDysentery" title_key="statRobotAtkSpd" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingMechanismDT_haste" display_group="modAttire">
+			<display_entry name="dStopsConcussion" title_key="statRobotMagCapacity" display_leading_plus="true"/>
+			<display_entry name="dCureDysentery" title_key="statRobotAtkSpd" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statRobotDamage" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingMechanismDT_melee" display_group="modAttire">
+			<!-- <display_entry name="dStopsConcussion" title_key="statRobotStrikeRange" display_leading_plus="true"/> -->
+			<display_entry name="dStopsConcussion" title_key="statInHandTurretDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statRobotDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statRobotAtkSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingThunderstruckDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantThunderstruck"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingPredatorDT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statAtkSpd" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dRunSpeed" title_key="statMovementSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingAssassinDT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statSneakDamage" display_type="Percent" display_leading_plus="true"/>
+		
+			<display_entry name="dDysenteryRisk" title_key="statJumpDistance" display_leading_plus="true"/>
+			
+			<display_entry name="dNoiseMultiplier" title_key="statNoiseReduction" display_type="Percent" display_leading_plus="true" show_inverted="false" negative_preferred="false"/>
+			<display_entry name="dLightMultiplier" title_key="statVisibility" display_type="Percent" display_leading_plus="true" show_inverted="false" negative_preferred="false"/>
+			
+			<display_entry name="dCureDysentery" title_key="statCrouchSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingMendingDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="ringGrantMending"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingStaminaDT" display_group="modAttire">
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dDysenteryRisk" title_key="statFoodStaminaBonus" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingBeginningsDT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dHealthAmount" title_key="statHealthAmount" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statFoodStaminaBonus" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingFaceBreakerT1DT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statFistDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statFistAttackSpeed" display_type="Percent" display_leading_plus="true"/>
+			
+			<display_entry name="dCureDysentery" title_key="statPowerAttackDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dStopsConcussion" title_key="statPowerAttackStaminaCost" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingFaceBreakerT2DT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statFistDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statFistAttackSpeed" display_type="Percent" display_leading_plus="true"/>
+			
+			<display_entry name="dCureDysentery" title_key="statFistDamage75Chance25" display_type="Percent"/>
+			<display_entry name="dStopsConcussion" title_key="statFistDamage50Chance50" display_type="Percent"/>
+			<display_entry name="dEfficientDigestion" title_key="statFistDamage25Chance75" display_type="Percent"/>
+		</item_display_info>
+		<item_display_info display_type="modRingFaceBreakerT3DT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statFistDamage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statFistAttackSpeed" display_type="Percent" display_leading_plus="true"/>
+			
+			<display_entry name="dCureDysentery" title_key="statFistForce"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingDragonClawDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantDragonClaw"/>
+		</item_display_info>
+		<item_display_info display_type="modRingDragonFlameDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantDragonFlame"/>
+		</item_display_info>
+		<item_display_info display_type="modRingDragonRoarDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantDragonRoar"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingForceDT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCureDysentery" title_key="statForce"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingWishARTDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statRobotSummonLimit" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishMovementDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statMovementSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishDamageMitDT" display_group="modAttire">
+			<display_entry name="dHealthLoss" title_key="statHealthLoss" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishHealthMaxDT" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statHealthMax" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishStaminaMaxDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statFoodStaminaBonus" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAddProjDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalProjectilesArchery" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishJumpDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statJumpDistance" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishEXPDT" display_group="modAttire">
+			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAttSTRDT" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attStrength" title_key="statShowStrength" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAttPERDT" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attPerception" title_key="statShowPerception" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAttAGIDT" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attAgility" title_key="statShowAgility" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAttFORTDT" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attFortitude" title_key="statShowFortitude" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAttINTDT" display_group="modAttire">
+			<display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAtkSpdDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAtkSpd" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishEntityDamageDT" display_group="modAttire">
+			<display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishDigRadiusDT" display_group="modAttire">
+			<display_entry name="dTreasureBlocksPerReduction" title_key="statTreasureRadius" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishHarvestDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityOre" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityWood" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantitySalvage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityMeat" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishOreOSDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statOneShotOre" display_type="Percent"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishTreeOSDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statOneShotTree" display_type="Percent"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishLockpickDT" display_group="modAttire">
+			<display_entry name="dLockpickSuccess" title_key="statLockpickTime" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAddQuestDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalQuestReward" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishDukeQuantDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityDukes" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishLootStageDT" display_group="modAttire">
+			<display_entry name="LootStage" title_key="statLootStage" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishAmplifyDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAmplify" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingWishLootSpeedDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statLootSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingVenomDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statPoisonOnHit"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingDemolitionT1DT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statDemoBrawler" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingDemolitionT2DT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statDemoSledge" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingDemolitionT3DT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statDemoGeneric" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingRebornDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantsReborn"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingAmplifyDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAmplify" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingSplinterRainWrathDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalProjectilesArchery" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="modRingSplinterRainFuriousDT" display_group="modAttire">
+			<display_entry name="dCureDysentery" title_key="statArcheryAttackSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+		<item_display_info display_type="modRingSplinterRainDestructiveDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statAdditionalProjectilesArchery" display_leading_plus="true"/>
+			<display_entry name="dEntityDamage" title_key="statEntityDamageRanged" display_type="Percent" negative_preferred="true"/>
+			<display_entry name="dCureDysentery" title_key="statArcheryAttackSpeed" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingStorageDT" display_group="modAttire">
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingFishingDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statGrantFishing" display_leading_plus="true"/>
+		</item_display_info>
+		
+		
+		<item_display_info display_type="modRingCraftedSilverDT" display_group="modAttire">
+			<display_entry name="dHealthAmount" title_key="statHealthMax" display_leading_plus="true"/>
+			<display_entry name="PhysicalDamageResist" display_type="Decimal1" title_key="statPhysicalDamageResist" display_leading_plus="true"/>
+			<display_entry name="ElementalDamageResist" display_type="Decimal1" title_key="statExplosionResistance" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingCraftedGoldDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityOre" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantityWood" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statHarvestQuantitySalvage" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dDysenteryRisk" title_key="statLootQuantityDukes" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modRingCraftedDiamondDT" display_group="modAttire">
+			<display_entry name="dDysenteryRisk" title_key="statOneShotOre" display_type="Percent"/>
+			<display_entry name="dBarteringSellBuy" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+		
+
+	</append>
+</Config>

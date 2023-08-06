@@ -1,0 +1,46 @@
+
+<configs>
+    <append xpath="/recipes">
+
+<recipe name="PowerUPModDMG1" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="resourceSpring" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="70"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceMechanicalParts" count="4"/>
+</recipe>
+
+<recipe name="PowerUPModDMG2" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="15"/>
+	<ingredient name="resourceSpring" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="80"/>
+	<ingredient name="resourceDuctTape" count="3"/>
+	<ingredient name="resourceMechanicalParts" count="6"/>
+</recipe>
+
+<recipe name="PowerUPModDMG3" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="20"/>
+	<ingredient name="resourceSpring" count="6"/>
+	<ingredient name="resourceScrapPolymers" count="90"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceMechanicalParts" count="8"/>
+</recipe>
+
+<recipe name="PowerUPModDMG4" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="25"/>
+	<ingredient name="resourceSpring" count="8"/>
+	<ingredient name="resourceScrapPolymers" count="100"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceMechanicalParts" count="5"/>
+</recipe>
+
+<recipe name="PowerUPModDMG5" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceSpring" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="120"/>
+	<ingredient name="resourceDuctTape" count="6"/>
+	<ingredient name="resourceMechanicalParts" count="12"/>
+</recipe>
+
+    </append>
+</configs>

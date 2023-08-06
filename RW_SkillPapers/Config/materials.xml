@@ -1,0 +1,30 @@
+<configs>
+
+<!--Add a new material. This is what the items you want to scrap will be made of.-->
+<!--Forge category is the new resource item created in the items xml that you get back when scrapping.-->
+<append xpath="/materials">
+
+<material id="MresourceRWPerkPapers">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="resourceRWPerkPapers"/>
+	<property name="Experience" value="0"/>
+</material>
+
+<material id="MresourceRWSkillPapers">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="resourceRWSkillPapers"/>
+	<property name="Experience" value="0"/>
+</material>
+
+<material id="MresourceRWBlueprintScraps">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="resourceRWBlueprintScraps"/>
+	<property name="Experience" value="0"/>
+</material>
+
+</append>
+
+</configs>

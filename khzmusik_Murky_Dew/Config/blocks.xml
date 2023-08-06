@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- Do not produce heat -->
+    <remove xpath="//block[@name='cntDewCollector']/property[starts-with(@name, 'HeatMap')]" />
+
+    <!-- Produce murky water -->
+    <set xpath="//block[@name='cntDewCollector']/property[@name='ConvertToItem']/@value">drinkJarRiverWater</set>
+</config>

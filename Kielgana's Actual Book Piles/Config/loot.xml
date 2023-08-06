@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>  
+  <!-- Add new loot group-->
+  <insertAfter xpath="/lootcontainers/lootgroup[@name='groupBookPile01']">
+	<lootgroup name="kielganasBooks">
+	  <item group="skillMagazines" count="1,3" />
+	  <item group="skillMagazines" count="1,3" loot_prob_template="high" />
+	  <item group="skillMagazines" count="1,3" loot_prob_template="med" />
+	  <item group="skillMagazines" count="1,3" loot_prob_template="med" />
+	  <item group="skillMagazines" count="1,3" loot_prob_template="med" />
+	  <item group="skillMagazines" count="1,3" loot_prob_template="med" />
+	  
+	  <item group="perkBooks" count="1,3" loot_prob_template="high" />
+	  <item group="perkBooks" count="1,3" loot_prob_template="low" />
+	  <item group="perkBooks" count="1,3" loot_prob_template="low" />
+	  
+	  <item group="booksAllScaled" count="1,3"/>
+	  <item group="booksAllScaled" count="1,3" loot_prob_template="high" />
+	  <item group="booksAllScaled" count="1,3" loot_prob_template="low" />	  
+	</lootgroup>
+  </insertAfter>
+  <!-- remove each loot container and replace with new one containing new loot group-->
+  <!-- bookpile-->
+  <remove xpath="/lootcontainers/lootcontainer[@name='bookPile']"></remove>
+  <insertAfter xpath="/lootcontainers/lootcontainer[@name='shoes']">
+    <lootcontainer name="bookPile" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true">
+	  <item group="kielganasBooks" />
+	  <item group="kielganasBooks" />
+    </lootcontainer>
+  </insertAfter>
+  <!-- bookcase-->
+  <remove xpath="/lootcontainers/lootcontainer[@name='bookcase']"></remove>
+  <insertAfter xpath="/lootcontainers/lootcontainer[@name='purse']">
+    <lootcontainer name="bookcase" count="1" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	  <item group="kielganasBooks" />
+	  <item group="kielganasBooks" />
+	  <item group="kielganasBooks" />
+    </lootcontainer>
+  </insertAfter>
+  <!-- Mailbox-->
+  <remove xpath="/lootcontainers/lootcontainer[@name='mailbox']"></remove>  
+  <insertAfter xpath="/lootcontainers/lootcontainer[@name='laundryBasket']">
+    <lootcontainer name="mailbox" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	  <item group="kielganasBooks" />
+    </lootcontainer>
+  </insertAfter>
+  <!-- PObox-->
+  <remove xpath="/lootcontainers/lootcontainer[@name='PObox']"></remove>  
+  <insertAfter xpath="/lootcontainers/lootcontainer[@name='mailbox']">
+  <lootcontainer name="PObox" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true">
+	<item group="kielganasBooks" />
+  </lootcontainer>
+  </insertAfter>
+</xml>

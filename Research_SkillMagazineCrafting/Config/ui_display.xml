@@ -1,0 +1,17 @@
+<configs>
+
+	<append xpath="/ui_display_info/crafting_category_display">
+
+		<crafting_category_list display_type="researchbench">
+			<crafting_category name="TCReading" icon="ui_game_symbol_book" display_name="All Magazines" />
+			<crafting_category name="RUtility" icon="ui_game_symbol_assemble" display_name="Utility Skills" />
+			<crafting_category name="RTools" icon="ui_game_symbol_tool" display_name="Tool Skills" />
+			<crafting_category name="RWeapons" icon="ui_game_symbol_knife" display_name="Weapon Skills" />
+			<crafting_category name="RScience" icon="ui_game_symbol_science" display_name="Science Skills" />
+			<crafting_category name="RSArmor" icon="ui_game_symbol_shirt" display_name="Armor Skills" />
+			<crafting_category name="RFood" icon="ui_game_symbol_fork" display_name="Food Skills" />
+		</crafting_category_list>
+
+	</append>	
+
+</configs>

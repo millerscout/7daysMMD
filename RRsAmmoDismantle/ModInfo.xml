@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="RunyonRing's Ammo Dismantle " />
+        <Description value="Allows you to dismantle ammo bundles and get back the material it took to craft them." />
+        <Author value="RunyonRings" />
+        <Version value="1.0.0" />
+    </ModInfo>
+</xml>

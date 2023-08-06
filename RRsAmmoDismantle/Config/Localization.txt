@@ -1,0 +1,32 @@
+Key,english
+
+dismantleStoneBoltDesc,Crafting material from dismantling Stone Arrows
+dismantleIronArrowDesc,Crafting material from dismantling Iron Arrows
+dismantleSteelArrowDesc,Crafting material from dismantling Steel Arrows
+dismantleFlamingArrowDesc,Crafting material from dismantling Flaming Arrows
+dismantleExplodingArrowDesc,Crafting material from dismantling Exploding Arrows
+
+dismantleStoneBoltDesc,Crafting material from dismantling Stone Crossbow Bolts
+dismantleIronBoltDesc,Crafting material from dismantling Iron Crossbow Bolts
+dismantleSteelBoltDesc,Crafting material from dismantling Steel Crossbow Bolts
+dismantleFlamingBoltDesc,Crafting material from dismantling Flaming Crossbow Bolts
+dismantleExplodingBoltDesc,Crafting material from dismantling Exploding Crossbow Bolts
+
+dismantle44MagnumDesc,Crafting material from dismantling .44 Magnum Ammo
+dismantle44MagnumAPDesc,Crafting material from dismantling .44 Magnum Armor Piercing Ammo
+dismantle44MagnumHPDesc,Crafting material from dismantling .44 Magnum HiPower Ammo
+
+dismantle9mmDesc,Crafting material from dismantling 9mm Ammo
+dismantle9mmAPDesc,Crafting material from dismantling 9mm Armor Piercing Ammo
+dismantle9mmHPDesc,Crafting material from dismantling 9mm HiPower Ammo
+
+dismantle762mmDesc,Crafting material from dismantling 7.62mm Ammo
+dismantle762mmAPDesc,Crafting material from dismantling 7.62mm Armor Piercing Ammo
+dismantle762mmHPDesc,Crafting material from dismantling 7.62mm HiPower Ammo
+
+dismantleShotgunShellDesc,Crafting material from dismantling Shotgun Shells
+dismantleShotgunSlugDesc,Crafting material from dismantling Shotgun AP Slugs
+dismantleShotgunBreachingSlugDesc,Crafting material from dismantling Shotgun Breaching Slugs
+
+dismantleRocketFragDesc,Crafting material from dismantling Rocket Frag Ammo
+dismantleRocketHEDesc,Crafting material from dismantling Rocket HE Ammo

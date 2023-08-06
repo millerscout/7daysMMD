@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+AutomatedMining,blocks,Workstation,,,Automated Mining Bot,,,,,,,,,,,,,
+AutomatedMiningDesc,blocks,Workstation,,,"The Automated Mining Bot allows you to mine resources using nano mining bots that target specific resources. Requires Advanced Bellows, Anvil, and Crucible for access to all resources. Anvil speeds up mining.",,,,,,,,,,,,,
+AutomatedAmmunition,blocks,Workstation,,,Automated Ammunition Bot,,,,,,,,,,,,,
+AutomatedAmmunitionDesc,blocks,Workstation,,,"The Automated Ammunition Bot allows you to manufacture various kinds of ammunition using a combination of nano mining and manufacture bots. Requires Advanced Bellows, Anvil, and Crucible to manufacture all ammo types. Anvil speeds up production.",,,,,,,,,,,,,

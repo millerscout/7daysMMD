@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <!-- If you want to change the unread books icon, here is how to do it -->
+    <!-- <set xpath="//item[@name='schematicMaster']/property[@name='ItemTypeIcon']/@value">add</set> -->
+    <set xpath="//item[@name='schematicMaster']/property[@name='AltItemTypeIcon']/@value">check</set>
+    <insertAfter xpath="//item[@name='schematicMaster']/property[@name='AltItemTypeIcon']">
+        <property name="AltItemTypeIconColor" value="128,256,128,128" />
+    </insertAfter>
+
+    <!-- Reduce time to scrap brass - this is 1/2 of the original value -->
+    <set xpath="//item[@name='resourceScrapBrass']/property[@name='CraftingIngredientTime']/@value">0.1</set>
+
+    <!-- (A21) Make anvils scrappable -->
+    <set xpath="//item[@name='toolAnvil']/property[@name='Weight']/@value">1000</set>
+</configs>

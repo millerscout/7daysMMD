@@ -1,0 +1,193 @@
+<config>
+	<set xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']/@value">-0.5</set>
+	<set xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']/@value">-0.5</set>
+
+	<set xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']/@value">60000</set>
+
+	<append xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group[@name='meleeToolRepairT1ClawHammer']">
+		<passive_effect name="CraftingTime" operation="perc_subtract" value="0.5" tags="WB"/>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeToolSalvageT1Wrench']/effect_group[@name='meleeToolSalvageT1Wrench']">
+		<passive_effect name="CraftingTime" operation="perc_subtract" value="0.1667" tags="WB"/>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeToolSalvageT2Ratchet']/effect_group[@name='meleeToolSalvageT2Ratchet']">
+		<passive_effect name="CraftingTime" operation="perc_subtract" value="0.0833" tags="WB"/>
+	</append>
+	
+	<append xpath="/items/item[@name='toolBeaker']">
+		<effect_group tiered="false">
+			<passive_effect name="CraftingTime" operation="perc_subtract" value="0.5" tags="CS"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']">
+		<passive_effect name="CraftingTime" operation="perc_subtract" value="0.05" tags="CF"/>
+	</append>
+	
+	<append xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/effect_group[@name='meleeWpnSledgeT1IronSledgehammer']">
+		<passive_effect name="CraftingTime" operation="perc_subtract" value="0.025"/>
+	</append>
+
+	<append xpath="/items">
+		<item name="toolCookingPotDouble">
+			<property name="Extends" value="toolCookingPot"/>
+			<property name="CustomIcon" value="toolCookingPot"/>
+			<property name="CustomIconTint" value="50FF50"/>
+			<property name="DescriptionKey" value="toolCookingPotDoubleDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.5" tags="CP"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolCookingPotTriple">
+			<property name="Extends" value="toolCookingPotDouble"/>
+			<property name="CustomIconTint" value="FF5050"/>
+			<property name="DescriptionKey" value="toolCookingPotTripleDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.1667" tags="CP"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolCookingGrillDouble">
+			<property name="Extends" value="toolCookingGrill"/>
+			<property name="CustomIcon" value="toolCookingGrill"/>
+			<property name="CustomIconTint" value="50FF50"/>
+			<property name="DescriptionKey" value="toolCookingGrillDoubleDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.5" tags="GR"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolCookingGrillTriple">
+			<property name="Extends" value="toolCookingGrillDouble"/>
+			<property name="CustomIconTint" value="FF5050"/>
+			<property name="DescriptionKey" value="toolCookingGrillTripleDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.1667" tags="GR"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolCookingHotSauce">
+			<property name="Extends" value="toolBeaker"/>
+			<property name="CustomIcon" value="drinkJarGrandpasAwesomeSauce"/>
+			<property name="CustomIconTint" value="FF5050"/>
+			<property name="DescriptionKey" value="toolCookingHotSauceDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingIngredientCount" operation="base_subtract" value="1" tags="foodRawMeat"/>
+			</effect_group>
+		</item>
+		
+		
+		<item name="toolBellowsDouble">
+			<property name="Extends" value="toolBellows"/>
+			<property name="CustomIcon" value="toolBellows"/>
+			<property name="CustomIconTint" value="50FF50"/>
+			<property name="DescriptionKey" value="toolBellowsDoubleDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingSmeltTime" operation="perc_subtract" value="0.1667"/>
+				<display_value name="dCraftingSmeltTime" value="0.33"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolBellowsTriple">
+			<property name="Extends" value="toolBellowsDouble"/>
+			<property name="CustomIconTint" value="FF5050"/>
+			<property name="DescriptionKey" value="toolBellowsTripleDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingSmeltTime" operation="perc_subtract" value="0.0833"/>
+				<display_value name="dCraftingSmeltTime" value="0.25"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolAnvilDouble">
+			<property name="Extends" value="toolAnvil"/>
+			<property name="CustomIcon" value="toolAnvil"/>
+			<property name="CustomIconTint" value="50FF50"/>
+			<property name="DescriptionKey" value="toolAnvilDoubleDesc"/>
+			<effect_group tiered="false">
+				<requirement name="!HoldingItemHasTags" tags="toolAnvil"/>
+					<passive_effect name="CraftingTime" operation="perc_subtract" value="0.1667"/>
+					<display_value name="dCraftingTime" value="0.33"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolAnvilTriple">
+			<property name="Extends" value="toolAnvilDouble"/>
+			<property name="CustomIconTint" value="FF5050"/>
+			<property name="DescriptionKey" value="toolAnvilTripleDesc"/>
+			<effect_group tiered="false">
+				<requirement name="!HoldingItemHasTags" tags="toolAnvil"/>
+					<passive_effect name="CraftingTime" operation="perc_subtract" value="0.0833"/>
+					<display_value name="dCraftingTime" value="0.25"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolForgeHighCarbonTooling">
+			<property name="Extends" value="toolForgeCrucible"/>
+			<property name="CustomIcon" value="meleeToolAllSteelParts"/>
+			<property name="CustomIconTint" value="404040"/>
+			<property name="DescriptionKey" value="toolForgeHighCarbonToolingDesc"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.025"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolBunsenBurner">
+			<property name="Extends" value="toolBeaker"/>
+			<property name="CustomIcon" value="modMeleeClubBurningShaft"/>
+			<property name="CustomIconTint" value="53A1DA"/>
+			<property name="DescriptionKey" value="toolBunsenBurnerDesc"/>
+			<property name="ItemTypeIcon" value="chemistry"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.1667" tags="CS"/>
+			</effect_group>
+		</item>
+		
+		<item name="resourceSulfur">
+			<property name="Extends" value="resourcePotassiumNitratePowder"/>
+			<property name="CustomIcon" value="resourcePotassiumNitratePowder"/>
+			<property name="CustomIconTint" value="FDFA99"/>
+			<property name="DescriptionKey" value="resourceSulfurDesc"/>
+			<property name="ItemTypeIcon" value="chemistry"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.0833" tags="CS"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolLimestone">
+			<property name="Extends" value="resourceCobblestones"/>
+			<property name="CustomIcon" value="resourceCobblestones"/>
+			<property name="CustomIconTint" value="788872"/>
+			<property name="DescriptionKey" value="toolLimestoneDesc"/>
+			<property name="ItemTypeIcon" value="cement"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.5" tags="CM"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolPlasticizer">
+			<property name="Extends" value="resourceAcid"/>
+			<property name="CustomIcon" value="resourceAcid"/>
+			<property name="CustomIconTint" value="d11c16"/>
+			<property name="DescriptionKey" value="toolPlasticizerDesc"/>
+			<property name="ItemTypeIcon" value="cement"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.1667" tags="CM"/>
+			</effect_group>
+		</item>
+		
+		<item name="toolAccelerator">
+			<property name="Extends" value="resourceGlue"/>
+			<property name="CustomIcon" value="resourceGlue"/>
+			<property name="CustomIconTint" value="ecd473"/>
+			<property name="DescriptionKey" value="toolAcceleratorDesc"/>
+			<property name="ItemTypeIcon" value="cement"/>
+			<effect_group tiered="false">
+				<passive_effect name="CraftingTime" operation="perc_subtract" value="0.0833" tags="CM"/>
+			</effect_group>
+		</item>
+	</append>
+</config>
+	

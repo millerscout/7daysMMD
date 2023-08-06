@@ -1,0 +1,33 @@
+<configs>
+	<remove xpath="/recipes/recipe[@name='resourceGlue']" />
+	<remove xpath="/recipes/recipe[@name='resourceGlue']" />
+	<remove xpath="/recipes/recipe[@name='resourceGlue']" />
+
+	<append xpath="/recipes">
+
+<recipe name="resourceGlue" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkAdvancedEngineering">
+	<ingredient name="resourceBone" count="7"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-1" tags="resourceBone"/>
+	</effect_group>
+</recipe>
+
+<recipe name="resourceGlue" count="1" craft_area="chemistryStation" tags="perkAdvancedEngineering,chemStationCrafting">
+	<ingredient name="resourceBone" count="5"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-1" tags="resourceBone"/>
+	</effect_group>
+</recipe>
+
+<recipe name="resourceGlue" count="2" craft_area="chemistryStation" tags="perkAdvancedEngineering,chemStationCrafting">
+	<ingredient name="foodCropGraceCorn" count="6"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-2" tags="foodCropGraceCorn"/>
+	</effect_group>
+</recipe>
+
+	</append>
+</configs>

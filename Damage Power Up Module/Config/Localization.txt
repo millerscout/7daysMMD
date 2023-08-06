@@ -1,0 +1,12 @@
+Key,UsedInMainMenu,Source,Context,Changes,English,Japanese
+
+PowerUPModDMG1,,items,Item,New,x1.2 Damage Mod,,威力1.2倍増加改造パーツ
+PowerUPModDMG1Desc,,items,Item,New,Modification parts that can be attached to tools and guns. By attaching this modification part. the maximum range and power are x1.2.,道具や銃に取り付けられる改造パーツ。この改造パーツを取り付けることで最大射程、威力が1.2倍向上する。
+PowerUPModDMG2,,items,Item,New,x1.4 Damage Mod,,威力1.4倍増加改造パーツ
+PowerUPModDMG2Desc,,items,Item,New,Modification parts that can be attached to tools and guns. By attaching this modification part. the maximum range and power are x1.4.,道具や銃に取り付けられる改造パーツ。この改造パーツを取り付けることで最大射程、威力が1.4倍向上する。
+PowerUPModDMG3,,items,Item,New,x1.6 Damage Mod,,威力1.6倍増加改造パーツ
+PowerUPModDMG3Desc,,items,Item,New,Modification parts that can be attached to tools and guns. By attaching this modification part. the maximum range and power are x1.6.,道具や銃に取り付けられる改造パーツ。この改造パーツを取り付けることで最大射程、威力が1.6倍向上する。
+PowerUPModDMG4,,items,Item,New,x1.8 Damage Mod,,威力1.8倍増加改造パーツ
+PowerUPModDMG4Desc,,items,Item,New,Modification parts that can be attached to tools and guns. By attaching this modification part. the maximum range and power are x1.8.,道具や銃に取り付けられる改造パーツ。この改造パーツを取り付けることで最大射程、威力が1.8倍向上する。
+PowerUPModDMG5,,items,Item,New,x2.0 Damage Mod,,威力2倍増加改造パーツ
+PowerUPModDMG5Desc,,items,Item,New,Modification parts that can be attached to tools and guns. By attaching this modification part. the maximum range and power are x2.0.,道具や銃に取り付けられる改造パーツ。この改造パーツを取り付けることで最大射程、威力が2倍に向上する。

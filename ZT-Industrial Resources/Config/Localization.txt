@@ -1,0 +1,28 @@
+Key,english
+
+
+ztIndustrialMasterBlocks,"Industrial Master"
+ztIndustrialMasterBlocksDesc,"This set of parent blocks control all masters of elevators and company."
+ztIndustrialDoorParentBlocks,"Door Controller"
+ztIndustrialDoorParentBlocksDesc,"This master set includes door based items."
+ztIndustrialConcreteParentBlocks,"Conrete Master"
+ztIndustrialConcreteParentBlocksDesc,"This maset set includes concrete resources for industrial items."
+
+
+ZT_Industrial,"Industrial Resources"
+ZT_IndustrialDesc,"Somehow, you've managed to craft working devices and industrial resources to help you escape zombies or simply navigate differently in your base!"
+
+
+ZT_WorkingElevator,"Workable Elevator"
+ZT_WorkingRotatingDoor,"Rotating Door"
+ZT_WorkingRotatingDoorAlt,"Rotating Door (Alt Glass)"
+ZT_EscalatorBottom,"Elevator Start"
+ZT_EscalatorBottomDesc,"This elevator piece is to be placed first."
+ZT_EscalatorMiddle,"Elevator Middle"
+ZT_EscalatorMiddleDesc,"This elevator piece is to be placed as many times as needed before the final two pieces (i.e. Elevator Top and Elevator End)."
+ZT_EscalatorPreTop,"Elevator Top"
+ZT_EscalatorPreTopDesc,"This elevator piece is to be placed after the Elevator Start and Elevator Middle pices."
+ZT_EscalatorTop,"Elevator End"
+ZT_EscalatorTopDesc,"This elevator piece is placed at the end of ascension or descension."
+ZT_EscalatorAngle,"Elevator Wedge Support"
+ZT_EscalatorAngleDesc,"This elevator piece is technically the last piece. Place this inbetween every elevator piece to ensure the entire set looks like one escalator."

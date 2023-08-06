@@ -1,0 +1,8 @@
+<configs>
+	<set xpath="/recipes/recipe[@name='resourceClayLump']/@craft_time">0.1</set>
+	<set xpath="/recipes/recipe[@name='resourceCrushedSand']/@craft_time">0.1</set>
+	<set xpath="/recipes/recipe[@name='resourceRockSmall']/@craft_time">0.1</set>
+	<set xpath="/recipes/recipe[@name='resourceScrapBrass']/@craft_time">0.1</set>
+	<set xpath="/recipes/recipe[@name='resourceScrapIron']/@craft_time">0.1</set>
+	<set xpath="/recipes/recipe[@name='resourceScrapLead']/@craft_time">0.1</set>				
+</configs>

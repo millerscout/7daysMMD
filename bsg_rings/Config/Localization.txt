@@ -1,0 +1,367 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+modRingScorchT1,item_modifiers,Mod,,,"Ring of Scorch"
+modRingScorchT2,item_modifiers,Mod,,,"Ring of Scorch"
+modRingScorchT3,item_modifiers,Mod,,,"Ring of Scorch"
+ringScorchT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy has a 45% chance to Ignite them for 5 seconds."
+ringScorchT2BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy has a 60% chance to Ignite them for 5 seconds."
+ringScorchT3BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy has a 75% chance to Ignite them for 5 seconds."
+buffScorchName,buffs,Buff,,,Scorch
+buffScorchDesc,buffs,Buff,,,You are burning.
+
+
+modRingStrideT1,item_modifiers,Mod,,,"Ring of Stride"
+modRingStrideT2,item_modifiers,Mod,,,"Ring of Stride"
+modRingStrideT3,item_modifiers,Mod,,,"Ring of Stride"
+modRingStrideT4,item_modifiers,Mod,,,"Ring of Stride"
+modRingStrideT5,item_modifiers,Mod,,,"Ring of Stride"
+modRingStrideT6,item_modifiers,Mod,,,"Ring of Stride"
+ringStrideBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants movement speed."
+
+
+modRingGreedT1,item_modifiers,Mod,,,"Ring of Greed"
+modRingGreedT2,item_modifiers,Mod,,,"Ring of Greed"
+modRingGreedT3,item_modifiers,Mod,,,"Ring of Greed"
+ringGreedBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants Bartering bonus, duke-looting quantity bonus, and an additional quest reward."
+
+
+modRingSeekerT1,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT2,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT3,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT4,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT5,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT6,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT7,item_modifiers,Mod,,,"Ring of Seeker"
+modRingSeekerT8,item_modifiers,Mod,,,"Ring of Seeker"
+ringSeekerBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonuses to Loot Stage and Treasure Radius."
+ringSeekerBasicDescLooting,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonuses to Looting."
+ringSeekerBasicDescLootSpeed,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonuses to Loot Speed."
+
+
+modRingTwinTerrorT1,item_modifiers,Mod,,,"Ring of Twin Terror"
+modRingTwinTerrorT2,item_modifiers,Mod,,,"Ring of Twin Terror"
+modRingTwinTerrorT3,item_modifiers,Mod,,,"Ring of Twin Terror"
+ringTwinTerrorBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants an additional Projectile to be shot with Archery, but at the cost of a damage penelty."
+statAdditionalProjectilesArchery,ui_display,Item stat,,,Archery Additional Projectiles:
+
+
+modRingVampiricaT1,item_modifiers,Mod,,,"Ring of Vampirica"
+modRingVampiricaT2,item_modifiers,Mod,,,"Ring of Vampirica"
+modRingVampiricaT3,item_modifiers,Mod,,,"Ring of Vampirica"
+ringVampiricaBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nChance to leech 1 to 3 Health on hitting an enemy with Melee or Archery."
+statVampiricProcChance,ui_display,Item stat,,,Chance to leech:
+
+
+modRingLaborloveT1,item_modifiers,Mod,,,"Ring of Laborlove"
+modRingLaborloveT2,item_modifiers,Mod,,,"Ring of Laborlove"
+modRingLaborloveT3,item_modifiers,Mod,,,"Ring of Laborlove"
+modRingLaborloveT4,item_modifiers,Mod,,,"Ring of Laborlove"
+modRingLaborloveT5,item_modifiers,Mod,,,"Ring of Laborlove"
+modRingLaborloveT6,item_modifiers,Mod,,,"Ring of Laborlove"
+ringLaborloveBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nThis ring has 6 varients"
+statAdditionalCropHarvest,ui_display,Item stat,,,Additional Crop Harvested:
+
+modRingBrillianceT1,item_modifiers,Mod,,,"Ring of Brilliance"
+modRingBrillianceT2,item_modifiers,Mod,,,"Ring of Brilliance"
+modRingBrillianceT3,item_modifiers,Mod,,,"Ring of Brilliance"
+modRingBrillianceT4,item_modifiers,Mod,,,"Ring of Brilliance"
+modRingBrillianceT5,item_modifiers,Mod,,,"Ring of Brilliance"
+ringBrillianceBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants EXP and INT bonus."
+
+
+modRingInspirationT1,item_modifiers,Mod,,,"Ring of Inspiration"
+modRingInspirationT2,item_modifiers,Mod,,,"Ring of Inspiration"
+modRingInspirationT3,item_modifiers,Mod,,,"Ring of Inspiration"
+ringInspirationBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nBuffs nearby Allies."
+statInspirationMaxHealth,item_modifiers,Mod,,,Health Bonus for Allies:
+statInspirationDamage,item_modifiers,Mod,,,Allies deal more Damage:
+statInspirationAtkSpd,item_modifiers,Mod,,,Attack Speed for Allies:
+buffInspiredName,buffs,Buff,,,Inspired
+buffInspiredDesc,buffs,Buff,,,You have bonus Health and Damage and Attack Speed.
+
+
+modRingAgonyT1,item_modifiers,Mod,,,"Ring of Agony"
+modRingAgonyT2,item_modifiers,Mod,,,"Ring of Agony"
+modRingAgonyT3,item_modifiers,Mod,,,"Ring of Agony"
+ringAgonyBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants a Damage and Attack Speed boost, at the cost of Health."
+
+
+modRingHeadHunterT1,item_modifiers,Mod,,,"Ring of Head Hunter"
+ringHeadHunterBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nKilling an enemy grants a stacking buff. Grants 5% Damage, Attack Speed, and Move Speed bonus per Stack."
+buffHeadHunterName,buffs,Buff,,,Head Hunter
+buffHeadHunterDesc,buffs,Buff,,,You have bonus Damage and Attack Speed and Move Speed.
+statHeadHunter,ui_display,Item stat,,,Head Hunter stack per kill:
+
+
+modRingGuardiusT1,item_modifiers,Mod,,,"Ring of Guardius"
+modRingGuardiusT2,item_modifiers,Mod,,,"Ring of Guardius"
+modRingGuardiusT3,item_modifiers,Mod,,,"Ring of Guardius"
+modRingGuardiusT4,item_modifiers,Mod,,,"Ring of Guardius"
+modRingGuardiusT5,item_modifiers,Mod,,,"Ring of Guardius"
+modRingGuardiusT6,item_modifiers,Mod,,,"Ring of Guardius"
+ringGuardiusBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen hit, gain Fortify for 6 seconds. Fortify reduces damage taken by 50%. This Effect has a 30 second Cooldown."
+statFortify,ui_display,Item stat,,,When hit gain Fortify
+buffFortifyName,buffs,Buff,,,Fortify
+buffFortifyDesc,buffs,Buff,,,You take reduced damage.
+buffFortifyNameCD,buffs,Buff,,,Fortify Cooldown
+buffFortifyDescCD,buffs,Buff,,,Fortify is on Cooldown.
+
+
+modRingLifeEssT1,item_modifiers,Mod,,,"Ring of Life Essence"
+modRingLifeEssT2,item_modifiers,Mod,,,"Ring of Life Essence"
+modRingLifeEssT3,item_modifiers,Mod,,,"Ring of Life Essence"
+ringLifeEssT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen hit, recover 5 Health after 5 Seconds. 15 second cooldown."
+ringLifeEssT2BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen hit, recover 7 Health after 5 Seconds. 15 second cooldown."
+ringLifeEssT3BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen hit, recover 10 Health after 5 Seconds. 15 second cooldown."
+statHealthRecovery,ui_display,Item stat,,,When hit gain Health after a short delay
+buffLifeEssenceRecoverName,buffs,Buff,,,Health Recovery
+buffLifeEssenceRecoverDesc,buffs,Buff,,,You are recovering Health.
+
+
+modRingStealthT1,item_modifiers,Mod,,,"Ring of Stealth"
+modRingStealthT2,item_modifiers,Mod,,,"Ring of Stealth"
+modRingStealthT3,item_modifiers,Mod,,,"Ring of Stealth"
+ringStealthT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen you Crouch you trigger Stealth. Stealth makes you invisible to zombies. Stealth doesnt work on Blood Moon zombies."
+statGrantStealth,ui_display,Item stat,,,Grants Stealth on Crouch
+buffRingStealthName,buffs,Buff,,,Stealth
+buffRingStealthDesc,buffs,Buff,,,Stealth is active and you're Invisible to enemies (Non-player). Attacking will break this effect.
+buffRingStealthCDName,buffs,Buff,,,Stealth Cooldown
+buffRingStealthCDDesc,buffs,Buff,,,Stealth is on Cooldown.
+
+
+modRingMechanismT1,item_modifiers,Mod,,,"Ring of Mechanism"
+modRingMechanismT2,item_modifiers,Mod,,,"Ring of Mechanism"
+modRingMechanismT3,item_modifiers,Mod,,,"Ring of Mechanism"
+modRingMechanismT4,item_modifiers,Mod,,,"Ring of Mechanism"
+modRingMechanismT5,item_modifiers,Mod,,,"Ring of Mechanism"
+ringMechanismT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nRobotic Summon Limit applies to Robotic Turret, and Robotic Sledge."
+ringMechanismT2BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nBoost to Robotic Turret's and Robotic Sledge's Damage and Attack Speed."
+ringMechanismT3BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nLarge boost to Robotic Turret's and Robotic Sledge's Damage at the cost of their Attack Speed."
+ringMechanismT4BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nBoost to Robotic Turret's and Robotic Sledge's Attack Speed at the cost of their Damage. Also increases Robotic Turret's Magazine Capacity."
+ringMechanismT5BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nBoost Robotic Sledge's Strike Range, Damage, and Attack Speed."
+statRobotSummonLimit,ui_display,Item stat,,,Active Robot Limit
+statRobotActiveRange,ui_display,Item stat,,,Activation Range
+statRobotDamage,ui_display,Item stat,,,Robot Damage
+statRobotAtkSpd,ui_display,Item stat,,,Robot Attack Speed
+statRobotMagCapacity,ui_display,Item stat,,,Robot Magazine Capacity
+statRobotStrikeRange,ui_display,Item stat,,,Robot Strike Range
+
+
+modRingThunderstruckT1,item_modifiers,Mod,,,"Ring of Thunderstruck"
+ringThunderstruckT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nArchery and Spear Throw hits will shock all enemies on impact within a small radius. 5 Second Cooldown. Shock lasts 2 seconds and deals damage."
+statGrantThunderstruck,ui_display,Item stat,,,Grants Thunderstruck
+buffShockThunderstruckName,buffs,Buff,,,Shocked
+buffShockThunderstruckDesc,buffs,Buff,,,You are Shocked: You are slowed and taking electrical damage while Shocked.
+buffThunderstruckCDName,buffs,Buff,,,Thunderstruck Cooldown
+buffThunderstruckCDDesc,buffs,Buff,,,Thunderstruck is on Cooldown.
+
+
+modRingPredatorT1,item_modifiers,Mod,,,"Ring of Predator"
+modRingPredatorT2,item_modifiers,Mod,,,"Ring of Predator"
+modRingPredatorT3,item_modifiers,Mod,,,"Ring of Predator"
+ringPredatorT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nBoosts your Damage, Attack Speed, and Movement Speed."
+
+
+modRingAssassinT1,item_modifiers,Mod,,,"Ring of Assassin"
+modRingAssassinT2,item_modifiers,Mod,,,"Ring of Assassin"
+modRingAssassinT3,item_modifiers,Mod,,,"Ring of Assassin"
+ringAssassinT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nBoosts your Jump Distance, Light, Noise, Crouch Speed, and Sneak Damage."
+
+
+modRingMendingT1,item_modifiers,Mod,,,"Ring of Mending"
+ringMendingT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants Mending, a Buff that recovers Crit Injuries and Heals 2 Health per 30 seconds. This Buff recycles while this Ring is equipped."
+ringGrantMending,ui_display,Item stat,,,Grants Mending
+buffMendingName,buffs,Buff,,,Mending
+buffMendingDesc,buffs,Buff,,,You are being healed.
+
+
+modRingStaminaT1,item_modifiers,Mod,,,"Ring of Stamina"
+modRingStaminaT2,item_modifiers,Mod,,,"Ring of Stamina"
+modRingStaminaT3,item_modifiers,Mod,,,"Ring of Stamina"
+modRingStaminaT4,item_modifiers,Mod,,,"Ring of Stamina"
+ringStaminaT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants Stamina and Stamina Regen."
+
+
+modRingFaceBreakerT1,item_modifiers,Mod,,,"Ring of Face Breaker"
+modRingFaceBreakerT2,item_modifiers,Mod,,,"Ring of Face Breaker"
+modRingFaceBreakerT3,item_modifiers,Mod,,,"Ring of Face Breaker"
+ringFaceBreakerT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonuses to Fist attacks."
+statFistDamage,ui_display,Item stat,,,Brawling Damage
+statFistAttackSpeed,ui_display,Item stat,,,Brawling Attack Speed
+statPowerAttackDamage,ui_display,Item stat,,,Brawling Power Attack Damage
+statPowerAttackStaminaCost,ui_display,Item stat,,,Brawling Power Attack Stamina Cost
+statFistDamage75Chance25,ui_display,Item stat,,,Chance for +75% Brawling Damage:
+statFistDamage50Chance50,ui_display,Item stat,,,Chance for +50% Brawling Damage:
+statFistDamage25Chance75,ui_display,Item stat,,,Chance for +25% Brawling Damage:
+statFistForce,ui_display,Item stat,,,Brawling Knockback force: 
+
+
+modRingDragonClaw,item_modifiers,Mod,,,"Ring of Dragon Claw"
+ringDragonClawBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nActivates Dragon Claw on Power Attack.\nDragon Claw applies a Bleed debuff to the enemy hit and nearby enemies, lasts 8 seconds. 12 Second Cooldown."
+statGrantDragonClaw,ui_display,Item stat,,,Grants Dragon Claw
+buffDragonClawCooldownName,buffs,Buff,,,Dragon Claw Cooldown
+buffDragonClawCooldownDesc,buffs,Buff,,,Dragon Claw cannot activate during Cooldown.
+buffDragonClawBleedName,buffs,Buff,,,Dragon Claw Bleed
+
+modRingDragonFlame,item_modifiers,Mod,,,"Ring of Dragon Flame"
+ringDragonFlameBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nActivates Dragon Flame on Power Attack.\nDragon Flame applies a Burn debuff to the enemy hit and nearby enemies, lasts 4 seconds. 12 Second Cooldown."
+statGrantDragonFlame,ui_display,Item stat,,,Grants Dragon Flame
+buffDragonFlameCooldownName,buffs,Buff,,,Dragon Flame Cooldown
+buffDragonFlameCooldownDesc,buffs,Buff,,,Dragon Flame cannot activate during Cooldown.
+buffDragonFlameBurnName,buffs,Buff,,,Dragon Flame Burn
+
+modRingDragonRoar,item_modifiers,Mod,,,"Ring of Dragon Roar"
+ringDragonRoarBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nActivates Dragon Roar on Power Attack.\nDragon Roar knocksdown the enemy hit and nearby enemies. 12 Second Cooldown."
+statGrantDragonRoar,ui_display,Item stat,,,Grants Dragon Roar
+buffDragonRoarCooldownName,buffs,Buff,,,Dragon Roar Cooldown
+buffDragonRoarCooldownDesc,buffs,Buff,,,Dragon Roar cannot activate during Cooldown.
+
+
+modRingForceT1,item_modifiers,Mod,,,"Ring of Force"
+modRingForceT2,item_modifiers,Mod,,,"Ring of Force"
+modRingForceT3,item_modifiers,Mod,,,"Ring of Force"
+ringForceBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy will knock them back."
+statForce,ui_display,Item stat,,,Knockback Force:
+
+
+modRingWishART,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishMovement,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishDamageMit,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishHealthMax,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishStaminaMax,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAddProj,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishJump,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishEXP,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAttSTR,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAttPER,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAttAGI,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAttFORT,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAttINT,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAtkSpd,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishEntityDamage,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishDigRadius,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishHarvest,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishOreOS,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishTreeOS,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishLockpick,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAddQuest,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishDukeQuant,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishLootStage,item_modifiers,Mod,,,"Ring of Wish"
+modRingWishAmplify,item_modifiers,Mod,,,"Ring of Wish"
+ringWishBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants a single random modifier."
+
+
+modRingVenomT1,item_modifiers,Mod,,,"Ring of Venom"
+modRingVenomT2,item_modifiers,Mod,,,"Ring of Venom"
+modRingVenomT3,item_modifiers,Mod,,,"Ring of Venom"
+ringVenomT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy will apply 2 Poison Stacks. Each stack of poison deals low damage over time. This Poison lasts 12 seconds."
+ringVenomT2BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy will apply 3 Poison Stacks. Each stack of poison deals low damage over time. This Poison lasts 12 seconds."
+ringVenomT3BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nHitting an enemy will apply 4 Poison Stacks. Each stack of poison deals low damage over time. This Poison lasts 12 seconds."
+statPoisonOnHit,ui_display,Item stat,,,Poison Enemy On Hit:
+buffPoisonDurationROVName,buffs,Buff,,,Poison Duration
+buffPoisonDurationROVDesc,buffs,Buff,,,You are Poisoned by Ring of Venom. Taking damage over time.
+buffPoisonEffectROVName,buffs,Buff,,,Poison Stack
+buffPoisonEffectROVDesc,buffs,Buff,,,You are Poisoned by Ring of Venom. Taking damage over time.
+
+
+modRingDemolitionT1,item_modifiers,Mod,,,"Ring of Demolition"
+modRingDemolitionT2,item_modifiers,Mod,,,"Ring of Demolition"
+modRingDemolitionT3,item_modifiers,Mod,,,"Ring of Demolition"
+ringDemolitionBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonus Block Damage."
+statDemoBrawler,ui_display,Item stat,,,Brawler Block Damage:
+statDemoSledge,ui_display,Item stat,,,Robotic Sledge Block Damage:
+statDemoGeneric,ui_display,Item stat,,,Block Damage:
+
+
+modRingRebornT1,item_modifiers,Mod,,,"Ring of Reborn"
+modRingRebornT2,item_modifiers,Mod,,,"Ring of Reborn"
+modRingRebornT3,item_modifiers,Mod,,,"Ring of Reborn"
+ringRebornT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen reaching 15 or less Health, recover to full health. Reborn has a 10 Minute Cooldown."
+ringRebornT2BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen reaching 20 or less Health, recover to full health. Reborn has a 10 Minute Cooldown."
+ringRebornT3BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nWhen reaching 25 or less Health, recover to full health. Reborn has a 10 Minute Cooldown."
+statGrantsReborn,ui_display,Item stat,,,Grants Reborn
+buffRingOfRebornChargedName,buffs,Buff,,,Reborn Charged
+buffRingOfRebornT1ChargedDesc,buffs,Buff,,,Recover to full Health upon reaching 15 or less Health.
+buffRingOfRebornT2ChargedDesc,buffs,Buff,,,Recover to full Health upon reaching 20 or less Health.
+buffRingOfRebornT3ChargedDesc,buffs,Buff,,,Recover to full Health upon reaching 25 or less Health.
+buffRingOfRebornCooldownName,buffs,Buff,,,Reborn Cooldown
+buffRingOfRebornCooldownDesc,buffs,Buff,,,Roborn is on Cooldown.
+
+
+modRingAmplifyT1,item_modifiers,Mod,,,"Ring of Amplification"
+modRingAmplifyT2,item_modifiers,Mod,,,"Ring of Amplification"
+modRingAmplifyT3,item_modifiers,Mod,,,"Ring of Amplification"
+ringAmplifyBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonus to Consumable's Buff Duration."
+statAmplify,ui_display,Item stat,,,Consumable's Buff Duration:
+buffAmplifyName,buffs,Buff,,,Amplify
+buffAmplifyDesc,buffs,Buff,,,You are Amplified. Consumable Buff Duration increased.
+
+
+modRingSplinterRainWrathful,item_modifiers,Mod,,,"Ring of Splinter Rain"
+ringSplinterRainWrathBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nShoot additional Projectiles with Archery"
+buffRingSplinterRainWrathName,buffs,Buff,,,Wrathful Splinter Rain
+buffRingSplinterRainWrathDesc,buffs,Buff,,,Shoot additional Projectiles with Archery
+
+modRingSplinterRainFurious,item_modifiers,Mod,,,"Ring of Splinter Rain"
+ringSplinterRainFuriousBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nIncreased Attack Speed with Archery."
+buffRingSplinterRainFuriousName,buffs,Buff,,,Furious Splinter Rain
+buffRingSplinterRainFuriousDesc,buffs,Buff,,,Increased Attack Speed with Archery.
+
+modRingSplinterRainDestructive,item_modifiers,Mod,,,"Ring of Splinter Rain"
+ringSplinterRainDestructiveBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nShoot additional Projectiles with Archery, at the cost of Archery Damage and Attack Speed."
+buffRingSplinterRainDestructiveName,buffs,Buff,,,Destructive Splinter Rain
+buffRingSplinterRainDestructiveDesc,buffs,Buff,,,Shoot additional Projectiles with Archery at the cost of Archery Damage and Attack Speed.
+
+
+modRingStorageT1,item_modifiers,Mod,,,"Ring of Storage"
+modRingStorageT2,item_modifiers,Mod,,,"Ring of Storage"
+modRingStorageT3,item_modifiers,Mod,,,"Ring of Storage"
+modRingStorageT4,item_modifiers,Mod,,,"Ring of Storage"
+modRingStorageT5,item_modifiers,Mod,,,"Ring of Storage"
+modRingStorageT6,item_modifiers,Mod,,,"Ring of Storage"
+ringStorageBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants storage capacity"
+
+
+modRingFishingT1,item_modifiers,Mod,,,"Ring of Angler"
+ringFishingT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants the ability: Fishing."
+statGrantFishing,ui_display,Item stat,,,Grants Fishing
+buffRingGrantFishingName,buffs,Buff,,,Fishing
+buffRingGrantFishingDesc,buffs,Buff,,,You are fishing!
+
+modRingBeginningsT1,item_modifiers,Mod,,,"Ring of Beginnings"
+ringBeginningsT1BasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants Damage, Health, and Stamina."
+
+modRingCraftedSilver,item_modifiers,Mod,,,"Ring of Silver"
+ringCraftedSilverBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants Health and Defenses."
+
+modRingCraftedGold,item_modifiers,Mod,,,"Ring of Gold"
+ringCraftedGoldBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonuses to Harvest and Looting Dukes."
+
+modRingCraftedDiamond,item_modifiers,Mod,,,"Ring of Diamond"
+ringCraftedDiamondBasicDesc,item_modifiers,Mod,,,"Sockets into Hand Armor items.\nGrants bonuses to Bartering and chance to One-Shot ore."
+
+
+
+statLockpickTime,ui_display,Item stat,,,Faster Lockpicking
+statHealthMax,ui_display,Item stat,,,Max Health
+statJumpDistance,ui_display,Item stat,,,Jump Distance
+statCrouchSpd,ui_display,Item stat,,,Crouch Speed
+statMovementSpd,ui_display,Item stat,,,Movement Speed
+statWalkSpeed,ui_display,Item stat,,,Walk Speed
+statAtkSpd,ui_display,Item stat,,,Attack Speed
+statArcheryAttackSpeed,ui_display,Item stat,,,Archery Attack Speed
+statSneakDamage,ui_display,Item stat,,,Sneak Damage
+statOneShotOre,ui_display,Item stat,,,Chance to one-shot any ore:
+statOneShotTree,ui_display,Item stat,,,Chance to one-shot any tree:
+statInHandTurretDamage,ui_display,Item stat,,,Robotic Sledge In-Hand Damage
+statHarvestQuantityOre,ui_display,Item stat,,,Ore Harvest Quantity:
+statHarvestQuantityWood,ui_display,Item stat,,,Wood Harvest Quantity:
+statHarvestQuantitySalvage,ui_display,Item stat,,,Salvage Harvest Quantity:
+statHarvestQuantityMeat,ui_display,Item stat,,,Meat Harvest Quantity:
+statAdditionalQuestReward,ui_display,Item stat,,,Additional Quest Reward:
+
+statLootQuantityDukes,ui_display,Item stat,,,Loot Quantity Dukes:
+statLootQuantityFood,ui_display,Item stat,,,Loot Quantity Food:
+statLootQuantityAmmo,ui_display,Item stat,,,Loot Quantity Ammo:
+statLootQuantityMedical,ui_display,Item stat,,,Loot Quantity Medical:
+statLootSpeed,ui_display,Item stat,,,Looting Speed:

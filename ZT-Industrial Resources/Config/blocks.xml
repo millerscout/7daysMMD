@@ -1,0 +1,193 @@
+<configs>
+
+	<append xpath="/blocks">
+		
+		<!-- Grandmaster Block -->
+	
+		<block name="ztIndustrialMasterBlocks">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="ztIndustrialMasterBlocksDesc"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+			<property name="Material" value="Mwood_regular"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="PlaceEverywhere" value="true" />
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="SellableToTrader" value="false" />
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Path" value="solid"/>
+			<property name="FilterTags" value="MC_outdoor,SC_decor"/>
+		</block>
+		
+		<!-- Master Blocks -->
+		
+		<block name="ztIndustrialMetalParentBlocks">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="ztIndustrialMasterBlocks"/>
+			<property name="DescriptionKey" value="ztIndustrialConcreteParentBlocksDesc"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+			<property name="Material" value="Mmetal" />
+			<property name="LightOpacity" value="1" />
+			<property name="Stacknumber" value="1"/>
+			<property class="RepairItems">
+			  <property name="resourceForgedIron" value="5" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_wood" />
+			<drop event="Harvest" name="resourceForgedIron" count="5,20" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceWood" count="5,20" />
+			<drop event="Destroy" name="resourceForgedIron" count="10,30" tag="salvageHarvest" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceNail" count="20,100" tag="salvageHarvest" tool_category="Disassemble"/>
+			<drop event="Fall" name="resourceWood" count="3" prob="0.20" stick_chance="0" />
+			<property name="FilterTags" value="floot" />
+		</block>
+		
+		<block name="ztIndustrialDoorParentBlocks">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="ztIndustrialMasterBlocks"/>
+			<property name="DescriptionKey" value="ztIndustrialDoorParentBlocksDesc"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+			<property name="Material" value="Mmetal" />
+			<property name="Class" value="DoorSecure" />
+			<property name="Tags" value="door"/>
+			<property name="BlockTag" value="Door"/>
+			<property name="Place" value="Door" />
+			<property name="OpenSound" value="door_wood_open"/>
+			<property name="CloseSound" value="door_wood_close"/>
+			<property name="UpgradeSound" value="place_block_wood"/>
+			<property name="LightOpacity" value="1" />
+			<property name="Stacknumber" value="1"/>
+			<property class="RepairItems">
+			  <property name="resourceForgedIron" value="5" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_wood" />
+			<drop event="Harvest" name="resourceForgedIron" count="5,20" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceWood" count="5,20" />
+			<drop event="Destroy" name="resourceForgedIron" count="10,30" tag="salvageHarvest" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceNail" count="20,100" tag="salvageHarvest" tool_category="Disassemble"/>
+			<drop event="Fall" name="resourceWood" count="3" prob="0.20" stick_chance="0" />
+			<property name="FilterTags" value="floot" />
+		</block>
+		
+		<!-- Workbench Crafting Variant Blocks -->
+		
+		<block name="ZT_Industrial"> <!--Group 14, industrialModels -->
+			<property name="Extends" value="ztIndustrialMasterBlocks" param1="EconomicBundleSize"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="CustomIcon" value="ZT_Elevator"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="ZT_IndustrialDesc"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="PlaceAltBlockValue" value="ZT_WorkingElevator,ZT_WorkingRotatingDoor,ZT_WorkingRotatingDoorAlt,ZT_EscalatorBottom,ZT_EscalatorMiddle,ZT_EscalatorPreTop,ZT_EscalatorTop,ZT_EscalatorAngle"/>
+			<property name="Group" value="Building,Basics,Science"/>
+			<property name="PickupJournalEntry" value="shapeMenuTip"/>
+			<property name="SortOrder1" value="ZT9500"/>
+			<property name="SortOrder2" value="000014"/>
+		</block>
+		
+		<!-- Workbench Crafting Blocks -->
+		
+		<block name="ZT_WorkingElevator">
+			<property name="Extends" value="ztIndustrialDoorParentBlocks"/>
+			<property name="MaxDamage" value="2000"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech01.prefab"/>
+			<property name="CustomIcon" value="ZT_Elevator"/>
+			<property name="MultiBlockDim" value="3,7,2" />
+			<property name="ModelOffset" value="0,0.5,0"/>   		
+			<property name="OpenSound" value="open_door_elevator" />
+			<property name="CloseSound" value="close_door_elevator" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000001"/>
+		</block>
+		
+		<block name="ZT_WorkingRotatingDoor">
+			<property name="Extends" value="ztIndustrialDoorParentBlocks"/>
+			<property name="MaxDamage" value="2000"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech02.prefab"/>
+			<property name="Material" value="MglassR" />
+			<property name="CustomIcon" value="ZT_RotatingDoor"/>
+			<property name="MultiBlockDim" value="3,3,4" />
+			<property name="ModelOffset" value="0,0.5,0"/>   		
+			<property name="OpenSound" value="open_door_rotating" />
+			<property name="CloseSound" value="close_door_rotating" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000002"/>
+		</block>
+		
+		<block name="ZT_WorkingRotatingDoorAlt">
+			<property name="Extends" value="ztIndustrialDoorParentBlocks"/>
+			<property name="MaxDamage" value="2000"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech03.prefab"/>
+			<property name="Material" value="MglassR" />
+			<property name="CustomIcon" value="ZT_RotatingDoor"/>
+			<property name="MultiBlockDim" value="3,3,4" />
+			<property name="ModelOffset" value="0,0.5,0"/>   		
+			<property name="OpenSound" value="open_door_rotating" />
+			<property name="CloseSound" value="close_door_rotating" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000003"/>
+		</block>
+		
+		<block name="ZT_EscalatorBottom">
+			<property name="Extends" value="ztIndustrialMetalParentBlocks"/>
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech04.prefab"/>
+			<property name="CustomIcon" value="ZT_EscalatorBottom"/>
+			<property name="DescriptionKey" value="ZT_EscalatorBottomDesc"/>
+			<property name="MultiBlockDim" value="1,1,1" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000004"/>
+		</block>
+		
+		<block name="ZT_EscalatorMiddle">
+			<property name="Extends" value="ztIndustrialMetalParentBlocks"/>
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech05.prefab"/>
+			<property name="CustomIcon" value="ZT_EscalatorMiddle"/>
+			<property name="DescriptionKey" value="ZT_EscalatorMiddleDesc"/>
+			<property name="MultiBlockDim" value="1,2,1" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000005"/>
+		</block>
+
+		<block name="ZT_EscalatorPreTop">
+			<property name="Extends" value="ztIndustrialMetalParentBlocks"/>
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech06.prefab"/>
+			<property name="CustomIcon" value="ZT_EscalatorPreTop"/>
+			<property name="DescriptionKey" value="ZT_EscalatorPreTopDesc"/>
+			<property name="MultiBlockDim" value="1,2,1" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000006"/>
+		</block>
+		
+		<block name="ZT_EscalatorTop">
+			<property name="Extends" value="ztIndustrialMetalParentBlocks"/>
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech07.prefab"/>
+			<property name="CustomIcon" value="ZT_EscalatorTop"/>
+			<property name="DescriptionKey" value="ZT_EscalatorTopDesc"/>
+			<property name="MultiBlockDim" value="1,1,1" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000007"/>
+		</block>
+		
+		<block name="ZT_EscalatorAngle">
+			<property name="Extends" value="ztIndustrialMetalParentBlocks"/>
+			<property name="Model" value="#@modfolder:Resources/industrialModels.unity3d?ZTWTech08.prefab"/>
+			<property name="CustomIcon" value="ZT_EscalatorAngle"/>
+			<property name="DescriptionKey" value="ZT_EscalatorAngleDesc"/>
+			<property name="MultiBlockDim" value="1,1,1" />
+			<property name="SortOrder1" value="ZT9450"/>
+			<property name="SortOrder2" value="000008"/>
+		</block>
+		
+	</append>
+	
+</configs>

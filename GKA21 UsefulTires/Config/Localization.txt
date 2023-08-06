@@ -1,0 +1,3 @@
+﻿Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+resourceRubber,items,item,,,Scrap Rubber
+resourceRubberDesc,items,item,,,Now the tires on the ground have a use,the rubber is necessary to make the wheels.

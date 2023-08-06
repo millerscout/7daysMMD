@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+	<!-- Remove things from Airdrop -->
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodGrilledMeat']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodVegetableStew']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodBaconAndEggs']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodBlueberryPie']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodMeatStew']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodShamChowder']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodHoboStew']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodCornOnTheCob']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodBakedPotato']"/>
+		<remove xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[@name= 'foodCornBread']"/>
+		
+	<!-- Replace with these things -->
+		<insertAfter xpath="/lootcontainers/lootgroup[@name= 'airdropfood']/item[1]">
+			<item name="foodCanBacon" count="2,5"/>
+			<item name="foodTacVegStew" count="1,3"/>
+			<item name="foodTacCrackerReg" count="4,10"/>
+			<item name="foodTacCrackerVeg" count="4,10"/>
+			<item name="foodTacLemPoppyPoundCake" count="1,2" loot_prob_template="veryLow"/>
+			<item name="foodTacDriedFruit" count="4,8"/>
+		</insertAfter>
+
+</configs>

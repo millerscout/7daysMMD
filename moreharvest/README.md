@@ -1,0 +1,1 @@
+Sets parameters in progression.xml to increase the effectiveness of living off the land perk

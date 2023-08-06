@@ -1,0 +1,23 @@
+<Config>
+	<append xpath="/recipes">
+		<!-- ############# -->
+		<!--   FINAL CUT   -->
+		<recipe name="modRingBeginningsT1" count="1" craft_time="15">
+			<ingredient name="resourceScrapIron" count="150"/>
+			<ingredient name="resourceBrokenGlass" count="15"/>
+		</recipe>
+		
+		<recipe name="modRingCraftedSilver" count="1" craft_time="15">
+			<ingredient name="resourceSilverNugget" count="10"/>
+		</recipe>
+		
+		<recipe name="modRingCraftedGold" count="1" craft_time="15">
+			<ingredient name="resourceGoldNugget" count="10"/>
+		</recipe>
+		
+		<recipe name="modRingCraftedDiamond" count="1" craft_time="15">
+			<ingredient name="resourceRawDiamond" count="10"/>
+		</recipe>
+		
+	</append>
+</Config>

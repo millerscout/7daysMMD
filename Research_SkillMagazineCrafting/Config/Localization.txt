@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+researchbench,blocks,block,,,"Research Bench"
+researchbenchDesc,blocks,block,,,"Used to compile Research Data from scrapping Skill Magazines, Books, and Schematics.\n\nRepair with Scrap Iron, Mechanical Parts, and Wood."
+resourceResearchData,items,item,,,"Research Data"
+resourceResearchDataDesc,items,item,,,"Excerpts salvaged from Skill Magazines, Books, and Schematics. Can be compiled at a Research Bench to create new Skill Magazines."

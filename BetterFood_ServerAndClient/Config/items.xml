@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+	<!-- Waters ||| triggered_effect -> [1]=Water Amount -->
+		<set xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[1]/@value">80</set>
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='DisplayType']/@value">betterFoodWS</set>
+		
+		<set xpath="/items/item[@name='drinkJarRiverWater']/effect_group/triggered_effect[1]/@value">25</set>
+		
+		<set xpath="/items/item[@name='drinkJarPureMineralWater']/effect_group/triggered_effect[1]/@value">165</set>
+		
+	<!-- Honey ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[1]/@value">15</set>
+		<set xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[2]/@value">25</set>
+		
+	<!-- Juice and Teas, Smoothies ||| triggered_effect -> [1]=Food Amount [2]=Health Amount [3]=Water Amount -->
+		<set xpath="/items/item[@name='drinkJarYuccaJuice' or @name='drinkJarGoldenRodTea' or @name='drinkJarRedTea']/effect_group/triggered_effect[1]/@value">120</set>
+		
+		<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[2]/@value">40</set>
+		<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[3]/@value">80</set>
+		
+	<!-- *** Canned Food -->
+		
+	<!-- Large White Cans/Rations ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodCanBeef' or @name='foodCanLamb' or @name='foodCanChicken']/effect_group/triggered_effect[1]/@value">100</set>
+		<set xpath="/items/item[@name='foodCanBeef' or @name='foodCanLamb' or @name='foodCanChicken']/effect_group/triggered_effect[2]/@value">50</set>
+		<!-- Add a bit of water to them -->
+		<insertAfter xpath="/items/item[@name='foodCanBeef' or @name='foodCanLamb' or @name='foodCanChicken']/effect_group/triggered_effect[2]">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		</insertAfter>
+		<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCanBeef']/property[@name='DisplayType']/@value">betterFoodFH</set>
+		
+	<!-- Soup, Stock, Miso ||| triggered_effect -> [1]=Food Amount [2]=Health Amount [3]=Water Amount -->
+		<set xpath="/items/item[@name='foodCanSoup' or @name='foodCanStock' or @name='foodCanMiso']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodCanSoup' or @name='foodCanStock' or @name='foodCanMiso']/effect_group/triggered_effect[2]/@value">50</set>
+		<set xpath="/items/item[@name='foodCanSoup' or @name='foodCanStock' or @name='foodCanMiso']/effect_group/triggered_effect[3]/@value">50</set>
+		<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCanBeef']/property[@name='DisplayType']/@value">betterFoodFHW</set>
+		<set xpath="/items/item[@name='foodCanMiso']/property[@name='DisplayType']/@value">betterFoodFHW</set>
+		
+	<!-- Salmon, Sham, Tuna ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodCanSalmon' or @name='foodCanSham'or @name='foodCanTuna']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodCanSalmon' or @name='foodCanSham'or @name='foodCanTuna']/effect_group/triggered_effect[2]/@value">50</set>
+		<insertAfter xpath="/items/item[@name='foodCanSalmon' or @name='foodCanSham']/effect_group/triggered_effect[2]">
+	<!-- Add a bit of water to them -->
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		</insertAfter>
+		
+	<!-- Peas, Pears ||| triggered_effect -> [1]=Food Amount [2]=Health Amount [3]=Water Amount -->
+		<set xpath="/items/item[@name='foodCanPeas' or @name='foodCanPears']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodCanPeas' or @name='foodCanPears']/effect_group/triggered_effect[2]/@value">50</set>
+		<set xpath="/items/item[@name='foodCanPeas' or @name='foodCanPears']/effect_group/triggered_effect[3]/@value">10</set>
+		
+	<!-- Chili, Pasta ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodCanChili' or @name='foodCanPasta']/effect_group/triggered_effect[1]/@value">120</set>
+		<set xpath="/items/item[@name='foodCanChili' or @name='foodCanPasta']/effect_group/triggered_effect[2]/@value">80</set>
+		<insertAfter xpath="/items/item[@name='foodCanChili' or @name='foodCanPasta']/effect_group/triggered_effect[2]">
+	<!-- Add a bit of water to them -->
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+		</insertAfter>
+		
+	<!-- Dog Food, Cat Food ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodCanDogfood' or @name='foodCanCatfood']/effect_group/triggered_effect[1]/@value">40</set>
+		<set xpath="/items/item[@name='foodCanDogfood' or @name='foodCanCatfood']/effect_group/triggered_effect[2]/@value">25</set>
+		
+	<!-- *** Food -->
+		
+	<!-- Cooked Vegetables, Basic Foods, Raw Meats ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodCornOnTheCob' or @name='foodBakedPotato' or @name='foodEggBoiled']/effect_group/triggered_effect[1]/@value">40</set>
+		<set xpath="/items/item[@name='foodCornOnTheCob' or @name='foodBakedPotato' or @name='foodEggBoiled']/effect_group/triggered_effect[2]/@value">25</set>
+	<!-- Fix negative water values -->
+		<remove xpath="/items/item[@name='foodCornOnTheCob' or @name='foodBakedPotato']/effect_group/triggered_effect[3]"/>
+		<set xpath="/items/item[@name='foodCornOnTheCob' or @name='foodBakedPotato']/property[@name='DisplayType']/@value">betterFoodFH</set>
+		
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCornOnTheCob']/property[@name='DisplayType']/@value">betterFoodFHW</set>
+		
+		<set xpath="/items/item[@name='foodRawMeat']/effect_group/triggered_effect[1]/@value">5</set>
+		<set xpath="/items/item[@name='foodRawMeat']/effect_group/triggered_effect[2]/@value">5</set>
+		
+	<!--Fix Display Values -->
+		<set xpath="/items/item[@name='foodRawMeat']/property[@name='DisplayType']/@value">betterFoodFHS_N</set>
+		<set xpath="/items/item[@name='foodRawMeat']/effect_group/display_value[@name='foodHealthAmount']/@value">5</set>
+		
+		<set xpath="/items/item[@name='foodRottingFlesh']/effect_group/triggered_effect[1]/@value">5</set>
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='DisplayType']/@value">betterFoodFHS_N</set>
+		
+		<set xpath="/items/item[@name='foodEgg']/effect_group/triggered_effect[1]/@value">10</set>
+		
+		<set xpath="/items/item[@name='foodCornMeal']/effect_group/triggered_effect[1]/@value">5</set>
+		
+		<set xpath="/items/item[@name='foodCropBlueberries' or @name='foodCropCorn' or @name='foodCropGraceCorn']/effect_group/triggered_effect[1]/@value">10</set>
+		<set xpath="/items/item[@name='foodCropCorn' or @name='foodCropGraceCorn']/effect_group/triggered_effect[2]/@value">5</set>
+	<!-- Add a bit of water to the blueberries -->
+		<insertAfter xpath="/items/item[@name='foodCropBlueberries']/effect_group/triggered_effect[1]">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+		</insertAfter>
+	<!--Fix Display Values -->
+		<set xpath="/items/item[@name='foodCropBlueberries']/property[@name='DisplayType']/@value">betterFoodFHW</set>
+		
+		<set xpath="/items/item[@name='foodCropPotato' or @name='foodCropYuccaFruit']/effect_group/triggered_effect[1]/@value">10</set>
+	<!-- Add Health from Potato -->
+		<insertAfter xpath="/items/item[@name='foodCropPotato']/effect_group/triggered_effect[1]">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		</insertAfter>
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCropPotato']/property[@name='DisplayType']/@value">betterFoodFH</set>
+		
+		<set xpath="/items/item[@name='foodCropYuccaFruit']/effect_group/triggered_effect[2]/@value">5</set>
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCropYuccaFruit']/property[@name='DisplayType']/@value">betterFoodFH</set>
+		
+		<set xpath="/items/item[@name='foodCropMushrooms']/effect_group/triggered_effect[1]/@value">5</set>
+		<set xpath="/items/item[@name='foodCropMushrooms']/effect_group/triggered_effect[2]/@value">5</set>
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCropMushrooms']/property[@name='DisplayType']/@value">betterFoodFH</set>
+		
+		<set xpath="/items/item[@name='foodCropPumpkin']/effect_group/triggered_effect[1]/@value">15</set>
+		<set xpath="/items/item[@name='foodCropPumpkin']/effect_group/triggered_effect[1]/@value">5</set>
+	<!-- Fix Display Values -->
+		<set xpath="/items/item[@name='foodCropPumpkin']/property[@name='DisplayType']/@value">betterFoodFH</set>
+		
+	<!-- Cooked Meats ||| triggered_effect -> [1]=Food Amount [2]=Health Amount [3]=Water Amount -->
+		<set xpath="/items/item[@name='foodGrilledMeat']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodGrilledMeat']/effect_group/triggered_effect[2]/@value">25</set>
+		
+		<set xpath="/items/item[@name='foodBoiledMeat']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodBoiledMeat']/effect_group/triggered_effect[2]/@value">25</set>
+		<set xpath="/items/item[@name='foodBoiledMeat']/effect_group/triggered_effect[3]/@value">25</set>
+		
+	<!-- Stews ||| triggered_effect -> [1]=Food Amount [2]=Health Amount [3]=Water Amount [4]=Stamina-->
+		<set xpath="/items/item[@name='foodMeatStew' or @name='foodHoboStew' or @name='foodGumboStew' or @name='foodVegetableStew' or @name='foodShamChowder']/effect_group/triggered_effect[1]/@value">120</set>
+		<set xpath="/items/item[@name='foodMeatStew' or @name='foodHoboStew' or @name='foodGumboStew' or @name='foodVegetableStew' or @name='foodShamChowder']/effect_group/triggered_effect[2]/@value">60</set>
+		<set xpath="/items/item[@name='foodMeatStew' or @name='foodHoboStew' or @name='foodGumboStew' or @name='foodVegetableStew' or @name='foodShamChowder']/effect_group/triggered_effect[3]/@value">25</set>
+		<set xpath="/items/item[@name='foodMeatStew' or @name='foodHoboStew' or @name='foodGumboStew' or @name='foodVegetableStew' or @name='foodShamChowder']/effect_group/triggered_effect[4]/@value">60</set>
+		
+	<!-- Meals ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodSteakAndPotato' or @name='foodFishTacos' or @name='foodChiliDog' or @name='foodBaconAndEggs']/effect_group/triggered_effect[1]/@value">120</set>
+		<set xpath="/items/item[@name='foodSteakAndPotato' or @name='foodFishTacos' or @name='foodChiliDog' or @name='foodBaconAndEggs']/effect_group/triggered_effect[2]/@value">60</set>
+		
+	<!--Pies ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodBlueberryPie' or @name='foodPumpkinPie' or @name='foodPumpkinCheesecake' or @name='foodShepardsPie']/effect_group/triggered_effect[1]/@value">80</set>
+		<set xpath="/items/item[@name='foodBlueberryPie' or @name='foodPumpkinPie' or @name='foodPumpkinCheesecake' or @name='foodShepardsPie']/effect_group/triggered_effect[2]/@value">50</set>
+		
+	<!-- Breads ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodPumpkinBread' or @name='foodCornBread']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodPumpkinBread' or @name='foodCornBread']/effect_group/triggered_effect[2]/@value">25</set>
+		
+	<!-- Spaghetti, Toast ||| triggered_effect -> [1]=Food Amount [2]=Health Amount -->
+		<set xpath="/items/item[@name='foodSpaghetti' or @name='foodTunaFishGravyToast']/effect_group/triggered_effect[1]/@value">60</set>
+		<set xpath="/items/item[@name='foodSpaghetti' or @name='foodTunaFishGravyToast']/effect_group/triggered_effect[2]/@value">25</set>
+	
+	<!-- Add in Custom Foods -->
+		<append xpath="/items">
+			<item name="foodCanBacon">
+				<property name="DisplayType" value="betterFoodFHS"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mplants"/>
+				<property name="Stacknumber" value="10"/>
+				<property name="EconomicValue" value="250"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="Sound_start" value="player_eating"/>
+				</property>
+				<effect_group tiered="false" name="Food Tier 3">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				</effect_group>
+			</item>
+			
+			<item name="foodTacVegStew">
+				<property name="DisplayType" value="betterFoodFHWS"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mplants"/>
+				<property name="Stacknumber" value="10"/>
+				<property name="EconomicValue" value="250"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="Sound_start" value="player_eating"/>
+				</property>
+				<effect_group tiered="false" name="Food Tier 3">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="125"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="60"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="60"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				</effect_group>
+			</item>
+			
+			<item name="foodTacCrackerReg">
+				<property name="DisplayType" value="betterFoodFHS"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mplants"/>
+				<property name="Stacknumber" value="60"/>
+				<property name="EconomicValue" value="250"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="Sound_start" value="player_eating"/>
+				</property>
+				<effect_group tiered="false" name="Food Tier 3">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="50"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				</effect_group>
+			</item>
+			
+			<item name="foodTacCrackerVeg">
+				<property name="DisplayType" value="betterFoodFHS"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mplants"/>
+				<property name="Stacknumber" value="60"/>
+				<property name="EconomicValue" value="250"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="Sound_start" value="player_eating"/>
+				</property>
+				<effect_group tiered="false" name="Food Tier 3">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="50"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="60"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				</effect_group>
+			</item>
+			
+			<item name="foodTacLemPoppyPoundCake">
+				<property name="DisplayType" value="betterFoodFHS"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mplants"/>
+				<property name="Stacknumber" value="60"/>
+				<property name="EconomicValue" value="250"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="Sound_start" value="player_eating"/>
+				</property>
+				<effect_group tiered="false" name="Food Tier 3">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="125"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="60"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				</effect_group>
+			</item>
+			
+			<item name="foodTacDriedFruit">
+				<property name="DisplayType" value="betterFoodFHS"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mplants"/>
+				<property name="Stacknumber" value="60"/>
+				<property name="EconomicValue" value="250"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="Sound_start" value="player_eating"/>
+				</property>
+				<effect_group tiered="false" name="Food Tier 3">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="40"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				</effect_group>
+			</item>
+		</append>
+	
+	
+	<!-- Venilla DisplayTypes -->
+	<!-- *** KEY *** -->
+	<!-- waterDysentary				= Water, Stamina Regen, Health, Dysentary -->
+	<!-- foodRaw					= Food, Health, Max Stamina Bonus, Dysentary -->
+	<!-- foodWaterRaw				= Food, Health, Water, Max Stamina Bonus -->
+	<!-- foodWaterNegative			= Food, Health, Water, Max Stamina Bonus -->
+	<!-- food						= Food, Health, Max Stamina Bonus -->
+	<!-- foodWater					= Food, Health, Water, Max Stamina Bonus -->
+	<!-- foodShamChowder			= Food, Health, Water, Max Stamina Bonus, Fortitude, Duration -->
+	<!-- foodPumpkinCheesecake		= Food, Health, Max Stamina Bonus, Bartering (buying), Duration -->
+	<!-- waterGoldenRodTea			= Water, Stamina Regen, Cure Dysentary -->
+	<!-- waterGoldenrod				= Water, Stamina Regen, Cure Dysentary -->
+	<!-- water						= Water, Stamina Regen -->
+	<!-- waterRedTea				= Water, Stamina Regen, Efficient Digestion, Duration -->
+	<!-- drinkYuccaSmoothie			= Food, Health, Water, Stamina Regen, Cold Resist, Duration -->
+	<!-- waterMegaCrush				= Water, Stamina Regen, Run Speed, Duration -->
+	<!-- waterCoffee				= Water, Stamina Regen, Cold Resist, Duration -->
+	<!-- waterBeer					= Stamina Regen, Brawling Damage, Stun Resist, Duration -->
+	<!-- waterGrandpasMoonshine		= Melee Damage, Stun Resist, Healing /s, Damage Mitigation, Stamina Regen, Duration -->
+	<!-- waterGrandpasAwesomeSauce	= Bartering, Duration -->
+	<!-- waterGrandpasLearningElixir= XP Gain, Duration -->
+	<!-- betterFoodFHW				= Food, Water, Health -->
+	<!-- betterFoodFH				= Food, Health -->
+	
+</configs>

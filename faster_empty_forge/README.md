@@ -1,0 +1,1 @@
+Emptying the forge of base materials will is much faster

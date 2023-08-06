@@ -1,0 +1,137 @@
+<configs>
+	<append xpath="/recipes">
+	<!-- AutomatedMining--> <!-- If you prefer the old system, change recipe dependencies back to auger meleeToolPickT3Auger -->
+		<recipe name="resourceClayLump" count="1000" craft_area="AutomatedMining" craft_time="3600" tags="automatedmining" craft_tool="toolBellows">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+		<recipe name="resourceScrapBrass" count="1000" craft_area="AutomatedMining" craft_time="3600" tags="automatedmining" craft_tool="toolForgeCrucible">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+		<recipe name="resourceCoal" count="1000" craft_area="AutomatedMining" craft_time="3600" tags="automatedmining" craft_tool="toolAnvil">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+		<recipe name="resourceScrapIron" count="1000" craft_area="AutomatedMining" craft_time="3600" tags="automatedmining" craft_tool="toolAnvil">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+		<recipe name="resourceScrapLead" count="1000" craft_area="AutomatedMining" craft_time="3600" tags="automatedmining" craft_tool="toolForgeCrucible">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+		<recipe name="resourceRockSmall" count="1000" craft_area="AutomatedMining" craft_time="3600" tags="automatedmining" craft_tool="toolBellows">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+		<recipe name="resourcePotassiumNitratePowder" count="1000" craft_area="AutomatedMining"  craft_time="3600" tags="automatedmining" craft_tool="toolForgeCrucible">
+			<ingredient name="ammoGasCan" count="1000"/>
+		</recipe>
+
+		<recipe name="AutomatedMining" count="1" craft_time="300" craft_area="workbench" tags="learnable" >
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceElectricParts" count="12"/>			
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceSpring" count="20"/>
+			<ingredient name="resourceOil" count="6"/>
+		</recipe>		
+		
+	<!-- AutomatedAmmunition - Recipe formula = Half of individual Gunpowder (+ Primary Resource for selective projectiles for balance) requirement on Workbench + A third of Player Vending Machine cost -->
+	<!-- If you prefer the old system, change recipe dependencies back to ratchet meleeToolSalvageT2Ratchet -->
+		<recipe name="ammo9mmBulletBall" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceGunPowder" count="250"/> <!-- 1 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1500"/> <!-- 9 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo9mmBulletHP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolAnvil">
+			<ingredient name="resourceGunPowder" count="250"/> <!-- 1 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2333"/> <!-- 14 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo9mmBulletAP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="500"/> <!-- 2 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2333"/> <!-- 14 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo44MagnumBulletBall" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceGunPowder" count="500"/> <!-- 2 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1666"/> <!-- 10 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo44MagnumBulletHP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolAnvil">
+			<ingredient name="resourceGunPowder" count="500"/> <!-- 2 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2500"/> <!-- 15 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo44MagnumBulletAP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="750"/> <!-- 3 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2500"/> <!-- 15 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo762mmBulletBall" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceGunPowder" count="750"/> <!-- 3 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1833"/> <!-- 11 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo762mmBulletHP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolAnvil">
+			<ingredient name="resourceGunPowder" count="750"/> <!-- 3 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2666"/> <!-- 16 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammo762mmBulletAP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="1250"/> <!-- 5 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2666"/> <!-- 16 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoShotgunShell" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceGunPowder" count="1000"/> <!-- 4 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1833"/> <!-- 11 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoShotgunSlug" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="1000"/> <!-- 4 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="3333"/> <!-- 20 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoShotgunBreachingSlug" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="1000"/> <!-- 4 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="3333"/> <!-- 20 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoJunkTurretRegular" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceScrapIron" count="750"/> <!-- 3 Iron per individual round on Workbench -->			
+			<ingredient name="casinoCoin" count="1500"/> <!-- 9 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoJunkTurretShell" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceScrapIron" count="500"/> <!-- 1 Iron per individual round on Workbench + 1 to replace Buckshot -->			
+			<ingredient name="casinoCoin" count="1500"/> <!-- 9 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoJunkTurretAP" count="500" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceScrapIron" count="1250"/> <!-- 5 Iron per individual round on Workbench -->			
+			<ingredient name="casinoCoin" count="1500"/> <!-- 9 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoArrowFlaming" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolAnvil">
+			<ingredient name="resourceGunPowder" count="100"/> <!-- 2 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1466"/> <!-- 44 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoArrowExploding" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="300"/> <!-- 6 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2166"/> <!-- 65 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoArrowIron" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceScrapIron" count="100"/> <!-- 2 Iron per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="833"/> <!-- 25 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoArrowSteelAP" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceScrapIron" count="350"/> <!-- 7 Iron per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1900"/> <!-- 57 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoCrossbowBoltFlaming" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolAnvil">
+			<ingredient name="resourceGunPowder" count="100"/> <!-- 2 Gunpowder per individual round on Workbench -->
+		<ingredient name="casinoCoin" count="1466"/> <!-- 44 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoCrossbowBoltExploding" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceGunPowder" count="400"/> <!-- 8 Gunpowder per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="2666"/> <!-- 80 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoCrossbowBoltIron" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolBellows">
+			<ingredient name="resourceScrapIron" count="100"/> <!-- 2 Iron per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="833"/> <!-- 25 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+		<recipe name="ammoCrossbowBoltSteelAP" count="100" craft_area="AutomatedAmmunition" craft_time="3600" tags="automatedammunition" craft_tool="toolForgeCrucible">
+			<ingredient name="resourceScrapIron" count="350"/> <!-- 7 Iron per individual round on Workbench -->
+			<ingredient name="casinoCoin" count="1900"/> <!-- 57 Dukes per round in Player Vending Machine at default -->
+		</recipe>
+	
+		<recipe name="AutomatedAmmunition" count="1" craft_time="300" craft_area="workbench" tags="learnable" >
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceElectricParts" count="12"/>
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceSpring" count="20"/>
+			<ingredient name="resourceOil" count="6"/>
+		</recipe>	
+	</append>
+</configs>

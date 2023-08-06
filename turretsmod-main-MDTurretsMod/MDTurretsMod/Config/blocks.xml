@@ -1,0 +1,9 @@
+<configs>
+  
+  <!-- Make turrets able to be picked up -->
+  <append xpath="/blocks/block[@name='autoTurret' or @name='shotgunTurret']">
+    <property name="TakeDelay" value="5"/>
+  </append>
+     
+</configs>
+

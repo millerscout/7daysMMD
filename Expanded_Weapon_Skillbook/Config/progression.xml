@@ -1,0 +1,458 @@
+<configs>
+	
+	<!-- <insertAfter xpath="//skills[@min_level='1']/book_group[@name='skillWasteTreasures']"> -->
+	<insertAfter xpath="//skills/book_group[@name='skillWasteTreasures']">
+		<book_group name="skillHammerTime" parent="attBooks" name_key="perkHammerTime0Name" desc_key="perkHammerTime0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_sledge"><effect_group/></book_group>
+		<book_group name="skillItsElectrifying" parent="attBooks" name_key="perkItsElectrifying0Name" desc_key="perkItsElectrifying0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_electric_power"><effect_group/></book_group>
+		<book_group name="skillKnifeGuy" parent="attBooks" name_key="perkKnifeGuy0Name" desc_key="perkKnifeGuy0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_knife"><effect_group/></book_group>
+		<book_group name="skillMassacreManiac" parent="attBooks" name_key="perkMassacreManiac0Name" desc_key="perkMassacreManiac0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_sneak_attack"><effect_group/></book_group>
+	</insertAfter>
+	
+	<insertAfter xpath="//perks/perk[@name='perkSkullCrusher']/effect_group/passive_effect[@name='EntityDamage']">
+		<!-- Increase the chance to find Hammer Time books until each book is read -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="hammerTimeProb">
+			<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="LT" value="1"/>
+		</passive_effect>
+
+		<!-- When all Hammer Time books have been read, set the probability bonus of finding them to 0 -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="0,0" tags="hammerTimeProb">
+			<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	
+	<insertAfter xpath="//perks/perk[@name='perkElectrocutioner']/effect_group/passive_effect[@name='EntityDamage']">
+		<!-- Increase the chance to find Its Electrifying books until each book is read -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="itsElectrifyingProb">
+			<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingComplete" operation="LT" value="1"/>
+		</passive_effect>
+
+		<!-- When all Its Electrifying books have been read, set the probability bonus of finding them to 0 -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="0,0" tags="itsElectrifyingProb">
+			<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingComplete" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	
+	<insertAfter xpath="//perks/perk[@name='perkDeepCuts']/effect_group/passive_effect[@name='EntityDamage']">
+		<!-- Increase the chance to find Knife Guy books until each book is read -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="knifeGuyProb">
+			<requirement name="ProgressionLevel" progression_name="perkKnifeGuyComplete" operation="LT" value="1"/>
+		</passive_effect>
+
+		<!-- When all Knife Guy books have been read, set the probability bonus of finding them to 0 -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="0,0" tags="knifeGuyProb">
+			<requirement name="ProgressionLevel" progression_name="perkKnifeGuyComplete" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	
+	<insertAfter xpath="//perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='EntityDamage']">
+		<!-- Increase the chance to find Massacre Maniac books until each book is read -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="massacreManiacProb">
+			<requirement name="ProgressionLevel" progression_name="perkMassacreManiacComplete" operation="LT" value="1"/>
+		</passive_effect>
+
+		<!-- When all Massacre Maniac books have been read, set the probability bonus of finding them to 0 -->
+		<passive_effect name="LootProb" operation="perc_add" level="1,5" value="0,0" tags="massacreManiacProb">
+			<requirement name="ProgressionLevel" progression_name="perkMassacreManiacComplete" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	
+	<insertAfter xpath="/progression/perks/book[@name='perkSpearHunter8Complete']">
+	
+		<!-- *** HAMMER_TIME_VOLUME_01_DAMAGE -->
+		<!-- Do 10% more damage with sledgehammers. -->
+		<book name="perkHammerTimeV1" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV1Desc" long_desc_key="perkHammerTimeV1LongDesc">
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1" tags="perkSkullCrusher"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** HAMMER_TIME_VOLUME_02_STAMINA -->
+		<!-- Power attacks cost 20% less stamina. -->
+		<book name="perkHammerTimeV2" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV2Desc" long_desc_key="perkHammerTimeV2LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				<!-- <passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.2"/> -->
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-0.2" tags="secondary"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** HAMMER_TIME_VOLUME_03_SPEEDSTER -->
+		<!-- Each kill boosts your run speed by 10% for 10 seconds up to 60 seconds. -->
+		<book name="perkHammerTimeV3" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV3Desc" long_desc_key="perkHammerTimeV3LongDesc">
+			<effect_group>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffHammerTimeSpeedster">
+					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+					<requirement name="ProgressionLevel" progression_name="perkHammerTimeV3" operation="Equals" value="1"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		
+		<!-- *** HAMMER_TIME_VOLUME_04_TANK -->
+		<!-- Take 5% less damage with a sledgehammer drawn. -->
+		<book name="perkHammerTimeV4" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV4Desc" long_desc_key="perkHammerTimeV4LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+					<passive_effect name="GeneralDamageResist" operation="base_add" level="1" value=".05"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** HAMMER_TIME_VOLUME_05_MAINTENANCE -->
+		<!-- Sledgehammers degrade 20% slower. -->
+		<book name="perkHammerTimeV5" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV5Desc" long_desc_key="perkHammerTimeV5LongDesc">
+			<effect_group>
+				<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="perkSkullCrusher"/>
+		</effect_group>
+		</book>
+		
+		<!-- *** HAMMER_TIME_VOLUME_06_DEMOLISHER -->
+		<!-- Do 25% more damage to blocks. -->
+		<book name="perkHammerTimeV6" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV6Desc" long_desc_key="perkHammerTimeV6LongDesc">
+			<effect_group>
+				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2" tags="perkSkullCrusher"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** HAMMER_TIME_VOLUME_07_NO_MERCY -->
+		<!-- Do 15% more damage to knocked down opponents. -->
+		<book name="perkHammerTimeV7" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeV7Desc" long_desc_key="perkHammerTimeV7LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+					<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".15"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** 7/7 HAMMER_TIME_COMPLETE -->
+		<!-- Kills have a 20% chance to give you Victory Cry which refills 50 stamina to you and allies and grants 10% Damage and Damage Mitigation buff for 60 seconds. -->
+		<book name="perkHammerTimeComplete" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeCompleteDesc" long_desc_key="perkHammerTimeCompleteLongDesc">
+			<effect_group>
+				<!-- <triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="20">
+					<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				</triggered_effect> -->
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffVictoryCryStamina">
+					<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="selfAOE" range="4" target_tags="ally,party" buff="buffVictoryCryStamina">
+					<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffVictoryCry">
+					<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="selfAOE" range="4" target_tags="ally,party" buff="buffVictoryCry">
+					<requirement name="ProgressionLevel" progression_name="perkHammerTimeComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+				</triggered_effect>
+				
+			</effect_group>
+		</book>
+		
+		<!-- *** ITS_ELECTRIFYING_VOLUME_01_DAMAGE -->
+		<!-- Do 10% more damage with batons. -->
+		<book name="perkItsElectrifyingV1" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV1Desc" long_desc_key="perkItsElectrifyingV1LongDesc">
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1" tags="perkElectrocutioner"/>
+			</effect_group>
+		</book>
+		<!-- *** ITS_ELECTRIFYING_VOLUME_02_MAINTENANCE -->
+		<!-- Batons degrade 20% slower. -->
+		<book name="perkItsElectrifyingV2" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV2Desc" long_desc_key="perkItsElectrifyingV2LongDesc">
+			<effect_group>
+				<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="perkElectrocutioner"/>
+			</effect_group>
+		</book>
+		<!-- *** ITS_ELECTRIFYING_VOLUME_03_FAST_LEARNING -->
+		<!-- Each kill boosts your XP gain by 20% for 20 seconds stacking up to 300 seconds. -->
+		<book name="perkItsElectrifyingV3" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV3Desc" long_desc_key="perkItsElectrifyingV3LongDesc">
+			<effect_group>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffItsElectrifyingFastLearning">
+					<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+					<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV3" operation="Equals" value="1"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		<!-- *** ITS_ELECTRIFYING_VOLUME_04_ELECTROSTATIC -->
+		<!-- Getting hit with a stun baton drawn has a 20% chance to shock the attackers. -->
+		<book name="perkItsElectrifyingV4" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV4Desc" long_desc_key="perkItsElectrifyingV4LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="stunBaton"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffShocked">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+					<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV4" operation="Equals" value="1"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		<!-- *** ITS_ELECTRIFYING_VOLUME_05_CONDUCTIVE -->
+		<!-- Do 15% more damage to electrocuted victims. -->
+		<book name="perkItsElectrifyingV5" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV5Desc" long_desc_key="perkItsElectrifyingV5LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+				<requirement name="HasBuff" buff="buffShocked" target="other"/>
+					<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.15"/>
+			</effect_group>
+		</book>
+		<!-- *** ITS_ELECTRIFYING_VOLUME_06_LIGHTNING_FAST -->
+		<!-- Increase attack speed with batons by 10%. -->
+		<book name="perkItsElectrifyingV6" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV6Desc" long_desc_key="perkItsElectrifyingV6LongDesc">
+			<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value="0.1" tags="perkElectrocutioner"/>
+			</effect_group>
+		</book>
+		<!-- *** ITS_ELECTRIFYING_VOLUME_07_THE_FLASH -->
+		<!-- Increase move speed by 10% with a baton drawn. -->
+		<book name="perkItsElectrifyingV7" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingV7Desc" long_desc_key="perkItsElectrifyingV7LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+					<passive_effect name="RunSpeed" operation="perc_add" level="1" value="0.1"/>
+					<passive_effect name="WalkSpeed" operation="perc_add" level="1" value="0.1"/>
+			</effect_group>
+		</book>
+		<!-- *** 7/7 ITS_ELECTRIFYING_COMPLETE -->
+		<!-- Charged power attacks to electrocuted victims will cause nearby enemies to become electrocuted too. -->
+		<book name="perkItsElectrifyingComplete" parent="skillItsElectrifying" max_level="1" base_skill_point_cost="0" desc_key="perkItsElectrifyingCompleteDesc" long_desc_key="perkItsElectrifyingCompleteLongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
+				<requirement name="HasBuff" buff="buffShocked" target="other"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="buffShocked">
+					<requirement name="CompareItemMetaFloat" operation="GTE" value="4" key="charge"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		
+		<!-- *** KNIFE_GUY_VOLUME_01_DAMAGE -->
+		<!-- Do 10% more damage with knives. -->
+		<book name="perkKnifeGuyV1" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV1Desc" long_desc_key="perkKnifeGuyV1LongDesc">
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1" tags="perkDeepCuts"/>
+			</effect_group>
+		</book>
+		<!-- *** KNIFE_GUY_VOLUME_02_MAINTENANCE -->
+		<!-- Knives degrade 20% slower. -->
+		<book name="perkKnifeGuyV2" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV2Desc" long_desc_key="perkKnifeGuyV2LongDesc">
+			<effect_group>
+				<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="perkDeepCuts"/>
+			</effect_group>
+		</book>
+		<!-- *** KNIFE_GUY_VOLUME_03_LACERATE -->
+		<!-- Knives apply a 15% Attack Reduction debuff. -->
+		<book name="perkKnifeGuyV3" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV3Desc" long_desc_key="perkKnifeGuyV3LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffKnifeGuyDeepWounds">
+					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffKnifeGuyDeepWounds">
+					
+				</triggered_effect>
+			</effect_group>
+			<!-- <effect_group>
+				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<requirement name="CVarCompare" cvar=".buffKnifeGuyDeepWoundsDuration" operation="GTE" value="1" target="other"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".2"/>
+			</effect_group> -->
+		</book>
+		<!-- *** KNIFE_GUY_VOLUME_04_BLOODBATH -->
+		<!-- Attacks have a 10% chance to restore 5 health. Power attacks double the chance. -->
+		<book name="perkKnifeGuyV4" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV4Desc" long_desc_key="perkKnifeGuyV4LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV4" operation="Equals" value="1"/>
+				<requirement name="IsAlive" target="other"/>
+				<requirement name="EntityTagCompare" target="other" tags="zombie,animal"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyStats" target="self" stat="Health" operation="add" value="5">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyStats" target="self" stat="Health" operation="add" value="5">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		<!-- *** KNIFE_GUY_VOLUME_05_BULLSEYE -->
+		<!-- Do 15% more damage to bleeding victims. -->
+		<book name="perkKnifeGuyV5" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV5Desc" long_desc_key="perkKnifeGuyV5LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<requirement name="CVarCompare" cvar="bleedCounter" operation="GT" value="1" target="other"/>
+				<requirement name="HasBuff" buff="buffInjuryBleeding" target="other"/>
+					<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".15"/>
+			</effect_group>
+		</book>
+		<!-- *** KNIFE_GUY_VOLUME_06_FAST_STAB -->
+		<!-- Increase attack speed with knives by 10%. -->
+		<book name="perkKnifeGuyV6" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV6Desc" long_desc_key="perkKnifeGuyV6LongDesc">
+			<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value="0.1" tags="perkDeepCuts"/>
+			</effect_group>
+		</book>
+		<!-- *** KNIFE_GUY_VOLUME_07_SNATCH_STEAL -->
+		<!-- Knife kills increase the base chance to drop loot by 30%. -->
+		<book name="perkKnifeGuyV7" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyV7Desc" long_desc_key="perkKnifeGuyV7LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+					<passive_effect name="LootDropProb" operation="perc_add" level="1" value="0.3"/>
+			</effect_group>
+		</book>
+		<!-- *** 7/7 KNIFE_GUY_COMPLETE -->
+		<!-- Sadistic: Each kill gives 5% bonus damage to knives stacking up to 50% bonus damage for 60 seconds. -->
+		<book name="perkKnifeGuyComplete" parent="skillKnifeGuy" max_level="1" base_skill_point_cost="0" desc_key="perkKnifeGuyCompleteDesc" long_desc_key="perkKnifeGuyCompleteLongDesc">
+			<effect_group>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffKnifeGuySadistic">
+					<requirement name="ProgressionLevel" progression_name="perkKnifeGuyComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_01_HEADHUNTER -->
+		<!-- Do 100% more headshot damage with axes and chainsaws. -->
+		<book name="perkMassacreManiacV1" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV1Desc" long_desc_key="perkMassacreManiacV1LongDesc">
+			<effect_group>
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV1" operation="Equals" value="1"/>
+				<requirement name="HitLocation" body_parts="Head"/>
+					<passive_effect name="EntityDamage" operation="perc_add" level="1" value="1.0" tags="axe"/>
+					<passive_effect name="EntityDamage" operation="perc_add" level="1" value="1.0" tags="chainsaw"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_02_MAINTENANCE -->
+		<!-- Axes and sledgehammers degrade 20% slower. -->
+		<book name="perkMassacreManiacV2" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV2Desc" long_desc_key="perkMassacreManiacV2LongDesc">
+			<effect_group>
+				<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="axe"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="chainsaw"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_03_INTIMIDATE -->
+		<!-- Attacks knock enemies back slightly. -->
+		<book name="perkMassacreManiacV3" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV3Desc" long_desc_key="perkMassacreManiacV3LongDesc">
+			<effect_group>
+				<!-- Axes: knockback -->
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="other" duration="0" force="50">
+					<requirement name="ItemHasTags" tags="axe"/>
+					<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="NotEquals" value="1" target="other"/>
+					<requirement name="!IsAttachedToEntity" />
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="Ragdoll" target="other" duration="0" force="100">
+					<requirement name="ItemHasTags" tags="axe"/>
+					<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="NotEquals" value="1" target="other"/>
+					<requirement name="!IsAttachedToEntity" />
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="1"/>
+				</triggered_effect>
+				<!-- Axes: knockdown -->
+				<!-- <triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="ItemHasTags" tags="axe"/>
+					<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="1"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="ItemHasTags" tags="axe"/>
+					<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="1"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect> -->
+				<!-- Chainsaws -->
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="Ragdoll" target="other" duration="0" force="10">
+					<requirement name="ItemHasTags" tags="chainsaw"/>
+					<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="NotEquals" value="1" target="other"/>
+					<requirement name="!IsAttachedToEntity" />
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="1"/>
+				</triggered_effect>
+				<!-- <triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="ItemHasTags" tags="chainsaw"/>
+					<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="1"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect> -->
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_04_STAMINA -->
+		<!-- Axes cost 10% reduced stamina and 20% reduced stamina for power attacks. -->
+		<book name="perkMassacreManiacV4" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV4Desc" long_desc_key="perkMassacreManiacV4LongDesc">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="axe"/>
+					<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1"/>
+					<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" tags="secondary"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_05_LONG_REACH -->
+		<!-- Chainsaws have 15% longer reach. -->
+		<book name="perkMassacreManiacV5" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV5Desc" long_desc_key="perkMassacreManiacV5LongDesc">
+			<effect_group>
+				<passive_effect name="MaxRange" operation="perc_add" level="1" value=".15" tags="chainsaw"/>
+				<passive_effect name="BlockRange" operation="perc_add" level="1" value=".15" tags="chainsaw"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_06_DEADLY_MULTILATOR -->
+		<!-- Attacks on limbs have a 50% chance to dismember. -->
+		<book name="perkMassacreManiacV6" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV6Desc" long_desc_key="perkMassacreManiacV6LongDesc">
+			<effect_group name="axeBonus">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV6" operation="Equals" value="1"/>
+				<requirement name="ItemHasTags" tags="axe"/>
+				<requirement name="HitLocation" body_parts="LeftUpperArm,RightUpperArm,LeftLowerArm,RightLowerArm,LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+					<passive_effect name="DismemberChance" operation="base_add" level="1" value=".3"/>
+					<passive_effect name="DismemberChance" operation="base_add" level="1" value=".2" tags="secondary"/>
+			</effect_group>
+			
+			<effect_group name="chainsawBonus">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV6" operation="Equals" value="1"/>
+				<requirement name="ItemHasTags" tags="chainsaw"/>
+				<requirement name="HitLocation" body_parts="LeftUpperArm,RightUpperArm,LeftLowerArm,RightLowerArm,LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+					<passive_effect name="DismemberChance" operation="base_add" level="1" value=".3"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** MASSACRE_MANIAC_VOLUME_07_HEAD_SPLITTER -->
+		<!-- Attacks on heads have a 30% chance to dismember. -->
+		<book name="perkMassacreManiacV7" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacV7Desc" long_desc_key="perkMassacreManiacV7LongDesc">
+			<effect_group name="axeBonus">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV7" operation="Equals" value="1"/>
+				<requirement name="ItemHasTags" tags="axe"/>
+				<requirement name="HitLocation" body_parts="Head"/>
+					<passive_effect name="DismemberChance" operation="base_add" level="1" value=".2"/>
+					<passive_effect name="DismemberChance" operation="base_add" level="1" value=".2" tags="secondary"/>
+			</effect_group>
+			
+			<effect_group name="chainsawBonus">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV7" operation="Equals" value="1"/>
+				<requirement name="ItemHasTags" tags="chainsaw"/>
+				<requirement name="HitLocation" body_parts="Head"/>
+					<passive_effect name="DismemberChance" operation="base_add" level="1" value=".2"/>
+			</effect_group>
+		</book>
+		
+		<!-- *** 7/7 MASSACRE_MANIAC_COMPLETE -->
+		<!-- Power attacks with axes that kill your enemy refill 50 stamina. Kills with chainsaws restore 10 health. Each kill with chainsaws gives a stacking 10% chance per stack added to base dismember chance for 90 seconds. (Max 20 stacks) -->
+		<book name="perkMassacreManiacComplete" parent="skillMassacreManiac" max_level="1" base_skill_point_cost="0" desc_key="perkMassacreManiacCompleteDesc" long_desc_key="perkMassacreManiacCompleteLongDesc">
+			<effect_group>
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacComplete" operation="Equals" value="1"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" target="self" stat="Stamina" operation="add" value="50">
+					<requirement name="ItemHasTags" tags="axe"/>
+					<requirement name="IsSecondaryAttack"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" target="self" stat="Health" operation="add" value="10">
+					<requirement name="ItemHasTags" tags="chainsaw"/>
+				</triggered_effect>
+				<!-- Dismember bonus buff -->
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffMassacreManiac">
+					<requirement name="ProgressionLevel" progression_name="perkMassacreManiacComplete" operation="Equals" value="1"/>
+					<requirement name="ItemHasTags" tags="chainsaw"/>
+				</triggered_effect>
+			</effect_group>
+		</book>
+		
+		
+    </insertAfter>
+</configs>

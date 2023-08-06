@@ -1,0 +1,21 @@
+<configs>
+
+	<append xpath="/materials">
+	
+		<material id="MglassR">
+			<property name="damage_category" value="glass"/>
+			<property name="surface_category" value="glass"/>
+			<property name="forge_category" value="glass"/>
+			<property name="Hardness" type="float" value="1"/>
+			<property name="lightopacity" value="2"/>
+			<property name="stepsound" value="metal"/>
+			<property name="stability_glue" value="2000"/>
+			<property name="Mass" type="int" value="10"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="MaxDamage" value="1500"/>
+			<property name="Experience" value="2"/>
+		</material>
+	
+	</append>
+	
+</configs>

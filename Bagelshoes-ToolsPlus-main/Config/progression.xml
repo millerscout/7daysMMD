@@ -1,0 +1,4 @@
+<config>
+	<remove xpath="/progression/perks/perk[contains(@name,'perk')]/effect_group/passive_effect[@name='CraftingTime']"/>
+</config>
+	

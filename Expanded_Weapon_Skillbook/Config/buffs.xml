@@ -1,0 +1,216 @@
+<Config>
+	
+	<append xpath="/buffs">
+		
+		<!-- *** HAMMER_TIME_VOLUME_03_SPEEDSTER -->
+		<buff name="buffHammerTimeSpeedster" name_key="buffHammerTimeSpeedsterName" description_key="buffHammerTimeSpeedsterDesc" showonhud="true" icon="ui_game_symbol_agility" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffHammerTimeSpeedster"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffHammerTimeSpeedster" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffHammerTimeSpeedster" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffHammerTimeSpeedster" operation="add" value="-1"/>
+				
+				<!-- Max Duration -->
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffHammerTimeSpeedster" operation="set" value="120">
+					<requirement name="CVarCompare" cvar=".buffHammerTimeSpeedster" operation="GT" value="120"/>
+				</triggered_effect>
+				
+				<!-- Effect -->
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.15"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.15"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHammerTimeSpeedster">
+					<requirement name="CVarCompare" cvar=".buffHammerTimeSpeedster" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffHammerTimeSpeedster" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		<!-- *** 7/7 HAMMER_TIME_COMPLETE -->
+		<buff name="buffVictoryCryStamina" name_key="buffVictoryCryStaminaName" description_key="buffVictoryCryStaminaDesc" showonhud="false" icon="ui_game_symbol_talk" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="5"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Stamina" operation="add" value="50"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffVictoryCryStamina"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffVictoryCryStamina"/>
+			</effect_group>
+		</buff>
+		<buff name="buffVictoryCry" name_key="buffVictoryCryName" description_key="buffVictoryCryDesc" showonhud="true" icon="ui_game_symbol_sledge" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<display_value value=".buffVictoryCryDuration"/>
+			<display_value_format value="time"/>
+			<duration value="60"/>
+
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffVictoryCryDuration" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffVictoryCryDuration" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffVictoryCryDuration" operation="add" value="-1"/>
+				
+				<!-- Effect -->
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" level="1" value="0.1"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffVictoryCry">
+					<requirement name="CVarCompare" cvar=".buffVictoryCryDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffVictoryCryDuration" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		<!-- *** ITS_ELECTRIFYING_VOLUME_03_FAST_LEARNING -->
+		<buff name="buffItsElectrifyingFastLearning" name_key="buffItsElectrifyingFastLearningName" description_key="buffItsElectrifyingFastLearningDesc" showonhud="true" icon="ui_game_symbol_intellect" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffItsElectrifyingFastLearning"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffItsElectrifyingFastLearning" operation="set" value="20"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffItsElectrifyingFastLearning" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffItsElectrifyingFastLearning" operation="add" value="-1"/>
+				
+				<!-- Max Duration -->
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffItsElectrifyingFastLearning" operation="set" value="300">
+					<requirement name="CVarCompare" cvar=".buffItsElectrifyingFastLearning" operation="GT" value="300"/>
+				</triggered_effect>
+				
+				<!-- Effect -->
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".2"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffItsElectrifyingFastLearning">
+					<requirement name="CVarCompare" cvar=".buffItsElectrifyingFastLearning" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffItsElectrifyingFastLearning" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		<!-- *** KNIFE_GUY_VOLUME_03_LACERATE -->
+		<buff name="buffKnifeGuyDeepWounds" name_key="buffKnifeGuyDeepWoundsName" description_key="buffKnifeGuyDeepWoundsDesc" showonhud="true" icon="ui_game_symbol_deep_cuts" icon_color="255,0,0">
+			<stack_type value="replace"/>
+			<duration value="60"/>
+			<display_value value="cvarBuffKnifeGuyDeepWoundsDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsDuration" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsDuration" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsDuration" operation="add" value="-1"/>
+				
+				<!-- Stack Effect -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsStackEffect" operation="set" value="-0.2"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsStackEffect" operation="subtract" value="0.2"/>
+				
+				<!-- Effect -->
+				<!-- <passive_effect name="RunSpeed" operation="perc_add" value="@cvarBuffKnifeGuyDeepWoundsStackEffect"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="@cvarBuffKnifeGuyDeepWoundsStackEffect"/> -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-0.15"/>
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffKnifeGuyDeepWounds">
+					<requirement name="CVarCompare" cvar="cvarBuffKnifeGuyDeepWoundsDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="cvarBuffKnifeGuyDeepWoundsStackEffect" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		<!-- *** 7/7 KNIFE_GUY_COMPLETE -->
+		<buff name="buffKnifeGuySadistic" name_key="buffKnifeGuySadisticName" description_key="buffKnifeGuySadisticDesc" showonhud="true" icon="ui_game_symbol_deep_cuts" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="60"/>
+			<display_value value=".buffKnifeGuySadisticStackCount"/>
+			<display_value_key value="{0}"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffKnifeGuySadisticDuration" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffKnifeGuySadisticDuration" operation="set" value="60"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffKnifeGuySadisticDuration" operation="add" value="-1"/>
+				
+				<!-- Stack Effect -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackCount" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackCount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackEffect" operation="set" value="0.05"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackEffect" operation="add" value="0.05"/>
+				
+				<!-- Max Stack -->
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackEffect" operation="set" value="0.5">
+					<requirement name="CVarCompare" cvar=".buffKnifeGuySadisticStackEffect" operation="GT" value="0.5"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackCount" operation="set" value="20">
+					<requirement name="CVarCompare" cvar=".buffKnifeGuySadisticStackCount" operation="GT" value="20"/>
+				</triggered_effect>
+				
+				<!-- Effect -->
+				<!-- <passive_effect name="EntityDamage" operation="perc_add" value="@.buffKnifeGuySadisticStackEffect"/> -->
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffKnifeGuySadistic">
+					<requirement name="CVarCompare" cvar=".buffKnifeGuySadisticDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffKnifeGuySadisticDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackEffect" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffKnifeGuySadisticStackCount" operation="set" value="0"/>
+			</effect_group>
+			<!-- Effect -->
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="@.buffKnifeGuySadisticStackEffect"/>
+			</effect_group>
+		</buff>
+		
+		<!-- *** 7/7 MASSACRE_MANIAC_COMPLETE -->
+		<buff name="buffMassacreManiac" name_key="buffMassacreManiacName" description_key="buffMassacreManiacDesc" showonhud="true" icon="ui_game_symbol_sneak_attack" icon_color="0,255,0">
+			<stack_type value="replace"/>
+			<duration value="90"/>
+			<display_value value=".buffMassacreManiacStackCount"/>
+			<display_value_key value="{0}"/>
+			<effect_group>
+				<!-- Duration Handling -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffMassacreManiacDuration" operation="set" value="90"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffMassacreManiacDuration" operation="set" value="90"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffMassacreManiacDuration" operation="add" value="-1"/>
+				
+				<!-- Stack Effect -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffMassacreManiacStackCount" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffMassacreManiacStackCount" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".buffMassacreManiacStackEffect" operation="set" value="0.1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffMassacreManiacStackEffect" operation="add" value="0.1"/>
+				
+				<!-- Max Stack -->
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffMassacreManiacStackEffect" operation="set" value="2.0">
+					<requirement name="CVarCompare" cvar=".buffMassacreManiacStackEffect" operation="GT" value="2.0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".buffMassacreManiacStackCount" operation="set" value="20">
+					<requirement name="CVarCompare" cvar=".buffMassacreManiacStackCount" operation="GT" value="20"/>
+				</triggered_effect>
+				
+				<!-- Effect -->
+				<!-- <passive_effect name="EntityDamage" operation="perc_add" value="@.buffMassacreManiacStackEffect"/> -->
+				
+				<!-- Cleanup Handling -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMassacreManiac">
+					<requirement name="CVarCompare" cvar=".buffMassacreManiacDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffMassacreManiacDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffMassacreManiacStackEffect" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffMassacreManiacStackCount" operation="set" value="0"/>
+			</effect_group>
+			<!-- Effect -->
+			<effect_group name="chainsawBonus">
+				<requirement name="ItemHasTags" tags="chainsaw"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="@.buffMassacreManiacStackEffect"/>
+			</effect_group>
+		</buff>
+		
+	</append>
+	
+</Config>

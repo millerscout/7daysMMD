@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Sparrow's Vehicle storage mod" />
+        <Description value=" increasing the storage on all vehicles bicycle from 9 to 20
+																	minibike from 27 to 40
+																	motorcycle from 36 to 60
+																	gyrocopter from 45 to 60
+																	4x4 truck from 81 to 100." />
+        <Author value="Sparrow" />
+        <Version value="1.0" />
+    </ModInfo>
+</xml>

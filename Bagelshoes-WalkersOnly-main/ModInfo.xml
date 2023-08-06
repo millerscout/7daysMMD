@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Walkers Only" />
+        <Description value="Limits all zombie speeds to walking only." />
+        <Author value="BagelShoes" />
+        <Version value="1.0" />
+    </ModInfo>
+</xml>

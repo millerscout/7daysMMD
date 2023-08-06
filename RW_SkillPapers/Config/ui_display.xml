@@ -1,0 +1,13 @@
+<config>
+
+<!--Add a category list for the new binding bench so it will display the new groups that were added to everything.-->
+<append xpath="/ui_display_info/crafting_category_display">
+
+		<crafting_category_list display_type="RWBindingBench">
+			<crafting_category name="RWPerkBooks" icon="ui_game_symbol_book" display_name="lblCategoryRWPerkBooks" />
+			<crafting_category name="RWSkillMagazines" icon="ui_game_symbol_hammer" display_name="lblCategoryRWSkillMagazines" />
+			<crafting_category name="RWSchematics" icon="ui_game_symbol_schematic" display_name="lblCategoryRWSchematics" />
+		</crafting_category_list>
+</append>
+
+</config>

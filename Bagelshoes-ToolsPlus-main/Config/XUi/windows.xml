@@ -1,0 +1,71 @@
+<config>
+	<set xpath="/windows/window[contains(@name,'windowToolsCampfire')]/rect/grid/@rows">3</set>
+	<append xpath="/windows/window[contains(@name,'windowToolsCampfire')]/rect/grid/@required_tools">,toolCookingPotDouble,toolCookingGrillDouble,toolCookingHotSauce,toolCookingPotTriple,toolCookingGrillTriple,meleeWpnBladeT1HuntingKnife</append>
+	
+	<set xpath="/windows/window[contains(@name,'windowToolsForge')]/rect/grid/@rows">3</set>
+	<append xpath="/windows/window[contains(@name,'windowToolsForge')]/rect/grid/@required_tools">,toolBellowsDouble,toolAnvilDouble,meleeWpnSledgeT1IronSledgehammer,toolBellowsTriple,toolAnvilTriple,toolForgeHighCarbonTooling</append>
+	
+	
+	<setattribute xpath="/windows/window[@name='windowFuel']/panel[@style='header.panel'][last()]" name="pos">0,-150</setattribute>
+	<set xpath="/windows/window[@name='windowFuel']/rect[@name='content']/@pos">0,-196</set>
+	
+	<set xpath="/windows/window[@name='windowFuel']/@height">120</set>
+	<set xpath="/windows/window[@name='windowFuel']/panel[@name='buttonContent']/@pos">0,-271</set>
+	
+	<setattribute xpath="/windows/window[@name='windowOutput']/panel[@style='header.panel']" name="pos">0,-250</setattribute>
+	<set xpath="/windows/window[@name='windowOutput']/rect/@pos">0,-296</set>
+	
+	<setattribute xpath="/windows/window[@name='windowForgeInput']/panel[@style='header.panel']" name="pos">0,-185</setattribute>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/@pos">0,-231</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/sprite[@name='backgroundMain']/@height">228</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/sprite[@name='backgroundMain']/@pos">0,-231</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/@height">223</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/@pos">78,-233</set>
+	<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/grid[@depth='7']/@rows">3</set>
+	
+	<append xpath="/windows">
+		<window name="windowToolsWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
+			<panel style="header.panel" pos="0,200">
+				<sprite style="header.icon" sprite="ui_game_symbol_workbench"/>
+				<label style="header.name" text="TOOLS" text_key="xuiTools" />
+			</panel>
+
+			<rect name="content" depth="0" pos="0,154" height="75" disablefallthrough="true">
+
+				<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="meleeToolRepairT1ClawHammer,meleeToolSalvageT1Wrench,meleeToolSalvageT2Ratchet" required_tools_only="true">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="windowToolsChemistryStation" width="228" height="121" panel="Right" cursor_area="true" >
+			<panel style="header.panel" pos="0,325">
+				<sprite style="header.icon" sprite="ui_game_symbol_chemistry"/>
+				<label style="header.name" text="TOOLS" text_key="xuiTools" />
+			</panel>
+
+			<rect name="content" depth="0" pos="0,279" height="75" disablefallthrough="true">
+
+				<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolBeaker,toolBunsenBurner,resourceSulfur" required_tools_only="true">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="windowToolsCementMixer" width="228" height="121" panel="Right" cursor_area="true" >
+			<panel style="header.panel" pos="0,200">
+				<sprite style="header.icon" sprite="ui_game_symbol_cement"/>
+				<label style="header.name" text="TOOLS" text_key="xuiTools" />
+			</panel>
+
+			<rect name="content" depth="0" pos="0,154" height="75" disablefallthrough="true">
+
+				<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolLimestone,toolPlasticizer,toolAccelerator" required_tools_only="true">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+	</append>
+		
+</config>
+	

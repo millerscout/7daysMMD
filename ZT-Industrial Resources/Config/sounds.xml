@@ -1,0 +1,53 @@
+<configs>
+	
+	<insertAfter xpath="/Sounds/SoundDataNode[@name='gyrocopter_empty']">
+	
+		<!-- Elevator Open & Close Sounds -->
+		
+		<SoundDataNode name="open_door_elevator">
+			<AudioSource name="Sounds/AudioSource_Interact"/>
+			<AudioClip ClipName="#@modfolder:Resources/industrialModels.unity3d?elevatorSilence" Loop="false"/>
+				<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+				<LocalCrouchVolumeScale value="0.5"/>
+				<CrouchNoiseScale value="0.5"/>
+				<NoiseScale value="1"/>
+				<MaxVoices value="10"/>
+				<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+		
+		<SoundDataNode name="close_door_elevator">
+			<AudioSource name="Sounds/AudioSource_Interact"/>
+			<AudioClip ClipName="#@modfolder:Resources/industrialModels.unity3d?elevatorSilence" Loop="false"/>
+				<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+				<LocalCrouchVolumeScale value="0.5"/>
+				<CrouchNoiseScale value="0.5"/>
+				<NoiseScale value="1"/>
+				<MaxVoices value="10"/>
+				<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+		
+		<SoundDataNode name="open_door_rotating">
+			<AudioSource name="Sounds/AudioSource_Interact"/>
+			<AudioClip ClipName="#@modfolder:Resources/industrialModels.unity3d?elevatorSilence" Loop="false"/>
+				<Noise ID="1" noise="7" time="6" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+				<LocalCrouchVolumeScale value="0.5"/>
+				<CrouchNoiseScale value="0.5"/>
+				<NoiseScale value="1"/>
+				<MaxVoices value="10"/>
+				<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+		
+		<SoundDataNode name="close_door_rotating">
+			<AudioSource name="Sounds/AudioSource_Interact"/>
+			<AudioClip ClipName="#@modfolder:Resources/industrialModels.unity3d?elevatorSilence" Loop="false"/>
+				<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+				<LocalCrouchVolumeScale value="0.5"/>
+				<CrouchNoiseScale value="0.5"/>
+				<NoiseScale value="1"/>
+				<MaxVoices value="10"/>
+				<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+		
+	</insertAfter>
+	
+</configs>

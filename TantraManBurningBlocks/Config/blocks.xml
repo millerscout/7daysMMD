@@ -1,0 +1,42 @@
+
+<configs>
+	<append xpath="/blocks">
+	
+		<block name="burningblockShapes" shapes="All">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIconTint" value="120,6,6"/>
+			<property name="CustomIcon" value="corrugatedMetalMaster"/>
+			<property name="DescriptionKey" value="burningblockShapes:VariantHelperDesc"/>
+			<property name="Class" value="Particle"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="burningblockShapes"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Texture" value="355"/>
+			<property name="UiBackgroundTexture" value="191"/>
+			<property name="LightOpacity" value="6"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="PassThroughDamage" value="false"/>
+			<property name="CanMobsSpawnOn" value="false"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningElement"/>
+			<property name="ParticleName" value="chemistryStation"/>
+			<property name="ParticleOffset" value="-0.5,1.3,0.4"/>
+			<property name="Damage_received" value="40" />
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="8"/>
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Destroy" name="burningblockShapes:VariantHelper" count="1" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.5" stick_chance="0.2"/>
+			<property name="EconomicValue" value="360"/>
+			<property name="SortOrder1" value="0011"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+		</block>
+		
+	</append>
+</configs>

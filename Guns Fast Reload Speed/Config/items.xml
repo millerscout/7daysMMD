@@ -1,0 +1,78 @@
+<config>
+
+	<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/effect_group[@name='gunShotgunT0PipeShotgun']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkBoomstick"/>1.7s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkBoomstick"/>2.2s
+
+	</append>
+
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@name='AutoReload' and @value='false']/@value">true</set>
+
+
+	<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkBoomstick"/>2.1s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group[@name='gunMGT0PipeMachineGun']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkMachineGunner"/>3.3s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkMachineGunner"/>3.2s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkMachineGunner"/>4.7s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/effect_group[@name='gunRifleT0PipeRifle']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkDeadEye"/>2.2s
+
+	</append>
+
+	<set xpath="/items/item[@name='gunRifleT0PipeRifle']/property[@class='Action0']/property[@name='AutoReload' and @value='false']/@value">true</set>
+
+
+	<append xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkDeadEye"/>2.0s
+
+	</append>
+
+	<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='AutoReload' and @value='false']/@value">true</set>
+
+
+	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group[@name='gunHandgunT0PipePistol']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkGunslinger"/> 1.2s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkGunslinger"/> 3.8s
+
+	</append>
+
+	<append xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']">
+
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkGunslinger"/> 3.1s
+
+	</append>
+	
+</config>

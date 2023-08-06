@@ -1,0 +1,3 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+trapSpikesSteelDmg0,blocks,Trap,,,"Steel Spikes Trap"
+trapSpikesSteelDmg0Desc,blocks,Trap,,,"Two times the damage, Four times the durability of Iron Spikes."

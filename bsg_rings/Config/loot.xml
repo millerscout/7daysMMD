@@ -1,0 +1,345 @@
+<Config>
+	<!-- ######### -->
+	<!--   RINGS   -->
+	<insertBefore xpath="//lootgroup[1]">
+		<!-- Ring Tier Grouping -->
+		<lootgroup name="groupRingScorch" count="1">
+			<item name="modRingScorchT1" prob=".8"/>
+			<item name="modRingScorchT2" prob=".5"/>
+			<item name="modRingScorchT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingStride" count="1">
+			<item name="modRingStrideT1" prob=".9"/>
+			<item name="modRingStrideT2" prob=".8"/>
+			<item name="modRingStrideT3" prob=".7"/>
+			<item name="modRingStrideT4" prob=".6"/>
+			<item name="modRingStrideT5" prob=".5"/>
+			<item name="modRingStrideT6" prob=".4"/>
+		</lootgroup>
+		<lootgroup name="groupRingGreed" count="1">
+			<item name="modRingGreedT1" prob=".8"/>
+			<item name="modRingGreedT2" prob=".5"/>
+			<item name="modRingGreedT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingSeeker" count="1">
+			<item name="modRingSeekerT1" prob=".8"/>
+			<item name="modRingSeekerT2" prob=".5"/>
+			<item name="modRingSeekerT3" prob=".2"/>
+			<item name="modRingSeekerT4" prob=".4"/>
+			<item name="modRingSeekerT5" prob=".4"/>
+			<item name="modRingSeekerT6" prob=".4"/>
+			<item name="modRingSeekerT7" prob=".4"/>
+			<item name="modRingSeekerT8" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingTwinTerror" count="1">
+			<item name="modRingTwinTerrorT1" prob=".8"/>
+			<item name="modRingTwinTerrorT2" prob=".5"/>
+			<item name="modRingTwinTerrorT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingVampirica" count="1">
+			<item name="modRingVampiricaT1" prob=".8"/>
+			<item name="modRingVampiricaT2" prob=".5"/>
+			<item name="modRingVampiricaT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingLaborlove" count="1">
+			<item name="modRingLaborloveT1" prob=".5"/>
+			<item name="modRingLaborloveT2" prob=".5"/>
+			<item name="modRingLaborloveT3" prob=".5"/>
+			<item name="modRingLaborloveT4" prob=".5"/>
+			<item name="modRingLaborloveT5" prob=".5"/>
+			<item name="modRingLaborloveT6" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingBrilliance" count="1">
+			<item name="modRingBrillianceT1" prob=".8"/>
+			<item name="modRingBrillianceT2" prob=".7"/>
+			<item name="modRingBrillianceT3" prob=".5"/>
+			<item name="modRingBrillianceT4" prob=".4"/>
+			<item name="modRingBrillianceT5" prob=".3"/>
+		</lootgroup>
+		<lootgroup name="groupRingInspiration" count="1">
+			<item name="modRingInspirationT1" prob=".8"/>
+			<item name="modRingInspirationT2" prob=".5"/>
+			<item name="modRingInspirationT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingAgony" count="1">
+			<item name="modRingAgonyT1" prob=".8"/>
+			<item name="modRingAgonyT2" prob=".5"/>
+			<item name="modRingAgonyT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingHeadHunter" count="1">
+			<item name="modRingHeadHunterT1"/>
+		</lootgroup>
+		<lootgroup name="groupRingGuardius" count="1">
+			<item name="modRingGuardiusT1" prob=".8"/>
+			<item name="modRingGuardiusT2" prob=".7"/>
+			<item name="modRingGuardiusT3" prob=".6"/>
+			<item name="modRingGuardiusT4" prob=".5"/>
+			<item name="modRingGuardiusT5" prob=".4"/>
+			<item name="modRingGuardiusT6" prob=".3"/>
+		</lootgroup>
+		<lootgroup name="groupRingLifeEss" count="1">
+			<item name="modRingLifeEssT1" prob=".8"/>
+			<item name="modRingLifeEssT2" prob=".5"/>
+			<item name="modRingLifeEssT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingStealth" count="1">
+			<item name="modRingStealthT1" prob=".8"/>
+			<item name="modRingStealthT2" prob=".5"/>
+			<item name="modRingStealthT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingMechanism" count="1">
+			<item name="modRingMechanismT1" prob=".5"/>
+			<item name="modRingMechanismT2" prob=".5"/>
+			<item name="modRingMechanismT3" prob=".5"/>
+			<item name="modRingMechanismT4" prob=".5"/>
+			<item name="modRingMechanismT5" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingThunderstruck" count="1">
+			<item name="modRingThunderstruckT1"/>
+		</lootgroup>
+		<lootgroup name="groupRingPredator" count="1">
+			<item name="modRingPredatorT1" prob=".8"/>
+			<item name="modRingPredatorT2" prob=".5"/>
+			<item name="modRingPredatorT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingAssassin" count="1">
+			<item name="modRingAssassinT1" prob=".8"/>
+			<item name="modRingAssassinT2" prob=".5"/>
+			<item name="modRingAssassinT3" prob=".2"/>
+		</lootgroup>
+		<lootgroup name="groupRingMending" count="1">
+			<item name="modRingMendingT1"/>
+		</lootgroup>
+		<lootgroup name="groupRingStamina" count="1">
+			<item name="modRingStaminaT1" prob=".8"/>
+			<item name="modRingStaminaT2" prob=".7"/>
+			<item name="modRingStaminaT3" prob=".5"/>
+			<item name="modRingStaminaT4" prob=".4"/>
+		</lootgroup>
+		<lootgroup name="groupRingFaceBreaker" count="1">
+			<item name="modRingFaceBreakerT1" prob=".5"/>
+			<item name="modRingFaceBreakerT2" prob=".5"/>
+			<item name="modRingFaceBreakerT3" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingDragon" count="1">
+			<item name="modRingDragonClaw" prob=".5"/>
+			<item name="modRingDragonFlame" prob=".5"/>
+			<item name="modRingDragonRoar" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingForce" count="1">
+			<item name="modRingForceT1" prob=".8"/>
+			<item name="modRingForceT2" prob=".5"/>
+			<item name="modRingForceT3" prob=".3"/>
+		</lootgroup>
+		<lootgroup name="groupRingWish" count="1">
+			<item name="modRingWishMovement" prob=".5"/>
+			<item name="modRingWishDamageMit" prob=".5"/>
+			<item name="modRingWishHealthMax" prob=".5"/>
+			<item name="modRingWishStaminaMax" prob=".5"/>
+			<item name="modRingWishAddProj" prob=".5"/>
+			<item name="modRingWishJump" prob=".5"/>
+			<item name="modRingWishEXP" prob=".5"/>
+			<item name="modRingWishAttSTR" prob=".5"/>
+			<item name="modRingWishAttPER" prob=".5"/>
+			<item name="modRingWishAttAGI" prob=".5"/>
+			<item name="modRingWishAttFORT" prob=".5"/>
+			<item name="modRingWishAttINT" prob=".5"/>
+			<item name="modRingWishAtkSpd" prob=".5"/>
+			<item name="modRingWishEntityDamage" prob=".5"/>
+			<item name="modRingWishDigRadius" prob=".5"/>
+			<item name="modRingWishHarvest" prob=".5"/>
+			<item name="modRingWishOreOS" prob=".5"/>
+			<item name="modRingWishTreeOS" prob=".5"/>
+			<item name="modRingWishLockpick" prob=".5"/>
+			<item name="modRingWishAddQuest" prob=".5"/>
+			<item name="modRingWishDukeQuant" prob=".5"/>
+			<item name="modRingWishLootStage" prob=".5"/>
+			<item name="modRingWishAmplify" prob=".5"/>
+			<item name="modRingWishLootSpeed" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingVenom" count="1">
+			<item name="modRingVenomT1" prob=".8"/>
+			<item name="modRingVenomT2" prob=".5"/>
+			<item name="modRingVenomT3" prob=".3"/>
+		</lootgroup>
+		<lootgroup name="groupRingDemolition" count="1">
+			<item name="modRingDemolitionT1" prob=".5"/>
+			<item name="modRingDemolitionT2" prob=".5"/>
+			<item name="modRingDemolitionT3" prob=".5"/>
+		</lootgroup>
+		<lootgroup name="groupRingReborn" count="1">
+			<item name="modRingRebornT1" prob=".8"/>
+			<item name="modRingRebornT2" prob=".5"/>
+			<item name="modRingRebornT3" prob=".3"/>
+		</lootgroup>
+		<lootgroup name="groupRingAmplify" count="1">
+			<item name="modRingAmplifyT1" prob=".8"/>
+			<item name="modRingAmplifyT2" prob=".5"/>
+			<item name="modRingAmplifyT3" prob=".3"/>
+		</lootgroup>
+		<lootgroup name="groupRingStorage" count="1">
+			<item name="modRingStorageT3" prob=".5"/>
+			<item name="modRingStorageT4" prob=".5"/>
+			<item name="modRingStorageT5" prob=".5"/>
+			<item name="modRingStorageT6" prob=".5"/>
+		</lootgroup>
+		
+		<!-- Final Output -->
+		<lootgroup name="selectRing" count="1">
+			<item group="groupRingScorch" prob="0.5"/>
+			<item group="groupRingStride" prob="0.5"/>
+			<item group="groupRingGreed" prob="0.3"/>
+			<item group="groupRingSeeker" prob="0.5"/>
+			<item group="groupRingTwinTerror" prob="0.5"/>
+			<item group="groupRingLaborlove" prob="0.5"/>
+			<item group="groupRingBrilliance" prob="0.5"/>
+			<item group="groupRingInspiration" prob="0.5"/>
+			<item group="groupRingAgony" prob="0.5"/>
+			<item group="groupRingGuardius" prob="0.5"/>
+			<item group="groupRingLifeEss" prob="0.5"/>
+			<item group="groupRingStealth" prob="0.5"/>
+			<item group="groupRingMechanism" prob="0.5"/>
+			<item group="groupRingThunderstruck" prob="0.3"/>
+			<item group="groupRingPredator" prob="0.5"/>
+			<item group="groupRingAssassin" prob="0.5"/>
+			<item group="groupRingMending" prob="0.5"/>
+			<item group="groupRingStamina" prob="0.5"/>
+			<item group="groupRingFaceBreaker" prob="0.5"/>
+			<item group="groupRingForce" prob="0.5"/>
+			<item group="groupRingWish" prob="0.5"/>
+			<item group="groupRingVenom" prob="0.5"/>
+			<item group="groupRingDemolition" prob="0.5"/>
+			<item group="groupRingStorage" prob="0.5"/>
+			<item group="groupRingReborn" prob="0.4"/>
+			<item group="groupRingAmplify" prob="0.4"/>
+			<item group="groupRingHeadHunter" prob="0.2"/>
+			<item group="groupRingDragon" prob="0.2"/>
+			<item name="modRingFishingT1" prob="0.01"/>
+		</lootgroup>
+		
+		<!-- Loot Chance :: Default -->
+		<lootgroup name="groupRings" count="1">
+			<item name="casinoCoin" count="1,20" prob="0.7"/> 	<!-- X% Probability to NOT loot a Ring -->
+			<item group="selectRing" prob="0.3"/>				<!-- X% Probability to loot a Ring -->
+		</lootgroup>
+		
+		<!-- Loot Chance :: Low -->
+		<lootgroup name="groupRingsLCL" count="1">
+			<item name="casinoCoin" count="1,20" prob="0.85"/> 	<!-- X% Probability to NOT loot a Relic -->
+			<item group="selectRing" prob="0.15"/>				<!-- X% Probability to loot a Relic -->
+		</lootgroup>
+		
+		<!-- Loot Chance :: Very Low -->
+		<lootgroup name="groupRingsLCVL" count="1">
+			<item name="casinoCoin" count="1,20" prob="0.95"/> 	<!-- X% Probability to NOT loot a Relic -->
+			<item group="selectRing" prob="0.05"/>				<!-- X% Probability to loot a Relic -->
+		</lootgroup>
+	</insertBefore>
+	
+	
+	<!-- Lootable from the following -->
+	<append xpath="//lootgroup[@name='groupSmallSafeLoot']">
+		<item group="groupRings" loot_prob_template="med"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupGunSafeSecure']">
+		<item group="groupRings" loot_prob_template="med"/>
+	</append>
+	
+	<!-- T1_Wood_Crate -->
+	<append xpath="//lootgroup[@name='groupReinforcedChestT1']">
+		<item group="groupRingsLCVL"/>
+	</append>
+	<!-- T2_Leather_Trunk -->
+	<append xpath="//lootgroup[@name='groupReinforcedChestT2']">
+		<item group="groupRingsLCL"/>
+	</append>
+	<!-- Locked Iron Chest -->
+	<append xpath="//lootgroup[@name='groupReinforcedChestT3']">
+		<item group="groupRings" loot_prob_template="med"/>
+	</append>
+	<!-- Locked Small Hardened Chest -->
+	<append xpath="//lootgroup[@name='groupHardenedChestT4']">
+		<item group="groupRings" loot_prob_template="med"/>
+	</append>
+	<!-- Locked Large Hardened Chest -->
+	<append xpath="//lootgroup[@name='groupHardenedChestT5']">
+		<item group="groupRings" loot_prob_template="med"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupZpackBoss']">
+		<item group="groupRings"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupZpackStrong']">
+		<item group="groupRings" loot_prob_template="med"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupZpackReg']">
+		<item group="groupRingsLCL"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupHiddenStash']">
+		<item group="groupRings"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupBuriedWeaponChest']">
+		<item group="groupRings" />
+	</append>
+	<append xpath="//lootgroup[@name='groupBuriedSuppliesT1']">
+		<item group="groupRings" />
+	</append>
+	<append xpath="//lootgroup[@name='groupBuriedTreasure']">
+		<item group="groupRings" />
+	</append>
+	
+	<!--
+		How looting Rings work:
+		If a lootable object (chest / stash / forge / zbag) can provide a Ring as loot:
+			1) If it does NOT have a loot_prob_template, it will have a 20% chance to provide a RINGS
+			2) If it DOES have a loot_prob_template, it has a 20% chance to THEN roll the loot_prob_template's % chance.
+			
+		So basically, sections with loot_prob_template are harder to receive a Ring item from.
+	-->
+	
+
+	<!-- FOR TESTING LOOTING
+	<append xpath="//lootgroup[@name='groupJunk']">
+		<item group="groupRings"/>
+	</append>
+	-->
+	
+	<!-- REFERENCES & NOTES -->
+	<!-- xpath="items/item//property[@name='Tags' and not (contains(@value,'tool'))]/.." -->
+	
+	<!-- *** A20_Loot_Probability_Templates -->
+	<!--
+	<lootprobtemplate name="veryLow">
+		<loot level="1,999999" prob=".05"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="low">
+		<loot level="1,999999" prob=".20"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="medLow">
+		<loot level="1,999999" prob=".35"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="med">
+		<loot level="1,999999" prob=".5"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="medHigh">
+		<loot level="1,999999" prob=".63"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="high">
+		<loot level="1,999999" prob=".75"/>
+	</lootprobtemplate>
+	<lootprobtemplate name="guaranteed">
+		<loot level="1,999999" prob="1"/>
+	</lootprobtemplate>
+	-->
+	
+	
+	<!-- WIKI on Looting
+	force_prob="true" - this means that even though the group specifies count="all", 
+	the game is forced to test this item against its probability, 
+	which comes from a loot_prob_template of "med" (0.5) or "low" (0.2). 
+	Basically items with force_prob="true" on them are treated like their own individual RNG checks, 
+	not grouped up like in the previous example.
+	-->
+</Config>

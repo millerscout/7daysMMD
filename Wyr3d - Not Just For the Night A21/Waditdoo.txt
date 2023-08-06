@@ -1,0 +1,1 @@
+This modlet extends the time limit on loot bag before despawn. Recommended for 90min and 120min day worlds, which would lose loot bags before the Horde night finished with the default setting 

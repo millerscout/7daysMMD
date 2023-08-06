@@ -1,0 +1,6 @@
+<configs>
+	<append xpath="/blocks/block[@name='cntBirdnest']">
+		<property name="Material" value="Mcorn"/>
+		<property name="MaxDamage" value="100"/>
+	</append>
+</configs>

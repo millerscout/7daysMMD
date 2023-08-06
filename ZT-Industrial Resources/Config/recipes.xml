@@ -1,0 +1,15 @@
+<configs>
+
+	<append xpath="/recipes">
+		
+        <recipe name="ZT_Industrial" count="1" craft_time="600" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="15"/>
+            <ingredient name="resourceWood" count="50"/>
+            <ingredient name="resourceMechanicalParts" count="25"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceNail" count="200"/>
+		</recipe>
+		
+	</append>
+
+</configs>

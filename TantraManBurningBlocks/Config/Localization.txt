@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+burningblockShapes:VariantHelper,blocks,block,,,Burning Block Trap
+burningblockShapes:VariantHelperDesc,blocks,block,,,"Place these and watch those Zombie Freaks BURN!!!\n\nSuper Strong but too HOT too handle!"
+
+burningblockShapes,blocks,block,,,Burning Block Trap

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<xml>
+		<Name value="ZT-Industrial-Resources" />
+		<DisplayName value="Ztensitys Industrial Resources" />
+		<Version value="3.0.0.1" />
+		<Author value="Ztensity" />
+		<!-- Modlet's original files come from purchased assets via Nifty Studios on Unity. -->
+		<!-- A certain portion of the animations and general format of Elevator come from Guppycur's original modlet titled Guppycur's Elevator -->
+		<!-- This mod contains a functional elevator, rotating doors and a working escalator -->
+		<Website value="https://www.nexusmods.com/7daystodie/mods/1332" />
+	</xml>

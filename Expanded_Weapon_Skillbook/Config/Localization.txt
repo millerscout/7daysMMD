@@ -1,0 +1,115 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+bookHammerTimeV1,items,perk  book,,,Hammer Time Vol 1
+bookHammerTimeV2,items,perk  book,,,Hammer Time Vol 2
+bookHammerTimeV3,items,perk  book,,,Hammer Time Vol 3
+bookHammerTimeV4,items,perk  book,,,Hammer Time Vol 4
+bookHammerTimeV5,items,perk  book,,,Hammer Time Vol 5
+bookHammerTimeV6,items,perk  book,,,Hammer Time Vol 6
+bookHammerTimeV7,items,perk  book,,,Hammer Time Vol 7
+perkHammerTime0Desc,progression,perk  book,,,Learn how to wield sledgehammers with unmatched force. Immerse yourself in this book and you will gain the strength and skill to turn your enemies into mere rubble with every mighty swing.
+perkHammerTime0Name,progression,perk  book,,,Hammer Time!
+perkHammerTimeV1Desc,progression,perk  book,,,Do 10% more damage with sledgehammers.
+perkHammerTimeV1LongDesc,progression,perk  book,,,Damage: Do 10% more damage with sledgehammers.
+perkHammerTimeV2Desc,progression,perk  book,,,Power attacks cost 20% less stamina.
+perkHammerTimeV2LongDesc,progression,perk  book,,,Stamina: Power attacks cost 20% less stamina.
+perkHammerTimeV3Desc,progression,perk  book,,,Each kill boosts your run speed by 15% for 15 seconds stacking up to 120 seconds.
+perkHammerTimeV3LongDesc,progression,perk  book,,,Speedster: Each kill boosts your run speed by 15% for 15 seconds stacking up to 120 seconds.
+perkHammerTimeV4Desc,progression,perk  book,,,Take 5% less damage with a sledgehammer drawn.
+perkHammerTimeV4LongDesc,progression,perk  book,,,Ready to Roll: Take 5% less damage with a sledgehammer drawn.
+perkHammerTimeV5Desc,progression,perk  book,,,Sledgehammers degrade 20% slower.
+perkHammerTimeV5LongDesc,progression,perk  book,,,Maintenance: Sledgehammers degrade 20% slower.
+perkHammerTimeV6Desc,progression,perk  book,,,Do 25% more damage to blocks.
+perkHammerTimeV6LongDesc,progression,perk  book,,,Demolisher: Do 25% more damage to blocks.
+perkHammerTimeV7Desc,progression,perk  book,,,Do 15% more damage to knocked down opponents.
+perkHammerTimeV7LongDesc,progression,perk  book,,,No Mercy: Do 15% more damage to knocked down opponents.
+perkHammerTimeCompleteDesc,progression,perk  book,,,Kills might give you Victory Cry which refills 50 stamina to you and allies and grants Damage and Damage Mitigation buff.
+perkHammerTimeCompleteLongDesc,progression,perk  book,,,"Victory Cry: Kills have a 20% chance to give you Victory Cry which refills 50 stamina to you and allies and grants 10% Damage and Damage Mitigation buff for 60 seconds."
+bookItsElectrifyingV1,items,perk  book,,,It's Electrifying Vol 1
+bookItsElectrifyingV2,items,perk  book,,,It's Electrifying Vol 2
+bookItsElectrifyingV3,items,perk  book,,,It's Electrifying Vol 3
+bookItsElectrifyingV4,items,perk  book,,,It's Electrifying Vol 4
+bookItsElectrifyingV5,items,perk  book,,,It's Electrifying Vol 5
+bookItsElectrifyingV6,items,perk  book,,,It's Electrifying Vol 6
+bookItsElectrifyingV7,items,perk  book,,,It's Electrifying Vol 7
+perkItsElectrifying0Desc,progression,perk  book,,,Learn to handle the batons and stun batons from ex crowd control police. Delve yourself into this knowledge to learn a trick or two to suppress angry mobs as well as zombies.
+perkItsElectrifying0Name,progression,perk  book,,,It's Electrifying!
+perkItsElectrifyingV1Desc,progression,perk  book,,,Do 10% more damage with batons.
+perkItsElectrifyingV1LongDesc,progression,perk  book,,,Damage: Do 10% more damage with batons.
+perkItsElectrifyingV2Desc,progression,perk  book,,,Batons degrade 20% slower.
+perkItsElectrifyingV2LongDesc,progression,perk  book,,,Maintenance: Batons degrade 20% slower.
+perkItsElectrifyingV3Desc,progression,perk  book,,,Each kill boosts your XP gain by 20% for 20 seconds stacking up to 300 seconds.
+perkItsElectrifyingV3LongDesc,progression,perk  book,,,Fast Learning: Each kill boosts your XP gain by 20% for 20 seconds stacking up to 300 seconds.
+perkItsElectrifyingV4Desc,progression,perk  book,,,Getting hit with a stun baton drawn might cause the attacker to become electrocuted.
+perkItsElectrifyingV4LongDesc,progression,perk  book,,,Electrostatic: Getting hit with a stun baton drawn has a 20% chance to shock the attackers.
+perkItsElectrifyingV5Desc,progression,perk  book,,,Do 15% more damage to electrocuted victims.
+perkItsElectrifyingV5LongDesc,progression,perk  book,,,Conductive: Do 15% more damage to electrocuted victims.
+perkItsElectrifyingV6Desc,progression,perk  book,,,Increase attack speed with batons by 10%.
+perkItsElectrifyingV6LongDesc,progression,perk  book,,,Lightning Fast: Increase attack speed with batons by 10%.
+perkItsElectrifyingV7Desc,progression,perk  book,,,Increase move speed by 10% with a baton drawn.
+perkItsElectrifyingV7LongDesc,progression,perk  book,,,The Flash: Increase move speed by 10% with a baton drawn.
+perkItsElectrifyingCompleteDesc,progression,perk  book,,,Charged power attacks to electrocuted victims will cause nearby enemies to become electrocuted too.
+perkItsElectrifyingCompleteLongDesc,progression,perk  book,,,"Short Circuit: Charged power attacks to electrocuted victims will cause nearby enemies to become electrocuted too."
+bookKnifeGuyV1,items,perk  book,,,Knife Guy Vol 1
+bookKnifeGuyV2,items,perk  book,,,Knife Guy Vol 2
+bookKnifeGuyV3,items,perk  book,,,Knife Guy Vol 3
+bookKnifeGuyV4,items,perk  book,,,Knife Guy Vol 4
+bookKnifeGuyV5,items,perk  book,,,Knife Guy Vol 5
+bookKnifeGuyV6,items,perk  book,,,Knife Guy Vol 6
+bookKnifeGuyV7,items,perk  book,,,Knife Guy Vol 7
+perkKnifeGuy0Desc,progression,perk  book,,,Learn to live like a street thug. Embrace the tricks of back-alley brawlers and learn to wield your knife with brutal efficiency and leave your adversaries trembling in fear.
+perkKnifeGuy0Name,progression,perk  book,,,Knife Guy
+perkKnifeGuyV1Desc,progression,perk  book,,,Do 10% more damage with knives.
+perkKnifeGuyV1LongDesc,progression,perk  book,,,Damage: Do 10% more damage with knives.
+perkKnifeGuyV2Desc,progression,perk  book,,,Knives degrade 20% slower.
+perkKnifeGuyV2LongDesc,progression,perk  book,,,Maintenance: Knives degrade 20% slower.
+perkKnifeGuyV3Desc,progression,perk  book,,,Knives apply an Damage Reduction debuff on victims.
+perkKnifeGuyV3LongDesc,progression,perk  book,,,Lacerate: Knives apply a 15% Damage Reduction debuff on victims.
+perkKnifeGuyV4Desc,progression,perk  book,,,Attacks have a chance to restore health. Power attacks double the chance.
+perkKnifeGuyV4LongDesc,progression,perk  book,,,Bloodbath: Attacks have a 10% chance to restore 5 health. Power attacks double the chance.
+perkKnifeGuyV5Desc,progression,perk  book,,,Do 15% more damage to bleeding victims.
+perkKnifeGuyV5LongDesc,progression,perk  book,,,Bull's Eye: Do 15% more damage to bleeding victims.
+perkKnifeGuyV6Desc,progression,perk  book,,,Increase attack speed with knives by 10%.
+perkKnifeGuyV6LongDesc,progression,perk  book,,,Fast Stab: Increase attack speed with knives by 10%.
+perkKnifeGuyV7Desc,progression,perk  book,,,Knife kills increase a chance to drop loot.
+perkKnifeGuyV7LongDesc,progression,perk  book,,,Snatch Steal: Knife kills increase the base chance to drop loot by 30%.
+perkKnifeGuyCompleteDesc,progression,perk  book,,,Each kill gives 5% bonus damage to knives stacking up to 50% bonus damage.
+perkKnifeGuyCompleteLongDesc,progression,perk  book,,,"Sadistic: Each kill gives 5% bonus damage to knives stacking up to 50% bonus damage for 60 seconds."
+bookMassacreManiacV1,items,perk  book,,,Massacre Maniac Vol 1
+bookMassacreManiacV2,items,perk  book,,,Massacre Maniac Vol 2
+bookMassacreManiacV3,items,perk  book,,,Massacre Maniac Vol 3
+bookMassacreManiacV4,items,perk  book,,,Massacre Maniac Vol 4
+bookMassacreManiacV5,items,perk  book,,,Massacre Maniac Vol 5
+bookMassacreManiacV6,items,perk  book,,,Massacre Maniac Vol 6
+bookMassacreManiacV7,items,perk  book,,,Massacre Maniac Vol 7
+perkMassacreManiac0Desc,progression,perk  book,,,Learn the arts of axes and chainsaws from an ex murderer. Dive deep in the crafts of self proclaimed maniac and ex murderer to behead living things efficiently including post apocalytic zombies.
+perkMassacreManiac0Name,progression,perk  book,,,Massacre Maniac
+perkMassacreManiacV1Desc,progression,perk  book,,,Do 100% more headshot damage with axes and chainsaws.
+perkMassacreManiacV1LongDesc,progression,perk  book,,,Head Hunter: Do 100% more headshot damage with axes and chainsaws.
+perkMassacreManiacV2Desc,progression,perk  book,,,Axes and chainsaws degrade 20% slower.
+perkMassacreManiacV2LongDesc,progression,perk  book,,,Maintenance: Axes and chainsaws degrade 20% slower.
+perkMassacreManiacV3Desc,progression,perk  book,,,Attacks knock enemies back slightly.
+perkMassacreManiacV3LongDesc,progression,perk  book,,,Intimidate: Attacks knock enemies back slightly.
+perkMassacreManiacV4Desc,progression,perk  book,,,Axes cost 10% reduced stamina and 20% reduced stamina for power attacks.
+perkMassacreManiacV4LongDesc,progression,perk  book,,,Stamina: Axes cost 10% reduced stamina and 25% reduced stamina for power attacks.
+perkMassacreManiacV5Desc,progression,perk  book,,,Chainsaws have 15% longer reach.
+perkMassacreManiacV5LongDesc,progression,perk  book,,,Long Reach: Chainsaws have 15% longer reach.
+perkMassacreManiacV6Desc,progression,perk  book,,,Attacks on limbs have a 30% chance to dismember.
+perkMassacreManiacV6LongDesc,progression,perk  book,,,Deadly Multilator: Attacks on limbs have a 30% chance to dismember.
+perkMassacreManiacV7Desc,progression,perk  book,,,Attacks on heads have a 20% chance to dismember.
+perkMassacreManiacV7LongDesc,progression,perk  book,,,Head Splitter: Attacks on heads have a 20% chance to dismember.
+perkMassacreManiacCompleteDesc,progression,perk  book,,,Power attacks with axes that kill your enemy refill 50 stamina. Kills with chainsaws restore 10 health. Each kill gives a stacking dismember chance for chainsaws.
+perkMassacreManiacCompleteLongDesc,progression,perk  book,,,"Maniac: Power attacks with axes that kill your enemy refill 50 stamina. Kills with chainsaws restore 10 health. Each kill with chainsaws gives a stacking 10% chance per stack added to base dismember chance for 90 seconds. (Max 20 stacks)"
+
+buffHammerTimeSpeedsterName,buffs,Buff,,,Hammer Time Speed Buff
+buffHammerTimeSpeedsterDesc,buffs,Buff,,,"You move 15% faster."
+buffVictoryCryName,buffs,Buff,,,Victory Cry
+buffVictoryCryDesc,buffs,Buff,,,"You receive 10% less damage and do 10% more damage."
+buffItsElectrifyingFastLearningName,buffs,Buff,,,It's Electrifying XP Buff
+buffItsElectrifyingFastLearningDesc,buffs,Buff,,,"You gain 20% more XP."
+buffKnifeGuyDeepWoundsName,buffs,Buff,,,Lacerate
+buffKnifeGuyDeepWoundsDesc,buffs,Buff,,,"You do 25% less damage."
+buffKnifeGuySadisticName,buffs,Buff,,,Sadistic
+buffKnifeGuySadisticDesc,buffs,Buff,,,"You do 5% more damage per each kill."
+buffMassacreManiacName,buffs,Buff,,,Maniac
+buffMassacreManiacDesc,buffs,Buff,,,"Chainsaws have a 10% chance per stack added to base dismember chance."

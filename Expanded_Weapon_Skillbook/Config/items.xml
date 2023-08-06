@@ -1,0 +1,513 @@
+<configs>
+
+    <append xpath="/items">
+		<!-- *** Hammer Time Vol 1: Damage -->
+		<item name="bookHammerTimeV1">
+			<property name="Extends" value="bookFiremansAlmanacHeat"/>
+			<property name="CustomIcon" value="bookGetHammered"/>
+			<property name="CustomIconTint" value="FFD700"/>
+			<property name="DescriptionKey" value="perkHammerTimeV1LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV1"/>
+			<property name="Tags" value="hammerTimeProb"/>
+			<property name="Group" value="Books,BooksOnly,TCReading"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV1" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV1" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Hammer Time Vol 2: Stamina -->
+		<item name="bookHammerTimeV2">
+			<property name="Extends" value="bookHammerTimeV1"/>
+			<property name="DescriptionKey" value="perkHammerTimeV2LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV2"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV2" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV2" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Hammer Time Vol 3: Speedster -->
+		<item name="bookHammerTimeV3">
+			<property name="Extends" value="bookHammerTimeV1"/>
+			<property name="DescriptionKey" value="perkHammerTimeV3LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV3"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV3" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV3" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Hammer Time Vol 4: Tank -->
+		<item name="bookHammerTimeV4">
+			<property name="Extends" value="bookHammerTimeV1"/>
+			<property name="DescriptionKey" value="perkHammerTimeV4LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV4"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV4" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV4" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Hammer Time Vol 5: Maintenance -->
+		<item name="bookHammerTimeV5">
+			<property name="Extends" value="bookHammerTimeV1"/>
+			<property name="DescriptionKey" value="perkHammerTimeV5LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV5"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV5" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV5" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Hammer Time Vol 6: Demolisher -->
+		<item name="bookHammerTimeV6">
+			<property name="Extends" value="bookHammerTimeV1"/>
+			<property name="DescriptionKey" value="perkHammerTimeV6LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV6"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV6" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV6" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Hammer Time Vol 7: Bonecrusher -->
+		<item name="bookHammerTimeV7">
+			<property name="Extends" value="bookHammerTimeV1"/>
+			<property name="DescriptionKey" value="perkHammerTimeV7LongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeV7"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeV7" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeV7" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 1: Damage -->
+		<item name="bookItsElectrifyingV1">
+			<property name="Extends" value="bookFiremansAlmanacHeat"/>
+			<property name="CustomIcon" value="bookTechPlanet"/>
+			<property name="CustomIconTint" value="FFD700"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV1LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV1"/>
+			<property name="Tags" value="itsElectrifyingProb"/>
+			<property name="Group" value="Books,BooksOnly,TCReading"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV1" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV1" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 2: Maintenance -->
+		<item name="bookItsElectrifyingV2">
+			<property name="Extends" value="bookItsElectrifyingV1"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV2LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV2"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV2" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV2" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 3: Fast Learning -->
+		<item name="bookItsElectrifyingV3">
+			<property name="Extends" value="bookItsElectrifyingV1"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV3LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV3"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV3" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV3" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 4: Electrostatic -->
+		<item name="bookItsElectrifyingV4">
+			<property name="Extends" value="bookItsElectrifyingV1"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV4LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV4"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV4" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV4" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 5: Conductive -->
+		<item name="bookItsElectrifyingV5">
+			<property name="Extends" value="bookItsElectrifyingV1"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV5LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV5"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV5" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV5" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 6: Lightning Fast -->
+		<item name="bookItsElectrifyingV6">
+			<property name="Extends" value="bookItsElectrifyingV1"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV6LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV6"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV6" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV6" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Its Electrifying Vol 7: The Flash -->
+		<item name="bookItsElectrifyingV7">
+			<property name="Extends" value="bookItsElectrifyingV1"/>
+			<property name="DescriptionKey" value="perkItsElectrifyingV7LongDesc"/>
+			<property name="Unlocks" value="perkItsElectrifyingV7"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkItsElectrifyingV7" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingV7" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkItsElectrifyingComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillItsElectrifying" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 1: Damage -->
+		<item name="bookKnifeGuyV1">
+			<property name="Extends" value="bookFiremansAlmanacHeat"/>
+			<property name="CustomIcon" value="bookKnifeGuy"/>
+			<property name="CustomIconTint" value="FFD700"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV1LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV1"/>
+			<property name="Tags" value="knifeGuyProb"/>
+			<property name="Group" value="Books,BooksOnly,TCReading"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV1" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV1" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 2: Maintenance -->
+		<item name="bookKnifeGuyV2">
+			<property name="Extends" value="bookKnifeGuyV1"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV2LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV2"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV2" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV2" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 3: Lacerate -->
+		<item name="bookKnifeGuyV3">
+			<property name="Extends" value="bookKnifeGuyV1"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV3LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV3"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV3" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV3" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 4: Bloodbath -->
+		<item name="bookKnifeGuyV4">
+			<property name="Extends" value="bookKnifeGuyV1"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV4LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV4"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV4" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV4" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 5: Bull's Eye -->
+		<item name="bookKnifeGuyV5">
+			<property name="Extends" value="bookKnifeGuyV1"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV5LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV5"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV5" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV5" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 6: Fast Stab -->
+		<item name="bookKnifeGuyV6">
+			<property name="Extends" value="bookKnifeGuyV1"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV6LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV6"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV6" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV6" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Knife Guy Vol 7: Snatch Steal -->
+		<item name="bookKnifeGuyV7">
+			<property name="Extends" value="bookKnifeGuyV1"/>
+			<property name="DescriptionKey" value="perkKnifeGuyV7LongDesc"/>
+			<property name="Unlocks" value="perkKnifeGuyV7"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkKnifeGuyV7" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyV7" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkKnifeGuyComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillKnifeGuy" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** Massacre Maniac Vol 1: Head Hunter -->
+		<item name="bookMassacreManiacV1">
+			<property name="Extends" value="bookFiremansAlmanacHeat"/>
+			<property name="CustomIcon" value="bookToolsDigest"/>
+			<property name="CustomIconTint" value="FFD700"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV1LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV1"/>
+			<property name="Tags" value="massacreManiacProb"/>
+			<property name="Group" value="Books,BooksOnly,TCReading"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV1" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV1" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** MassacreManiac Vol 2: Maintenance -->
+		<item name="bookMassacreManiacV2">
+			<property name="Extends" value="bookMassacreManiacV1"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV2LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV2"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV2" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV2" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** MassacreManiac Vol 3: Intimidate -->
+		<item name="bookMassacreManiacV3">
+			<property name="Extends" value="bookMassacreManiacV1"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV3LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV3"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV3" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV3" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** MassacreManiac Vol 4: Stamina -->
+		<item name="bookMassacreManiacV4">
+			<property name="Extends" value="bookMassacreManiacV1"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV4LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV4"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV4" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV4" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** MassacreManiac Vol 5: Long Reach -->
+		<item name="bookMassacreManiacV5">
+			<property name="Extends" value="bookMassacreManiacV1"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV5LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV5"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV5" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV5" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** MassacreManiac Vol 6: Deadly Multilator -->
+		<item name="bookMassacreManiacV6">
+			<property name="Extends" value="bookMassacreManiacV1"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV6LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV6"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV6" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV6" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		<!-- *** MassacreManiac Vol 7: Head Splitter -->
+		<item name="bookMassacreManiacV7">
+			<property name="Extends" value="bookMassacreManiacV1"/>
+			<property name="DescriptionKey" value="perkMassacreManiacV7LongDesc"/>
+			<property name="Unlocks" value="perkMassacreManiacV7"/>
+			<effect_group tiered="false">
+				<requirement name="ProgressionLevel" progression_name="perkMassacreManiacV7" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacV7" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMassacreManiacComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillMassacreManiac" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		
+    </append>
+	
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='EntityDamage']/@tags">perkMiner69r,chainsaw</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='BlockDamage']/@tags">perkMiner69r,chainsaw</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='MaxRange']/@tags">perkMiner69r,chainsaw</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='BlockRange']/@tags">perkMiner69r,chainsaw</set>
+	<set xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/effect_group[@name='meleeToolAxeT3Chainsaw']/passive_effect[@name='DegradationPerUse']/@tags">perkMiner69r,chainsaw</set>
+	
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='EntityDamage']/@tags">perkMiner69r,axe</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='BlockDamage']/@tags">perkMiner69r,axe</set>
+	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group[@name='meleeToolAxeT1IronFireaxe']/passive_effect[@name='DegradationPerUse']/@tags">perkMiner69r,axe</set>
+	
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='EntityDamage']/@tags">perkMiner69r,axe</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='BlockDamage']/@tags">perkMiner69r,axe</set>
+	<set xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group[@name='meleeToolAxeT2SteelAxe']/passive_effect[@name='DegradationPerUse']/@tags">perkMiner69r,axe</set>
+	
+</configs>

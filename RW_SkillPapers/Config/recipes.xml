@@ -1,0 +1,1354 @@
+<configs>
+
+<!--Add the new scrap recipes for the new material added.-->
+<!--Recipe name is the forge category listed in the materials xml and is the new resource item created in the items xml.-->
+<insertafter xpath="//recipe[@name='resourceBone']">
+<recipe name="resourceRWPerkPapers" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+<recipe name="resourceRWSkillPapers" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+<recipe name="resourceRWBlueprintScraps" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+</insertafter>
+
+<append xpath="/recipes">
+
+<!--Binding Bench Recipe-->
+<recipe name="RWBindingBench" count="1" craft_time="210" craft_exp_gain="0" craft_area="workbench">
+	<ingredient name="resourceForgedIron" count="50"/>
+	<ingredient name="resourceMechanicalParts" count="25"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceNail" count="50"/>
+	<ingredient name="resourceWood" count="50"/>
+</recipe>
+
+<!--Perk Book Recipes-->
+<recipe name="bookFiremansAlmanacHeat" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookFiremansAlmanacAxes" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookFiremansAlmanacSpeed" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookFiremansAlmanacMolotov" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookFiremansAlmanacPrevention" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookFiremansAlmanacHarvest" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookFiremansAlmanacEquipment" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerStealthDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerSilentNight" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerBlades" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerThiefAdrenaline" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerArchery" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerTwilightThief" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNightStalkerSlumberParty" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterDukes" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterAmmunition" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterBrass" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterLead" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterBooks" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterFood" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookLuckyLooterMedical" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerApparel" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerPunks" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerIntimidation" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerAPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerHPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookEnforcerCriminalPursuit" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpBigHits" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpStealingBases" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpSlowPitch" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpKnockdown" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpMaintenance" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpFoulBalls" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBatterUpMetalChain" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistSafes" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistGems" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistGoldRush" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistClaimed" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistAdrenalineFall" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistSprintSneak" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookGreatHeistMotionDetection" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresHoney" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresCoffins" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresAcid" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresWater" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresDoors" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresCloth" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookWasteTreasuresSinks" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadWinterWear" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadLegwear" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadFootwear" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadDesertWear" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadDusters" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadPufferCoats" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookNeedleAndThreadPockets" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalBears" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalWolves" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalCoyotes" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalMountainLions" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalDeer" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalVultures" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookHuntingJournalSelfDefense" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningLuckyStrike" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningDiamondTools" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningCoffee" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningBlackStrap" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningPallets" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningAvalanche" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookArtOfMiningDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersArrowRecovery" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersExplodingBolts" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersCripplingShot" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersAPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersFlamingArrows" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersForestGuide" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookRangersKnockdown" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteTakeAim" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteSwissKnees" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteSteadyHand" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteMaintenance" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteHPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteAPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookPistolPeteDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahBreachingSlugs" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahLimbShot" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahSlugs" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahMaintenance" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahMagazine" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookShotgunMessiahPartyStarter" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperCripplingShot" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperHeadShot" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperReload" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperControlledBreathing" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperAPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSniperHPAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsDamage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsUncontrolledBurst" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsMaintenance" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsDrumMag" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsRecoil" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsRagdoll" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookAutoWeaponsMachineGuns" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatLanding" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatCigar" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatSneaking" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatJumping" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatLandMines" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatAdrenalineRush" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookUrbanCombatRoomClearing" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie1Damage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie2Maintenance" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie3APAmmo" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie4Shells" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie5Repulsor" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie6BatonCharge" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookTechJunkie7Hydraulics" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling1BasicMoves" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling2DropABomb" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling3KillerInstinct" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling4FinishingMoves" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling5AdrenalineHealing" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling6RageMode" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookBarBrawling7BoozedUp" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter1Damage" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter2Maintenance" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter3Bleed" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter4KillMove" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter5RapidStrike" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter6PenetratingShaft" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<recipe name="bookSpearHunter7QuickStrike" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWPerkPapers" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceGlue" count="2"/>
+</recipe>
+
+<!--Skill Magazine Recipes-->
+<recipe name="harvestingToolsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="repairToolsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="salvageToolsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="knucklesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="bladesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="clubsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="sledgehammersSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="spearsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="bowsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="handgunsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="shotgunsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="riflesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="machineGunsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="explosivesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="roboticsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="armorSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="medicalSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="foodSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="seedSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="electricianSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="trapsSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="workstationSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<recipe name="vehiclesSkillMagazine" count="1" craft_time="90" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWSkillPapers" count="5"/>
+	<ingredient name="resourcePaper" count="2"/>
+	<ingredient name="resourceGlue" count="1"/>
+</recipe>
+
+<!--Mod Schematic Recipes-->
+<recipe name="modGunBarrelExtenderSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunMuzzleBrakeSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunSoundSuppressorSilencerSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunLaserSightSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunFlashlightSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunScopeSmallSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunScopeMediumSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunScopeLargeSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="14"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunReflexSightSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunTriggerGroupSemiSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunTriggerGroupBurst3Schematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunTriggerGroupAutomaticSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunBipodSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunForegripSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunRetractingStockSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunDuckbillSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunChokeSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunMagazineExtenderSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modShotgunSawedOffBarrelSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunBowPolymerStringSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunBowArrowRestSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunMeleeTheHunterSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modGunMeleeRadRemoverSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeTemperedBladeSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeSerratedBladeSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeWeightedHeadSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeStructuralBraceSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeErgonomicGripSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeFortifyingGripSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeClubBarbedWireSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeClubMetalSpikesSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeGraveDiggerSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeBunkerBusterSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeIronBreakerSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeWoodSplitterSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modMeleeClubBurningShaftSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorInsulatedLinerSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorCoolingMeshSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorImprovedFittingsSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorCustomizedFittingsSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="14"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorPlatingBasicSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorPlatingReinforcedSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="14"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorStoragePocketSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorDoubleStoragePocketSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorTripleStoragePocketSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="14"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorMuffledConnectorsSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorAdvancedMuffledConnectorsSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="14"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorImpactBracingSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorBandolierSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorWaterPurifierSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modArmorHelmetLightSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modFuelTankSmallSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modFuelTankLargeSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="14"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modRoboticDroneCargoModSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modRoboticDroneMedicModSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modRoboticDroneHeadlampModSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modRoboticDroneArmorPlatingModSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modRoboticDroneMoraleBoosterModSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modVehicleFuelSaverSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modVehicleOffRoadHeadlightsSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="7"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modVehicleSuperChargerSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modVehicleExpandedSeatSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="modVehicleReserveFuelTankSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<!--Farm And Food Schematic Recipes-->
+<recipe name="foodCanShamSchematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="10"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+<recipe name="plantedGraceCorn1Schematic" count="1" craft_time="120" craft_exp_gain="0" craft_area="RWBindingBench">
+	<ingredient name="resourceRWBlueprintScraps" count="70"/>
+	<ingredient name="resourceGlue" count="3"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+</recipe>
+
+</append>
+
+</configs>

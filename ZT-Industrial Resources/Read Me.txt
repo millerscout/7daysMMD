@@ -1,0 +1,135 @@
+
+ Ztensity's Industrial Resources - Version 3.0.0.1
+ The "A21" Compatibility Update | Functional Elevator Successor
+ Added Alternative Rotating Doors
+ 
+ 
+ ABOUT THIS MOD
+ =======
+ 
+ This modlet "Industrial Resources," is the latest version of A20s "Functional Elevator." Originally designed by mod developer and 7 Days to Die tastemaker Guppycur for A18, I brought his model into A19 and titled it Functional Elevator and gave it a release to the Nexus Mods.
+ 
+ After a few different iterations while I was working on the update for A21, I have decided to change the name of the mod to "Industrial Resources" to capture that this mod no longer just provides a functional elevator. Now, players can build not only a cleaned-up elevator for the latest alpha, but they will also be able to build a Rotating Door and an Escalator.
+ 
+ This mod and this latest update would not have happened without Guppycur alongside Hernan. Similarly, to my 4.0/4.5 update to Unnecessarily Beautiful But Immersive (UBBI), I was given unreleased assets by Hernan for his never before been seen sequel to Unnecessary But Beautiful (UBB) titled UBB2.
+ 
+ With Hernan's permission and after sharing files with me that haven't been seen by the community yet, I have now added the rotating doors and escalator blocks set.
+ 
+ Perhaps you want to take over a business location in A21? Here are the Industrial Resources to get you started.
+ 
+ 
+ ================================
+ 
+ 
+ Rotating Doors
+ =======
+ 
+ The new Rotating Doors should work seamlessly for players regardless of solo, multiplayer or dedicated server (everyone has mod installed in dedicated).
+ 
+ Since there is no active "open" state, you simply use it once to walk through and then it loops back to the closed state.
+ 
+ It took a lot of testing to get this right, however the doors won't open upon placement or open upon loading in-game.
+ 
+ I have also updated the textures to match Hernan's escalator textures to streamline the "industrial" look.
+ 
+ There are no specific building requirements with this item.
+ 
+ 
+ ================================
+ 
+ 
+ FUNCTIONAL ELEVATOR
+ =======
+ 
+ The functional elevator continues to be a staple in this mod. This elevator can move from one floor to the next across roughly 2 flights of real-life equivalent stairs.
+ 
+ To build it and use it properly, make sure to create a 3 blocks width, 6-7 blocks high and 3 blocks deep (x,y,z).
+ 
+ The iteration of this elevator in A21 contains the following tweaks & features:
+ 
+	 1. The starting state has been fixed so that when placed it'll be in the closed position.
+	 
+	 2. The elevator doors stay open for slightly longer (3-4 seconds roughly), so its easier to get in and out.
+	 
+	 3. I have thinned out the elevator just slightly to fit perfectly in the space you put it in.
+	 
+	 4. I have added sound effects, visual effects and additional animations for immersion.
+	 
+	 5. I have added additional colliders to prevent the player from accidentally falling out.
+	 
+	 6. I have added an official recipe with resource requirements for crafting it at the workbench.
+	 
+	 7. I have added a way to salvage the elevator using a wrench to get a portion of your materials back at random.
+	 
+	 8. I have added Localization text for the title and description.
+	 
+	 9. I removed the prefab data from this modlet for simplicity.
+	 
+	 10. Adjusted code in sounds.xml for Alpha 20 compatibility.
+ 
+ 
+ In Alpha 21, I have ensured compatibility but also fixed a z-fighting light flickering issue with all the buttons.
+ 
+ I also fixed the animation state so that the elevator stays in the position it was before you leave the game when returning or when another player encounters it used in multiplayer.
+ 
+ What is important to note is that if the Functional Elevator is used once it goes a floor above. It will stay there until used again either at the top or bottom.
+ 
+ This means that if a player used it once, when leaving the game and coming back, the elevator will still be on the second floor.
+ 
+ These features and tweaks make for a more immersive experience that is more fun than ever.
+ 
+ 
+ REQUIREMENTS
+ =======
+ 
+ As detailed by Guppycur, the shaft requirements are actually 10 blocks high (including floor and ceiling), 5 blocks wide (1 and 5 are the left right walls) and 5 blocks deep (1 and 5 are the front/rear walls). Think about it like x,y,z. This will be made even easier if the elevator is just placed first and then you build around it.
+ 
+ For building purposes, use the horizontal plates (concrete or otherwise) and select advanced rotations. Then rotate the plate so it's against a block. Use these plates with standard sized 1x1x1 blocks to build the shaft for the elevator.
+ 
+ 
+ ================================
+ 
+ 
+ Escalator Set
+ =======
+ 
+ The final items that can be built in the "Industrial Resources" pack is the Escalator set.
+ 
+ Consisting of five different blocks, when used correctly, you can properly build an escalator that simulates a real-life escalator.
+ 
+ This is the zombie apocalypse though and there seems to be no way to power it for now.
+ 
+ 
+ REQUIREMENTS
+ =======
+ 
+ The best way I can describe how to build this is to start with the "Elevator Start" and follow it with "Elevator Middle" blocks until you're ready for it to stop.
+ 
+ Once near the end, place the "Elevator Top" block and then place the "Elevator End" at the top in front of this last block. Make sure to use wedges in-between each elevator to streamline the appearance.
+
+ To aid in building this, you can use wood blocks as needed. Once everything is built, you should be able to destroy the blocks holding it during construction.
+
+ Since all these items are built one piece at a time, this should allow you to create escalators going down and up however high you wish.
+ 
+ 
+ ================================
+ 
+ 
+ CREDITS
+ =======
+ 
+ The assets for the escalator blocks and the rotating doors was designed by Hernan. They were originally built for Unnecessary But Beautiful (UBB) sequel UBB 2.0 that was unreleased and unseen by anyone. I was given the original assets and mod files to browse and use as I wanted for Unnecessarily Beautiful But Immersive (UBBI). I have used an assortment of these assets in UBBI 4.5, but I also decided to use some of these assets for the update to this mod also.
+ 
+ All assets used come from a purchased package from Nifty Studios via Unity. On the other hand, a portion of the animations designed and layout of the elevators was put together by Guppycur when he originally bought the assets for A18.
+
+ Not only did I get permission to rework and re-release Guppycur's work on animations and the elevator layout from Guppycur himself, but I made sure to purchase those same assets again myself for rights to share this modlet on Nexus Mods, the Forums and the 7 Days to Die Mod Launcher.
+ 
+ Original Mod Via 7 Days to Die Mods: https://7daystodiemods.com/working-elevator/
+ Original Mod Via the Forums: https://community.7daystodie.com/topic/9144-guppycurs-modlets/
+ Unity Page for Elevator: https://assetstore.unity.com/packages/3d/props/interior/easy-elevator-26266
+ Unity Assets Page for Nifty Studios: https://assetstore.unity.com/publishers/559
+ 
+ - Ztensity - 
+ 
+ 
+ 

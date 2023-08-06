@@ -1,0 +1,17 @@
+Key,english
+
+RWBindingBench,"Binding Bench"
+RWBindingBenchDesc,"Book binding bench for binding together books and magazines"
+
+lblCategoryRWPerkBooks,"Books"
+lblCategoryRWSkillMagazines,"Magazines"
+lblCategoryRWSchematics,"Schematics"
+
+resourceRWPerkPapers,"Perk Papers"
+resourceRWPerkPapersDesc,"Perk papers can be used at a binding bench to bind together a new perk book of your choosing."
+
+resourceRWSkillPapers,"Skill Papers"
+resourceRWSkillPapersDesc,"Skill papers can be used at a binding bench to bind together a new skill magazine of your choosing."
+
+resourceRWBlueprintScraps,"Blueprint Scraps"
+resourceRWBlueprintScrapsDesc,"Blueprint scraps can be used at a binding bench to piece together a schematic of your choosing."

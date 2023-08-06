@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ExpandedWeaponSkillbook" />
+	<DisplayName value="Expanded Weapon Skillbook" />
+	<Description value="Added all of missing weapon related skillbook into the game." />
+	<Author value="Razor" />
+	<Version value="1.2" />
+	<Website value="" />
+</xml>

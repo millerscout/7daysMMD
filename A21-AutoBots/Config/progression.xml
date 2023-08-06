@@ -1,0 +1,10 @@
+<configs>
+
+	<!-- Auto Bots -->
+	
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@icon='chemistryStation']/unlock_entry/@item">,AutomatedMining,AutomatedAmmunition</append>
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="AutomatedMining,AutomatedAmmunition"/>
+	</append>	
+	
+</configs>

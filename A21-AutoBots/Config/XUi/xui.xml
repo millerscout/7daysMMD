@@ -1,0 +1,20 @@
+<delmod>
+	<append xpath="/xui/ruleset">
+		<window_group name="workstation_AutomatedMining" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsForge" />			
+			<window name="windowOutput"/>
+			<window name="windowNonPagingHeader"/>
+		</window_group>
+		<window_group name="workstation_AutomatedAmmunition" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsForge" />						
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>	
+	</append>
+</delmod>

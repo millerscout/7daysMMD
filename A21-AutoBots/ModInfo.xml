@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="A21-AutoBots" />
+	<DisplayName value="A21 Auto Bots" />
+	<Description value="Automated Mining and Ammunition Making Robotic Workstations" />
+	<Author value="arramus (Based on Snufkin's Auto Miner and the chain of modder influences prior to that)" />
+	<Version value="21.0.1.0" />
+	<Website value="" />
+</xml>
