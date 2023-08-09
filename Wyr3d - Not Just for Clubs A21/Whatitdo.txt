@@ -1,0 +1,1 @@
+This modlet allows club mods to also apply to sledge, and the pipe baton. This includes the Metal Chain, Metal Spikes and Barbwire (sadly no visuals exist though)

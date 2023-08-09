@@ -1,0 +1,17 @@
+
+<configs>
+	<set xpath="items/item[@name='gunBowT1WoodenBow']/effect_group[@name='gunBowT1WoodenBow']/passive_effect[@name='ModSlots']/@value">2,2,3,3,4,4</set>
+	<set xpath="items/item[@name='gunBowT1IronCrossbow']/effect_group[@name='gunBowT1IronCrossbow']/passive_effect[@name='ModSlots']/@value">2,2,3,3,4,4</set>
+	<set xpath="items/item[@name='gunBowT3CompoundCrossbow']/effect_group[@name='gunBowT3CompoundCrossbow']/passive_effect[@name='ModSlots']/@value">3,3,3,4,4,4</set>
+
+	<set xpath="items/item[@name='gunBotT1JunkSledge']/effect_group[@name='gunBotT1JunkSledge']/passive_effect[@name='ModSlots']/@value">2,2,3,3,4,4</set>
+	<set xpath="items/item[@name='gunBotT2JunkTurret']/effect_group[@name='gunBotT2JunkTurret']/passive_effect[@name='ModSlots']/@value">2,2,3,3,4,4</set>
+	<set xpath="items/item[@name='gunBotT3JunkDrone']/effect_group[@name='gunBotT3JunkDrone']/passive_effect[@name='ModSlots']/@value">2,2,3,3,4,4</set>
+
+	<set xpath="items/item[@name='gunExplosivesT3RocketLauncher']/effect_group[@name='gunExplosivesT3RocketLauncher']/passive_effect[@name='ModSlots']/@value">2,2,3,3,4,4</set>
+
+	<set xpath="items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='ModSlots']/@value">4,4,4,4,4,4</set>
+	<set xpath="items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='ModSlots']/@value">3,3,3,4,4,4</set>
+	<set xpath="items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='ModSlots']/@value">4,4,4,4,4,4</set>
+
+</configs>

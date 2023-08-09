@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Wyr3d>
+
+
+<set xpath="/item_modifiers/item_modifier[@name='modMeleeClubBarbedWire']/@installable_tags">club,sledge,noStunEffect</set>
+<set xpath="/item_modifiers/item_modifier[@name='modMeleeClubMetalSpikes']/@installable_tags">club,sledge,noStunEffect</set>
+<set xpath="/item_modifiers/item_modifier[@name='modMeleeClubMetalChain']/@installable_tags">club,sledge,noStunEffect</set>
+
+</Wyr3d>

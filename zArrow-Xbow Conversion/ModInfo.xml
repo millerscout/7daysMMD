@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Arrow/Crossbow Conversion" />
+        <Description value="This modlet allows yout o convert arrows to crossbow bolt and back again." />
+        <Author value="Elucidus" />
+        <Version value="1.0.1" />
+    </ModInfo>
+</xml>

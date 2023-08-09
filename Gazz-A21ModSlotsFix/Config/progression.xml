@@ -1,0 +1,30 @@
+<configs>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']" />
+
+	<insertAfter xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']" >
+		<crafting_skill name="craftingBows" max_level="75" parent="attCrafting" name_key="craftingBowsName" desc_key="craftingBowsDesc" long_desc_key="craftingBowsLongDesc" icon="ui_game_symbol_archery">
+			<display_entry item="gunBowT0PrimitiveBow" unlock_level="1,3,5,7,10" />
+			<display_entry item="gunBowT1WoodenBow" unlock_level="11,17,24,31,38" />
+			<display_entry item="gunBowT1IronCrossbow" unlock_level="11,17,24,31,38" />
+			<display_entry item="gunBowT3CompoundBow" unlock_level="39,48,57,66,75" />
+			<display_entry item="gunBowT3CompoundCrossbow" unlock_level="39,48,57,66,75" />
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,100" value="1" tags="gunBowT0PrimitiveBow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBowT1WoodenBow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBowT1IronCrossbow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,100" value="1" tags="gunBowT3CompoundBow"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,100" value="1" tags="gunBowT3CompoundCrossbow"/>
+
+				<passive_effect name="CraftingTier" operation="base_add" level="3,5,7,10,75,100" value="1,2,3,4,4,4" tags="gunBowT0PrimitiveBow"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75,100" value="1,2,3,4,4,4" tags="gunBowT1WoodenBow"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="17,24,31,38,75,100" value="1,2,3,4,4,4" tags="gunBowT1IronCrossbow"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75,100" value="1,2,3,4,4" tags="gunBowT3CompoundBow"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="48,57,66,75,100" value="1,2,3,4,4" tags="gunBowT3CompoundCrossbow"/>
+			</effect_group>
+		</crafting_skill>
+	</insertAfter>
+</configs>
+
+
+

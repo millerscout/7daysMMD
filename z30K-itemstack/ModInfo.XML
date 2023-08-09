@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="30K-itemstack" />
+		<Description value="30000 Item Stack Size" />
+		<Author value="Elucidus" />
+		<Version value="1.1" />
+		<Website value="http://7daystodie.com" />
+	</ModInfo>
+</xml>

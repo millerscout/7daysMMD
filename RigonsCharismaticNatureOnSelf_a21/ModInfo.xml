@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="RigonsCharismaticNatureOnSelf" />
+		<Description value="Perk Charismatic Nature affects the player" />
+		<Author value="Rigon"/>
+		<Version value="1.2" />
+		<Website value="" />
+	</ModInfo>
+</xml>

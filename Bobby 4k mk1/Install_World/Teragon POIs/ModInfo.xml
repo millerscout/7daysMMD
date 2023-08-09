@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Teragon POIs" /> 
+        <Description value="This modlet adds prefabs that are needed for worlds that were created with Teragon (mainly bridges and other road parts)" />
+        <Author value="Pille" />
+        <Version value="A20.6" />
+    </ModInfo>
+</xml>

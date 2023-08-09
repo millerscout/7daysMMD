@@ -1,0 +1,22 @@
+<configs>
+	<append xpath="/progression/perks/perk[@name='perkCharismaticNature']/effect_group" >
+		<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="1" target="self">
+          <requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="1" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="2" target="self">
+          <requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="2" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="3" target="self">
+          <requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="3" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="4" target="self">
+          <requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="4" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="5" target="self">
+          <requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="5" />
+        </triggered_effect>
+		<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffPerkCharismaticNature" target="self">
+		  <requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="1"/>
+		</triggered_effect>
+	</append>
+</configs>

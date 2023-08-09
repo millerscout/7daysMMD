@@ -1,0 +1,7 @@
+<spawnpoints>
+ <spawnpoints position="0,0,0" rotation="0,0,0"/>
+ <spawnpoints position="512,0,512" rotation="0,0,0"/>
+ <spawnpoints position="-512,0,512" rotation="0,0,0"/>
+ <spawnpoints position="512,0,-512" rotation="0,0,0"/>
+ <spawnpoints position="-512,0,-512" rotation="0,0,0"/>
+</spawnpoints>

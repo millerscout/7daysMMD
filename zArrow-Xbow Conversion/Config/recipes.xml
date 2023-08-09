@@ -1,0 +1,49 @@
+<configs>
+<!-- Add in conversion recipes for arrows and bolts -->
+<append xpath="/recipes">
+	<recipe name="ammoCrossbowBoltSteelAP" count="1">
+		<ingredient name="ammoArrowSteelAP" count="1"/>
+	</recipe>
+	<recipe name="ammoArrowStone" count="1">
+		<ingredient name="ammoCrossbowBoltStone" count="1"/>
+	</recipe>
+	<recipe name="ammoArrowIron" count="1">
+		<ingredient name="ammoCrossbowBoltIron" count="1"/>
+	</recipe>
+	<recipe name="ammoArrowSteelAP" count="1">
+		<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
+	</recipe>
+	<recipe name="ammoCrossbowBoltStone" count="1">
+		<ingredient name="ammoArrowStone" count="1"/>
+	</recipe>
+	<recipe name="ammoCrossbowBoltIron" count="1">
+		<ingredient name="ammoArrowIron" count="1"/>
+	</recipe>
+
+<!--
+<recipe name="ammoCrossbowBoltFlaming" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="ammoArrowSteelAP" count="1" />
+	<ingredient name="resourceGunPowder" count="2" />
+	<ingredient name="resourceCloth" count="1" />
+	<ingredient name="resourceTallow" count="1" />
+<recipe name="ammoArrowExploding" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceArrowHeadSteelAP" count="1" />
+	<ingredient name="resourceGunPowder" count="8" />
+	<ingredient name="resourceDuctTape" count="1" />
+	<ingredient name="resourceWood" count="1" />
+	<ingredient name="resourceFeather" count="1" />
+</recipe>-->
+<recipe name="ammoCrossbowBoltFlaming" count="1" tags="learnable">
+    <ingredient name="ammoArrowFlaming" count="1"/>
+	</recipe>
+<recipe name="ammoArrowExploding" count="1" tags="learnable">
+    <ingredient name="ammoCrossbowBoltExploding" count="1"/>
+</recipe>
+<recipe name="ammoArrowFlaming" count="1" tags="learnable">
+    <ingredient name="ammoCrossbowBoltFlaming" count="1"/>
+</recipe>
+<recipe name="ammoCrossbowBoltExploding" count="1" tags="learnable">
+    <ingredient name="ammoArrowExploding" count="1"/>
+</recipe>
+</append>
+</configs>
