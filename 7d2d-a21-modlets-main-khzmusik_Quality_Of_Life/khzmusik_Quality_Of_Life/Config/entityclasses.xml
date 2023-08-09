@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configs>
-    <!--
-        Loot containers should stick around for 60 minutes.
-        That's an entire night if the user has a 24-hour cycle of 120 minutes and a daylight length of 12 hours.
-    -->
-    <set xpath="//entity_class[starts-with(@name, 'EntityLootContainer')]/property[@name='TimeStayAfterDeath']/@value">3600</set>
-</configs>

@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RainCollector</name>
+    </assembly>
+    <members>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches">
+            <summary>
+            Harmony patches for <see cref="T:BlockDewCollector"/>.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.BlockDewCollectorPatches.PropIsChunkObserver">
+            <summary>
+            Property name to determine if the dew collector should be a chunk observer.
+            </summary>
+        </member>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches.AddTileEntity">
+            <summary>
+            Patch to
+            <see cref="M:BlockDewCollector.addTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>
+            to add a chunk observer as the tile entity is being added.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.BlockDewCollectorPatches.AddTileEntity.Postfix(WorldBase,Vector3i,BlockDewCollector)">
+            <summary>
+            Harmony postfix for
+            <see cref="M:BlockDewCollector.addTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>.
+            </summary>
+            <param name="world"></param>
+            <param name="_blockPos"></param>
+            <param name="__instance"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches.RemoveTileEntity">
+            <summary>
+            Patch to
+            <see cref="M:BlockDewCollector.removeTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>
+            to remove the chunk observer added when the tile entity was added.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.BlockDewCollectorPatches.RemoveTileEntity.Postfix(WorldBase,Vector3i,BlockDewCollector)">
+            <summary>
+            Harmony postfix for
+            <see cref="M:BlockDewCollector.removeTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>.
+            </summary>
+            <param name="world"></param>
+            <param name="_blockPos"></param>
+            <param name="__instance"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches.OnBlockLoaded">
+            <summary>
+            <para>
+            Patch to
+            <see cref="M:Block.OnBlockLoaded(WorldBase,System.Int32,Vector3i,BlockValue)"/>
+            to ensure a chunk observer exists when the block is loaded.
+            </para>
+            
+            <para>
+            This would patch <see cref="T:BlockDewCollector"/> but it does not override this method.
+            </para>
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.BlockDewCollectorPatches.OnBlockLoaded.Postfix(WorldBase,System.Int32,Vector3i,BlockValue,Block)">
+            <summary>
+            Harmony postfix for
+            <see cref="M:Block.OnBlockLoaded(WorldBase,System.Int32,Vector3i,BlockValue)"/>.
+            </summary>
+            <param name="_world"></param>
+            <param name="_clrIdx"></param>
+            <param name="_blockPos"></param>
+            <param name="_blockValue"></param>
+            <param name="__instance"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.RainCollector">
+            <summary>
+            Harmony initializer for the Rain Collector mod.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.RainCollector.Debug">
+            <summary>
+            Whether or not to print debug messages to the console.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.RainCollector.InitMod(Mod)">
+            <summary>
+            Initializes the mod.
+            </summary>
+            <param name="_modInstance"></param>
+        </member>
+        <member name="M:RainCollector.Harmony.RainCollector.DebugLog(System.String)">
+            <summary>
+            Convenience method to log debug messages consistently.
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.TileEntityDewCollectorPatches">
+            <summary>
+            Harmony patches for <see cref="T:TileEntityDewCollector"/>.
+            </summary>
+        </member>
+        <member name="T:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo">
+            <summary>
+            Holds information about the weather.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.BiomeId">
+            <summary>
+            The ID of the biome in which this weather occurs.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.IsAverage">
+            <summary>
+            True if these values represent incremental averages, false if they represent the
+            current weather values.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.FogDensity">
+            <summary>
+            Fog density, 0..1.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.Rainfall">
+            <summary>
+            Rainfall, 0..1.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.Temperature">
+            <summary>
+            Temperature.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.DeltaTime">
+            <summary>
+            Number of <em>in-game</em> seconds since the last time the weather was checked.
+            This is always current, it is never an incremental average.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.AvgDeltaTime">
+            <summary>
+            The average delta time.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.Updated">
+            <summary>
+            The world time where this weather info was last updated.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.TotalTime">
+            <summary>
+            Total time, in <em>real time</em> seconds, this weather was active.
+            For current weather, this is <see cref="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.DeltaTime"/> converted to live seconds.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.AboveTemperatureTime">
+            <summary>
+            Total time, in <em>real time</em> seconds, this weather was above the minimum
+            temperature needed for the dew collector to be active.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.AboveTemperatureRatio">
+            <summary>
+            The ratio of time spent above the minimum conversion temperature.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.Initialized">
+            <summary>
+            Whether this object has been initialized with weather information.
+            Only objects representing incremental averages need initialization.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Deconstruct into fog density, rainfall, temperature, and delta time.
+            </summary>
+            <param name="fogDensity"></param>
+            <param name="rainfall"></param>
+            <param name="temperature"></param>
+            <param name="deltaTime"></param>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate">
+            <summary>
+            Patches <see cref="M:TileEntityDewCollector.HandleUpdate(World)"/> to handle the
+            additional features of this mod.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropFogConvertMultiplier">
+            <summary>
+            Fog Convert Multiplier property name.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropMinConvertTemperature">
+            <summary>
+            Minimum Convert Temperature property name.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropRainConvertMultiplier">
+            <summary>
+            Rain Convert Multiplier property name.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropContainerSize">
+            <summary>
+            Container size property name.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.Prefix(World,TileEntityDewCollector,System.UInt64,RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo@)">
+            <summary>
+            Harmony prefix for <see cref="M:TileEntityDewCollector.HandleUpdate(World)"/>
+            that saves the last world time as state, and bypasses the method if the temperature
+            check fails.
+            </summary>
+            <param name="world"></param>
+            <param name="__instance"></param>
+            <param name="___lastWorldTime"></param>
+            <param name="__state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.Postfix(World,TileEntityDewCollector,RainCollector.Harmony.TileEntityDewCollectorPatches.WeatherInfo,System.UInt64@)">
+            <summary>
+            Harmony postfix for <see cref="M:TileEntityDewCollector.HandleUpdate(World)"/>
+            that handles adding additional fill time due to fog density and rainfall.
+            </summary>
+            <param name="world"></param>
+            <param name="__instance"></param>
+            <param name="__state"></param>
+            <param name="___lastWorldTime"></param>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.Initialize(Block)">
+            <summary>
+            Initializes the mod using the block properties, if it hasn't already been initialized,
+            and returns true if the mod is enabled.
+            </summary>
+            <param name="block"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

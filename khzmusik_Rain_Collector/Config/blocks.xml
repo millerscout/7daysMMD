@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <append xpath="//block[@name='cntDewCollector']">
+        <!-- The minimum temperature, in degrees fahrenheit, at which the dew collector will work. -->
+        <property name="MinConvertTemperature" value="32" />
+        <!-- Takes the collection amount, multiplies it by the fog desnity, then this multiplier, and adds it. -->
+        <property name="FogConvertMultiplier" value="3" />
+        <!-- Takes the collection amount, multiplies it by the rainfall amount, then this multiplier, and adds it. -->
+        <property name="RainConvertMultiplier" value="5" />
+        <!-- Makes the dew collector a chunk observer for accurate calculations if the player isn't near. -->
+        <property name="IsChunkObserver" value="true" />
+		<!--
+            To change the grid size of the dew collector, set this value. Value represents "columns,rows".
+            These values MUST match the values in windows.xml! If they don't, your game will crash.
+        -->
+		<!-- <property name="ContainerSize" value="4,2" /> -->
+    </append>
+
+    <!--
+        Since the fog and rain can increase the dew collector production quite a bit,
+        double the min and max convert times so it's not OP.
+    -->
+    <set xpath="//block[@name='cntDewCollector']/property[@name='MinConvertTime']/@value">43200</set>
+    <set xpath="//block[@name='cntDewCollector']/property[@name='MaxConvertTime']/@value">72000</set>
+</config>
