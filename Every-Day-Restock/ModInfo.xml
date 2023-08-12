@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="Every_Day_Restock" />
+    <Description value="Traders will restock every day" />
+    <Author value="SBSTN" />
+    <Version value="19.6" compat="A19,A18" />
+  </ModInfo>
+</xml>

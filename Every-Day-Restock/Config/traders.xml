@@ -1,0 +1,11 @@
+<configs>
+
+<setattribute xpath="/traders/trader_info[@id='1']" name="reset_interval">1</setattribute>
+<setattribute xpath="/traders/trader_info[@id='2']" name="reset_interval">1</setattribute>
+<setattribute xpath="/traders/trader_info[@id='4']" name="reset_interval">1</setattribute>
+<setattribute xpath="/traders/trader_info[@id='5']" name="reset_interval">1</setattribute>
+<setattribute xpath="/traders/trader_info[@id='6']" name="reset_interval">1</setattribute>
+<setattribute xpath="/traders/trader_info[@id='7']" name="reset_interval">1</setattribute>
+<setattribute xpath="/traders/trader_info[@id='8']" name="reset_interval">1</setattribute>
+
+</configs>
